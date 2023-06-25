@@ -1,0 +1,42 @@
+<configs>
+
+    <!--
+    Keeping these user created waypoints to be compatible with Androth's mod v1.0.0,
+    map waypoints are not removed, however if using my Remove The Map mod you cannot set
+    custom waypoints anyway.
+	NOTE: It appears the game uses this to define "always see at any distance":
+	<property name="max_distance" value="-1"/>
+    -->
+    <!-- Makes any map waypoint you set except for quick waypoint invisible on compass -->
+    <!-- <remove xpath="/nav_object_classes/nav_object_class[@name='waypoint']/inactive_compass_settings"></remove> -->
+	  <!-- <remove xpath="/nav_object_classes/nav_object_class[@name='waypoint']/compass_settings"></remove> -->
+
+	  <!-- These are "removed" by making max distance 1 -->
+	  <set xpath="/nav_object_classes/nav_object_class[@name='spear']/compass_settings/property[@name='max_distance']/@value">1</set>
+	  <set xpath="/nav_object_classes/nav_object_class[@name='supply_drop']/compass_settings/property[@name='max_distance']/@value">1</set>
+	  <set xpath="/nav_object_classes/nav_object_class[@name='backpack_distant']/compass_settings/property[@name='max_distance']/@value">1</set>
+	  <!-- <set xpath="/nav_object_classes/nav_object_class[@name='backpack']/compass_settings/property[@name='max_distance']/@value">1</set> -->
+	  <set xpath="/nav_object_classes/nav_object_class[@name='NOJunkDrone']/compass_settings/property[@name='max_distance']/@value">1</set>
+	  <set xpath="/nav_object_classes/nav_object_class[@name='bicycle']/compass_settings/property[@name='max_distance']/@value">1</set>
+	  
+	  <!-- a20: These all now inherit/extend from bicycle -->
+	  <!-- <set xpath="/nav_object_classes/nav_object_class[@name='minibike']/compass_settings/property[@name='max_distance']/@value">1</set> -->
+	  <!-- <set xpath="/nav_object_classes/nav_object_class[@name='motorcycle']/compass_settings/property[@name='max_distance']/@value">1</set> -->
+	  <!-- <set xpath="/nav_object_classes/nav_object_class[@name='gyrocopter']/compass_settings/property[@name='max_distance']/@value">1</set> -->
+	  <!-- <set xpath="/nav_object_classes/nav_object_class[@name='junk_turret']/compass_settings/property[@name='max_distance']/@value">1</set> -->
+	  <!-- <set xpath="/nav_object_classes/nav_object_class[@name='junk_sledge']/compass_settings/property[@name='max_distance']/@value">1</set> -->
+	  
+	  <!-- a20/a21: These have no max_distance property. soo... set it? -->
+		<!-- In game: You can set the green "border" on it if you want to see it -->
+	  <append xpath="/nav_object_classes/nav_object_class[@name='land_claim']/compass_settings">
+		<property name="max_distance" value="1"/>
+	  </append>
+		<set xpath="/nav_object_classes/nav_object_class[@name='land_claim']/compass_settings/property[@name='max_scale_distance']/@value">1</set>
+
+	  <append xpath="/nav_object_classes/nav_object_class[@name='sleeping_bag']/compass_settings">
+		<property name="max_distance" value="1"/>
+	  </append>
+		<set xpath="/nav_object_classes/nav_object_class[@name='sleeping_bag']/compass_settings/property[@name='max_scale_distance']/@value">1</set>
+
+	  
+</configs>

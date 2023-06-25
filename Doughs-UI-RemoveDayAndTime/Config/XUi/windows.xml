@@ -1,0 +1,27 @@
+<configs>
+  <!--
+  Remove the day and time from under the compass
+  Cannot make blank or a space :(
+  Make it an arrow pointing to the compass....Its ugly, but it works for now.
+  -->
+  <set xpath="/windows/window[@name='windowCompass']/sprite[@pos='240,-60']/label/@text">^</set>
+
+  <!--
+    NOTE: If you want to put back just the TIME OR the DAY, use only use 1 of these below!
+
+    If you want just the time, copy and put this line line below, outside this somment
+    <set xpath="/windows/window[@name='windowCompass']/sprite[@pos='240,-60']/label/@text">{timetitle}: {time}</set>
+
+    If you want just the day, copy and put this line line below, outside this somment
+    <set xpath="/windows/window[@name='windowCompass']/sprite[@pos='240,-60']/label/@text">{daytitle}: [{daycolor}]{day}</set>
+  -->
+
+  <!-- This wipes out the map bottom left hand corner navigation data
+  AND also seems to trigger it all to work properly!? otherwise you can still see the map kinda
+  -->
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/rect[@name='content']/sprite[@name='dayTimeIcon']/@color">[transparent]</set>
+  <setattribute xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/rect[@name='content']/label[@name='dayTimeLabel']" name="color">[transparent]</setattribute>
+
+  <!-- Remove the Trader restock day CANNOT GET WORKING! -->
+  <!-- <setattribute xpath="/windows/window[@name='windowTrader']/panel[@name='header']" name="text">{restocklabel}: ???</setattribute> -->
+</configs>

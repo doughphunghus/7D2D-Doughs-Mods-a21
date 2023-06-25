@@ -1,0 +1,9 @@
+<Doughs>
+
+  <!-- 
+    Keep it simple for now. just remove the texture with all the points on it
+  -->
+
+  <removeattribute xpath="/windows/window[@name='windowCompass']/texture[@name='compassTexture3']/@texture" />
+
+</Doughs>

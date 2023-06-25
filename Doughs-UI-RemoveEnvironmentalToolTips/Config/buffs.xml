@@ -1,0 +1,15 @@
+<Doughs>
+
+  <!-- 
+    Keep it simple for now. just remove the tooltip attribute entirely
+    For others to use as a template: name each tooltip to remove explicitly, not using xpath matching
+  -->
+
+  <!-- <removeattribute xpath="/buffs/buff[@name='buffElementHot']/@tooltip_key" />  -->
+  <!-- <removeattribute xpath="/buffs/buff[@name='buffElementSweltering']/@tooltip_key" />  -->
+  <!-- <removeattribute xpath="/buffs/buff[@name='buffElementCold']/@tooltip_key" />  -->
+  <!-- <removeattribute xpath="/buffs/buff[@name='buffElementFreezing']/@tooltip_key" />  -->
+  <!-- <removeattribute xpath="/buffs/buff[@name='buffElementWet']/@tooltip_key" /> -->
+  
+</Doughs>
+

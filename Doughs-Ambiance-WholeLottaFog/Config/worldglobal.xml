@@ -1,0 +1,17 @@
+<configs>
+
+  <!-- The values are Day,Night 
+  The numbers are not "how much fog" but more of "How much visibility"
+  so a higher number is more visibility. 
+  I do not know if its a percentage but that would make sense
+  Vales go from 0 (no visibilty) to 1 (no fog I guess?)
+  Possibly just a 2 decimal number, I have not tested more decimals
+  Leading 0 is optional.
+  a20: Seems like .5 is as low as you want to go to have "semi believeable" heavy fog 
+  and still be able to see and react to zeds coming at you.
+  a21: Maybe bump the a20 numbers down a smidge
+  a21 Default
+  <property name="fogPower" value="1, 1"/>
+  -->
+  <set xpath="/worldglobal/environment/property[@name='fogPower']/@value">0.4,0.58</set>
+</configs>

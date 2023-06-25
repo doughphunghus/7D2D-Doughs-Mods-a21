@@ -1,0 +1,10 @@
+<Doughs>
+  <!-- a21 Default: 25, 33, 50, 67, 75, 100, 150, 200 
+    NOTE: new CSV does not have a prepend option
+  -->
+  <!-- DOUGH: Add more options in the daylight hours in the main "new game" UI -->
+  <set xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsAdvanced']/grid/gameoption[@name='LootAbundance']/@values">2, 5, 10, 15, 20, 25, 33, 50, 67, 75, 100, 150, 200</set>
+
+  <!-- DOUGH: Add more options in the daylight hours in the ...errr...server game UI? -->
+  <set xpath="/windows/window[@name='serverBrowser']/panel[@name='serverfilters']/panel[@controller='TabSelector']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsAdvanced']/grid/browsergameoptioncombined[@name='LootAbundance']/@values">2, 5, 10, 15, 20, 25, 33, 50, 67, 75, 100, 150, 200</set>
+</Doughs>

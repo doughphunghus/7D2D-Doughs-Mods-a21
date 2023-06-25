@@ -1,0 +1,17 @@
+<configs>
+    <!-- Hides the HP bar coloring (R,G,B,T = the last 0 at the end sets transparency to totally transparent) -->
+    <set xpath="/windows/window[@name='windowTargetBar']/rect/filledsprite[@name='BarContent']/@color">200,0,0,0</set>
+
+    <!-- Hides the HP border? Default is: 0,0,0,100 -->
+    <set xpath="/windows/window[@name='windowTargetBar']/rect/sprite[@name='border']/@color">0,0,0,0</set>
+
+
+    <!-- Removes the HP bar hit points. Default is: {name}:{currentwithmax} -->
+    <set xpath="/windows/window[@name='windowTargetBar']/rect/label[@name='TextContent']/@text">{name}</set>
+
+    <!-- Colors the name/text. Not sure what colors are allowed.  Default is [white] -->
+    <!--  <set xpath="/windows/window[@name='windowTargetBar']/rect/label[@name='TextContent']/@color">[red]</set> -->
+
+    <!-- Centers the text. Default is left -->
+    <!-- <set xpath="/windows/window[@name='windowTargetBar']/rect/label[@name='TextContent']/@justify">center</set> -->
+</configs>
