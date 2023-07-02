@@ -1,0 +1,286 @@
+<configs>
+  <!--
+  Possible types:
+    plastic <- throw far, less bang
+    brass <- TBD
+    iron <- default. tweak it for power, recipe?
+    steel <- TBD
+
+  Possible tiers:
+    bigger boom = +paint (tint graphic), +2x gunpowder
+
+  Things that explode, BY DISTANCE
+    thrownTimedCharge - damages blocks close (safes)
+      <property name="Explosion.RadiusBlocks" value=".65"/>
+      <property name="Explosion.RadiusEntities" value="1.2"/>
+      name="EntityDamage" operation="base_set" value="800"
+    thrownAmmoMolotovCocktail
+      <property name="Explosion.RadiusBlocks" value="1"/>
+      <property name="Explosion.RadiusEntities" value="1"/>
+    name="EntityDamage" operation="base_set" value="5"
+    ammoArrowExploding
+      <property name="Explosion.RadiusBlocks" value="3"/>
+      <property name="Explosion.RadiusEntities" value="4"/>
+      "EntityDamage" operation="base_set" value="90"
+    thrownAmmoPipeBomb
+      <property name="Explosion.RadiusBlocks" value="4"/>
+      <property name="Explosion.RadiusEntities" value="4"/>
+      name="EntityDamage" operation="base_set" value="253"
+    thrownGrenadeContact + thrownGrenade
+      <property name="Explosion.RadiusBlocks" value="4"/>
+      <property name="Explosion.RadiusEntities" value="5"/>
+      name="EntityDamage" operation="base_set" value="341"
+    thrownDynamite - damages blocks
+      <property name="Explosion.RadiusBlocks" value="5"/>
+      <property name="Explosion.RadiusEntities" value="6"/>
+      name="EntityDamage" operation="base_set" value="550")
+
+    NEW Items
+    thrownAmmoPipeBombSteel_doughs - HEAVIER.
+      <property name="Explosion.RadiusBlocks" value="6"/>
+      <property name="Explosion.RadiusEntities" value="7"/>
+      name="EntityDamage" operation="base_set" value="700")
+
+
+  -->
+
+<!--
+########## Mod vanilla items ##########
+-->
+<!-- Change default pipe bomb to act more like modded ones for blocks-->
+
+<append xpath="/items/item[@name='thrownAmmoPipeBomb']">
+  <property name="CustomIconTint" value="85929e"/> <!-- DOUGH: Darken to look more ironish.  Cannot lighten for steel -->
+  <property name="TintColor" value="133,146,158"/> <!-- DOUGH: RGB. Tints the item in the hand -->
+  <property name="Explosion.DamageBonus.wood" value="1.5"/>
+  <property name="Explosion.DamageBonus.metal" value=".5"/>
+</append>
+
+<set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Explosion.DamageBonus.earth']/@value">1.5</set>
+
+<!-- Carry a little more -->
+<set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Stacknumber']/@value">30</set>  <!-- DOUGH: Extended base class = 20 -->
+
+<set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='EconomicValue']/@value">29</set>  <!-- DOUGH: Extended base class = 41 -->
+<set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Explosion.DamageBonus.earth']/@value">1.5</set>
+<set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Explosion.BlastPower']/@value">45</set> <!-- DOUGH: Extended base class = 75 -->
+
+<set xpath="/items/item[@name='thrownAmmoPipeBomb']/effect_group/passive_effect[@name='BlockDamage']/@value">80</set>
+<!-- <set xpath="/items/item[@name='thrownAmmoPipeBomb']/effect_group/display_value[@name='dExDamageBlock']/@value">80</set> -->
+<!-- <set xpath="/items/item[@name='thrownAmmoPipeBomb']/effect_group/display_value[@name='dExDamageBlock']/@value">80</set> -->
+
+<!-- Change vanilla pipe to look more like modded ones -->
+<append xpath="/items/item[@name='resourceMetalPipe']">
+  <property name="CustomIconTint" value="85929e"/> <!-- DOUGH: Darken to look more ironish.  Cannot lighten for steel -->
+  <property name="TintColor" value="133,146,158"/> <!-- DOUGH: RGB. Tints the item in the hand -->
+</append>
+
+<!--
+########## New items ##########
+-->
+<append xpath="/items">
+  <item name="resourceSteelPipeBombParts_doughs">
+    <property name="Extends" value="resourceMetalPipe"/>
+    <!-- New properties -->
+    <property name="CustomIcon" value="resourceMetalPipe"/>
+    <property name="CustomIconTint" value="ffffff"/> <!-- DOUGH: lighten to vanilla color look more steelish -->
+    <property name="TintColor" value="255,255,255"/> <!-- DOUGH: RGB. Tints the item in the hand -->
+    <property name="DescriptionKey" value="resourceSteelPipeBombParts_doughsDesc"/>
+
+    <!-- Overrides to extended base class -->
+  	<property name="Material" value="MresourceForgedSteel"/>
+  	<property name="EconomicValue" value="24"/> <!-- DOUGH: 2x iron than iron -->
+  </item>
+
+  <item name="resourceBrassPipeBombParts_doughs">
+    <property name="Extends" value="resourceMetalPipe"/>
+    <!-- New properties -->
+    <property name="CustomIcon" value="resourceMetalPipe"/>
+    <property name="CustomIconTint" value="f4d03f"/> <!-- DOUGH: yellow to look more brassy -->
+    <property name="TintColor" value="244,208,63"/> <!-- DOUGH: RGB. Tints the item in the hand -->
+    <property name="DescriptionKey" value="resourceBrassPipeBombParts_doughsDesc"/>
+
+    <!-- Overrides to extended base class -->
+    <property name="Material" value="MresourceScrapBrassMedium"/>
+    <property name="Stacknumber" value="500"/> <!-- STK resource -->
+    <property name="EconomicValue" value="24"/> <!-- DOUGH: 1.5x iron than iron -->
+  </item>
+
+  <item name="resourcePlasticPipeBombParts_doughs">
+    <property name="Extends" value="resourceMetalPipe"/>
+    <!-- New properties -->
+    <property name="CustomIcon" value="resourceMetalPipe"/>
+    <property name="CustomIconTint" value="85c1e9"/> <!-- DOUGH: Make look more plasticish -->
+    <property name="TintColor" value="133,193,233"/> <!-- DOUGH: RGB. Tints the item in the hand -->
+    <property name="DescriptionKey" value="resourcePlasticPipeBombParts_doughsDesc"/>
+
+    <!-- Overrides to extended base class -->
+    <property name="Material" value="MresourceScrapPolymers"/>
+    <property name="EconomicValue" value="10"/>
+  </item>
+
+</append>
+
+<append xpath="/items">
+  <item name="thrownAmmoPipeBombSteel_doughs">
+    <property name="Extends" value="thrownAmmoPipeBomb"/>
+    <!-- New properties -->
+    <property name="CustomIcon" value="thrownAmmoPipeBomb"/>
+    <property name="CustomIconTint" value="ffffff"/> <!-- DOUGH: lighten to vanilla color look more steelish -->
+    <property name="TintColor" value="255,255,255"/> <!-- DOUGH: RGB. Tints the item in the hand -->
+    <property name="DescriptionKey" value="thrownAmmoPipeBombSteel_doughsDesc"/>
+    <property name="EconomicValue" value="51"/> <!-- DOUGH: Extended base class = 41 -->
+
+    <!-- Apparently DamageBonus is multiplicative  -->
+    <!-- metal, stone, earth, wood, water, cloth, glass, organic -->
+    <property name="Explosion.DamageBonus.wood" value="1.5"/>
+    <property name="Explosion.DamageBonus.metal" value=".5"/>
+
+    <!-- Overrides to extended base class -->
+  	<property name="Material" value="Mmetal"/>
+  	<property name="Explosion.ParticleIndex" value="12"/>
+  	<property name="Explosion.RadiusBlocks" value="5"/> <!-- DOUGH: Extended base class = 4 -->
+  	<property name="Explosion.RadiusEntities" value="6"/> <!-- DOUGH: Extended base class = 4 -->
+  	<property name="Explosion.DamageBonus.earth" value="1.5"/> <!-- DOUGH: Extended base class = 0 -->
+  	<property name="Explosion.DamageBonus.water" value="0"/>
+ 
+    <property name="Explosion.BlastPower" value="75"/> <!-- DOUGH: Extended base class = 75 (int,100) how far ragdolls and such are flung -->
+  
+  	<property name="UnlockedBy" value="craftingExplosives"/>
+  	<property class="Action0">
+  		<property name="Class" value="ThrowAway"/>
+  		<!-- <property name="Hitmask_override" value="Arrow"/> unfortunately this cannot work without a serious rewrite of the hitmask system -->
+  		<property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+  		<property name="Throw_strength_default" value="7"/> <!-- DOUGH: Extended base class = 8 -->
+  		<property name="Throw_strength_max" value="50"/> <!-- DOUGH: Extended base class = 50 -->
+  		<property name="Max_strain_time" value="1.25"/>
+  		<property name="Sound_start" value="swoosh"/>
+  		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+  	</property>
+  	<property class="Action1"> <!-- UseAction -->
+  		<property name="Class" value="Activate"/>
+  		<property name="Delay" value="1"/> <!-- obsolete if rounds per minute exists -->
+  	</property>
+  	<property name="ThrowableDecoy" value="true"/>
+  	<effect_group tiered="false">
+  		<passive_effect name="BlockDamage" operation="base_set" value="100"/> <!-- DOUGH: Extended base class = 5 -->
+      <display_value name="dExDamageBlock" value="100"/> <!-- DOUGH: Extended base class = 5 -->
+  		<!-- adding 10% damage because it's impossible to place explosives inside an entity where it would do the exact damage -->
+  		<passive_effect name="EntityDamage" operation="base_set" value="440"/> <!-- DOUGH: Extended base class = 253 -->
+      <display_value name="dExDamageEntity" value="400"/> <!-- DOUGH: Extended base class = 230 -->
+  		<display_value name="dExRadius" value="5"/> <!-- DOUGH: Extended base class = 4 -->
+  		<display_value name="dFuseTime" value="4"/>
+  	</effect_group>
+  </item>
+</append>
+
+<append xpath="/items">
+  <item name="thrownAmmoPipeBombBrass_doughs">
+    <property name="Extends" value="thrownAmmoPipeBomb"/>
+    <!-- New properties -->
+    <property name="CustomIcon" value="thrownAmmoPipeBomb"/>
+    <property name="CustomIconTint" value="f4d03f"/> <!-- DOUGH: yellow to look more brassy -->
+    <property name="TintColor" value="244,208,63"/> <!-- DOUGH: RGB. Tints the item in the hand -->
+    <property name="DescriptionKey" value="thrownAmmoPipeBombBrass_doughsDesc"/>
+    <property name="EconomicValue" value="35"/> <!-- DOUGH: Extended base class = 41 -->
+
+    <!-- Apparently DamageBonus is multiplicative  -->
+    <!-- metal, stone, earth, wood, water, cloth, glass, organic -->
+    <property name="Explosion.DamageBonus.wood" value="1.5"/>
+    <property name="Explosion.DamageBonus.metal" value=".2"/>
+
+    <!-- Overrides to extended base class -->
+  	<property name="Material" value="Mmetal"/>
+  	<property name="Explosion.ParticleIndex" value="12"/>
+  	<property name="Explosion.RadiusBlocks" value="3"/> <!-- DOUGH: Extended base class = 4 -->
+  	<property name="Explosion.RadiusEntities" value="4"/> <!-- DOUGH: Extended base class = 4 -->
+  	<property name="Explosion.DamageBonus.earth" value="1.3"/> <!-- DOUGH: Extended base class = 0 -->
+  	<property name="Explosion.DamageBonus.water" value="0"/>
+
+    <property name="Explosion.BlastPower" value="39"/> <!-- DOUGH: Extended base class = 75 (int,100) how far ragdolls and such are flung -->
+
+  	<property name="UnlockedBy" value="craftingExplosives"/>
+  	<property class="Action0">
+  		<property name="Class" value="ThrowAway"/>
+  		<!-- <property name="Hitmask_override" value="Arrow"/> unfortunately this cannot work without a serious rewrite of the hitmask system -->
+  		<property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+  		<property name="Throw_strength_default" value="8"/> <!-- DOUGH: Extended base class = 8 -->
+  		<property name="Throw_strength_max" value="60"/> <!-- DOUGH: Extended base class = 50 -->
+  		<property name="Max_strain_time" value="1.25"/>
+  		<property name="Sound_start" value="swoosh"/>
+  		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+  	</property>
+  	<property class="Action1"> <!-- UseAction -->
+  		<property name="Class" value="Activate"/>
+  		<property name="Delay" value="1"/> <!-- obsolete if rounds per minute exists -->
+  	</property>
+  	<property name="ThrowableDecoy" value="true"/>
+  	<effect_group tiered="false">
+  		<passive_effect name="BlockDamage" operation="base_set" value="50"/> <!-- DOUGH: Extended base class = 5 -->
+      <display_value name="dExDamageBlock" value="50"/> <!-- DOUGH: Extended base class = 5 -->
+  		<!-- adding 10% damage because it's impossible to place explosives inside an entity where it would do the exact damage -->
+  		<passive_effect name="EntityDamage" operation="base_set" value="187"/> <!-- DOUGH: Extended base class = 253 -->
+      <display_value name="dExDamageEntity" value="170"/> <!-- DOUGH: Extended base class = 230 -->
+  		<display_value name="dExRadius" value="3"/> <!-- DOUGH: Extended base class = 4 -->
+  		<display_value name="dFuseTime" value="4"/>
+  	</effect_group>
+  </item>
+</append>
+
+<!-- DOUGH: Item is more of a stun -->
+<append xpath="/items">
+  <item name="thrownAmmoPipeBombPlastic_doughs">
+    <property name="Extends" value="thrownAmmoPipeBomb"/>
+    <!-- New properties -->
+    <property name="CustomIcon" value="thrownAmmoPipeBomb"/>
+    <property name="CustomIconTint" value="85c1e9"/> <!-- DOUGH: Make look more plasticish -->
+    <property name="TintColor" value="133,193,233"/> <!-- DOUGH: RGB. Tints the item in the hand -->
+    <property name="DescriptionKey" value="thrownAmmoPipeBombPlastic_doughsDesc"/>
+    <property name="EconomicValue" value="21"/> <!-- DOUGH: Extended base class = 41 -->
+
+    <!-- Apparently DamageBonus is multiplicative  -->
+    <!-- metal, stone, earth, wood, water, cloth, glass, organic -->
+    <property name="Explosion.DamageBonus.glass" value="2"/> <!-- DOUGH: Its weak so make sure break fragile things -->
+    <property name="Explosion.DamageBonus.organic" value="2"/> <!-- DOUGH: Its weak so make sure break fragile things -->
+
+    <!-- Overrides to extended base class -->
+  	<property name="Material" value="Mmetal"/>
+  	<property name="Explosion.ParticleIndex" value="12"/>
+  	<property name="Explosion.RadiusBlocks" value="2"/> <!-- DOUGH: Extended base class = 4 -->
+  	<property name="Explosion.RadiusEntities" value="3"/> <!-- DOUGH: Extended base class = 4 -->
+    <property name="Explosion.DamageBonus.earth" value="1"/> <!-- DOUGH: Extended base class = 0 -->
+    <property name="Explosion.DamageBonus.water" value="0"/>
+    <property name="Explosion.DamageBonus.metal" value="0"/>
+  	<property name="Explosion.DamageBonus.wood" value="0"/>
+    <property name="Explosion.BlastPower" value="20"/> <!-- DOUGH: Extended base class = 75 (int,100) how far ragdolls and such are flung -->
+
+  	<property name="UnlockedBy" value="craftingExplosives"/>
+  	<property class="Action0">
+  		<property name="Class" value="ThrowAway"/>
+  		<!-- <property name="Hitmask_override" value="Arrow"/> unfortunately this cannot work without a serious rewrite of the hitmask system -->
+  		<property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+  		<property name="Throw_strength_default" value="15"/> <!-- DOUGH: Extended base class = 8 -->
+  		<property name="Throw_strength_max" value="70"/> <!-- DOUGH: Extended base class = 50 -->
+  		<property name="Max_strain_time" value="1.25"/>
+
+  		<property name="Sound_start" value="swoosh"/>
+  		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+  	</property>
+  	<property class="Action1"> <!-- UseAction -->
+  		<property name="Class" value="Activate"/>
+  		<property name="Delay" value="1"/> <!-- obsolete if rounds per minute exists -->
+  	</property>
+  	<property name="ThrowableDecoy" value="true"/>
+  	<effect_group tiered="false">
+  		<passive_effect name="BlockDamage" operation="base_set" value="20"/> <!-- DOUGH: Extended base class = 5 -->
+      <display_value name="dExDamageBlock" value="20"/> <!-- DOUGH: Extended base class = 5 -->
+  		<!-- adding 10% damage because it's impossible to place explosives inside an entity where it would do the exact damage -->
+  		<passive_effect name="EntityDamage" operation="base_set" value="90"/> <!-- DOUGH: Extended base class = 253 -->
+      <display_value name="dExDamageEntity" value="90"/> <!-- DOUGH: Extended base class = 230 -->
+  		<display_value name="dExRadius" value="2"/> <!-- DOUGH: Extended base class = 4 -->
+  		<display_value name="dFuseTime" value="4"/>
+  	</effect_group>
+  </item>
+</append>
+
+</configs>

@@ -1,0 +1,23 @@
+<configs>
+
+  <append xpath="/recipes">
+
+    <!--
+    ##########
+    Grenades
+    ########## -->
+    <recipe name="thrownGrenadeSteel_doughs" count="1" craft_time="16" craft_area="workbench" tags="learnable,workbenchCrafting">
+      <ingredient name="thrownGrenade" count="1"/>
+    	<ingredient name="resourceForgedSteel" count="1"/>
+    	<ingredient name="resourceBuckshot" count="3"/>
+    </recipe>
+
+    <recipe name="thrownGrenadeContactSteel_doughs" count="1" craft_time="20" craft_area="workbench" tags="learnable,workbenchCrafting">
+      <ingredient name="thrownGrenadeContact" count="1"/>
+      <ingredient name="resourceForgedSteel" count="1"/>
+      <ingredient name="resourceBuckshot" count="3"/>
+    </recipe>
+
+  </append>
+
+</configs>

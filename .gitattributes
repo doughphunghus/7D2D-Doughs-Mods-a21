@@ -7,3 +7,7 @@
 .gitignore      export-ignore
 /dev            export-ignore
 *.sh  export-ignore
+
+# Temp Exclusions
+/Doughs-Water-MiniOverhaul/
+/Doughs-Z-FaceOfSatan/

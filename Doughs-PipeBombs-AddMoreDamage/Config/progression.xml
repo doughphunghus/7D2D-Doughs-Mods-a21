@@ -1,0 +1,17 @@
+<configs>
+      
+  <!-- Add to display list/append to unlockable list/append to unlocked pop up msg -->
+  <csv xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT1-1,explosivesT1-2,explosivesT1-3']/@icon" delim="," op="add" >thrownAmmoPipeBombPlastic_doughs,thrownAmmoPipeBombBrass_doughs,thrownAmmoPipeBombSteel_doughs</csv>
+  <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT1-1,explosivesT1-2,explosivesT1-3']">
+    <unlock_entry item="thrownAmmoPipeBombPlastic_doughs" unlock_tier="1" />
+    <unlock_entry item="thrownAmmoPipeBombBrass_doughs" unlock_tier="1" />
+    <unlock_entry item="thrownAmmoPipeBombSteel_doughs" unlock_tier="1" />
+  </append>
+
+  <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group">
+    <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="thrownAmmoPipeBombPlastic_doughs"/>
+	  <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="thrownAmmoPipeBombBrass_doughs"/>
+	  <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="thrownAmmoPipeBombSteel_doughs"/>
+  </append>
+
+</configs>

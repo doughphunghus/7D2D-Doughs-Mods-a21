@@ -1,0 +1,107 @@
+<configs>
+<!--
+########## Mod vanilla items ##########
+-->
+
+<!-- No Changes -->
+  
+<!--
+########## New items ##########
+-->
+<append xpath="/items">
+  <item name="thrownGrenadeSteel_doughs">
+  	<property name="Extends" value="thrownGrenade" param1="ExplodeOnHit"/>
+  	<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Grenade/GrenadePrefab.prefab"/>
+  	<property name="UnlockedBy" value="craftingExplosives"/>
+  	<property name="DisplayType" value="ammoGrenade"/>
+
+    <!-- New properties -->
+    <property name="CustomIcon" value="thrownGrenade"/>
+    <property name="CustomIconTint" value="999966"/> <!-- DOUGH: Olive-Greyer -->
+    <property name="TintColor" value="153, 153, 102"/> <!-- DOUGH: RGB. Tints the item in the hand. Looks good. Keep it -->
+    <property name="DescriptionKey" value="thrownGrenadeSteel_doughsDesc"/>
+
+    <!-- Overrides to extended base class -->
+  	<property name="Material" value="MresourceForgedSteel"/>
+  	<property name="EconomicValue" value="80"/> <!-- DOUGH: 2x value -->
+
+    <!-- Want this to do block damage -->
+    <property name="Explosion.RadiusBlocks" value="6"/>
+  	<property name="Explosion.RadiusEntities" value="8"/>
+  	<property name="Explosion.DamageBonus.earth" value="2"/>
+  	<property name="Explosion.DamageBonus.water" value="0"/>
+    <property name="Explosion.DamageBonus.stone" value="2"/>
+  	<property name="Explosion.DamageBonus.metal" value="1"/>
+  	<property name="Explosion.DamageBonus.wood" value="3"/>
+
+    <!-- Make them harder to throw. Also adding this if we want to amp up the sound --> 
+    <property class="Action0">
+      <property name="Class" value="ThrowAway"/>
+      <!-- <property name="Hitmask_override" value="Arrow"/> unfortunately this cannot work without a serious rewrite of the hitmask system -->
+      <property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+      <property name="Throw_strength_default" value="8"/>
+      <property name="Throw_strength_max" value="40"/> <!-- DOUGH: Default 50 -->
+      <property name="Max_strain_time" value="1.25"/>
+      <property name="Sound_start" value="grenade_throw"/>
+      <property name="Gravity" value="-5"/>
+      <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+    </property>
+
+    <effect_group tiered="false">
+      <passive_effect name="BlockDamage" operation="base_set" value="100"/><display_value name="dExDamageBlock" value="100"/> <!-- DOUGH: 10x value -->
+      <passive_effect name="EntityDamage" operation="base_set" value="441"/><display_value name="dExDamageEntity" value="410"/> <!-- DOUGH: a little more value -->
+      <display_value name="dExRadius" value="8"/>
+      <display_value name="dFuseTime" value="3"/>
+    </effect_group>
+  </item>
+
+  <!-- DOUGH: Basically the same as grenade, but contact + material + color -->
+  <item name="thrownGrenadeContactSteel_doughs">
+    <property name="Extends" value="thrownGrenadeContact" param1="ExplodeOnHit"/>
+    <property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Grenade/GrenadePrefab.prefab"/>
+    <property name="UnlockedBy" value="craftingExplosives"/>
+    <property name="DisplayType" value="ammoGrenadeContact"/>
+
+    <!-- New properties -->
+    <property name="CustomIcon" value="thrownGrenadeContact"/>
+    <property name="CustomIconTint" value="990000"/> <!-- DOUGH: Red tint overlay -->
+    <property name="TintColor" value="153, 0, 0"/> <!-- DOUGH: RGB. Tints the item in the hand. Looks good. Keep it -->
+    <property name="DescriptionKey" value="thrownGrenadeContactSteel_doughsDesc"/>
+
+    <!-- Overrides to extended base class -->
+    <property name="Material" value="MresourceForgedSteel"/>
+    <property name="EconomicValue" value="80"/> <!-- DOUGH: 2x value -->
+    <property name="ExplodeOnHit" value="true"/>
+
+    <!-- Want this to do block damage -->
+    <property name="Explosion.RadiusBlocks" value="6"/>
+    <property name="Explosion.RadiusEntities" value="8"/>
+    <property name="Explosion.DamageBonus.earth" value="2"/>
+    <property name="Explosion.DamageBonus.water" value="0"/>
+    <property name="Explosion.DamageBonus.stone" value="2"/>
+    <property name="Explosion.DamageBonus.metal" value="1"/>
+    <property name="Explosion.DamageBonus.wood" value="3"/>
+
+    <!-- Make them harder to throw. Also adding this if we want to amp up the sound --> 
+    <property class="Action0">
+      <property name="Class" value="ThrowAway"/>
+      <!-- <property name="Hitmask_override" value="Arrow"/> unfortunately this cannot work without a serious rewrite of the hitmask system -->
+      <property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+      <property name="Throw_strength_default" value="8"/>
+      <property name="Throw_strength_max" value="40"/> <!-- DOUGH: Default 50 -->
+      <property name="Max_strain_time" value="1.25"/>
+      <property name="Sound_start" value="grenade_throw"/>
+      <property name="Gravity" value="-5"/>
+      <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+    </property>
+    
+    <effect_group tiered="false">
+      <passive_effect name="BlockDamage" operation="base_set" value="100"/><display_value name="dExDamageBlock" value="100"/> <!-- DOUGH: 10x value -->
+      <passive_effect name="EntityDamage" operation="base_set" value="441"/><display_value name="dExDamageEntity" value="410"/> <!-- DOUGH: a little more value -->
+      <display_value name="dExRadius" value="8"/>
+      <display_value name="dFuseTime" value="3"/>
+    </effect_group>
+  </item>
+</append>
+
+</configs>

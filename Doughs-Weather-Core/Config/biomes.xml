@@ -1,4 +1,4 @@
-<Doughs>
+<configs>
 
 <!--
 ########## Mod vanilla items ##########
@@ -346,4 +346,4 @@ Note: Setting this (and cloud cover, etc) too much makes it impossible to see an
 
 <!-- Purpose: Wind looks good -->
 
-</Doughs>
+</configs>

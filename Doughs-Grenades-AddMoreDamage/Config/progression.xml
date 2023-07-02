@@ -1,0 +1,29 @@
+<configs>
+  <!-- NOTE: FOr all of these, evern though soem are more powerful than others, the recipes
+  to make them "gates" them. Making them unlock in sequence with how TFP set the unlock_level
+  and tied it to the unlock_tier and teh passive_effect makes adding new items cumbersome, 
+  so I'm not going to do it. Unlocking "pipe bomb" unlocks "all pipe bombs"... you just are unlikely 
+  able to make them... though loot and buy are always possibilities.
+  -->
+
+  <!-- ITEM: thrownGrenadeSteel_doughs -->
+  <!-- Add to display list/append to unlockable list/append to unlocked pop up msg -->
+  <csv xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT1-1,explosivesT1-2,explosivesT1-3']/@icon" delim="," op="add" >thrownGrenadeSteel_doughs</csv>
+  <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT1-1,explosivesT1-2,explosivesT1-3']">
+    <unlock_entry item="thrownGrenadeSteel_doughs" unlock_tier="2" />
+  </append>
+  <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group">
+    <passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,100" value="1" tags="thrownGrenadeSteel_doughs"/>
+  </append>
+
+
+  <!-- ITEM: thrownGrenadeContactSteel_doughs -->
+  <!-- Add to display list/append to unlockable list/append to unlocked pop up msg -->
+  <csv xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT2-1,explosivesT2-2,explosivesT2-3']/@icon" delim="," op="add" >thrownGrenadeContactSteel_doughs</csv>
+  <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT2-1,explosivesT2-2,explosivesT2-3']">
+    <unlock_entry item="thrownGrenadeContactSteel_doughs" unlock_tier="2" />
+  </append>
+  <append xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group">
+    <passive_effect name="RecipeTagUnlocked" operation="base_set" level="16,100" value="1" tags="thrownGrenadeContactSteel_doughs"/>
+  </append>
+</configs>

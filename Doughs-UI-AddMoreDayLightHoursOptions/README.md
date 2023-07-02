@@ -4,7 +4,7 @@
 Apparently some other people have simiar modlets containing this functionality (and possibly more):
 [Claymores Modlets](https://community.7daystodie.com/topic/15031-claymores-modlets/)
 
-Also: for game version a19+: I recommed if you are looking for a very dark nighttime to also look into loading this modlet: [Doughs-Buff-Ambiance-DarkerNights](https://github.com/doughphunghus/Doughs-Buff-Ambiance-DarkerNights)
+Also: for game version a19+: I recommed if you are looking for a very dark nighttime to also look into loading this modlet: [Doughs-Ambiance-DarkerNights](https://github.com/doughphunghus/)
 
 **Description:**
 Adds additional options to the starting game UI to allow for 0 hours of daylight to 24

@@ -1,0 +1,25 @@
+<configs>
+  <!--
+  ########## Add items to traders##########
+  -->
+
+  <!-- Add new items to traders
+  Keep the volume of higher value items low to encourage crafting
+  -->
+  <append xpath="/traders/trader_item_groups/trader_item_group[@name='thrownAmmo']">
+    <item name="thrownAmmoPipeBombSteel_doughs" count="1,4"/>
+    <item name="thrownAmmoPipeBombBrass_doughs" count="1,8"/>
+    <item name="thrownAmmoPipeBombPlastic_doughs" count="1,12"/>
+  </append>
+
+  <!-- Add new items to traders
+  Make parts 1/2 of items. Because these are spare parts. The rest the trader used
+  to make the items ;)
+  -->
+  <append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoSupplies']">
+    <item name="resourceSteelPipeBombParts_doughs" count="1,2"/>
+    <item name="resourceBrassPipeBombParts_doughs" count="1,4"/>
+    <item name="resourcePlasticPipeBombParts_doughs" count="1,6"/>
+  </append>
+
+</configs>

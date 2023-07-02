@@ -1,0 +1,5 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+thrownGrenadeSteel_doughs,items,Gun,,,"Steel Grenade (Ammo)",,,,,,,,,,,,,,
+thrownGrenadeSteel_doughsDesc,items,Gun,,,"Prime the grenade with the secondary action & throw it with the primary action.\nBe very careful!\nDue to an extra steel layer these are heavier so they are harder to throw. They can also do damage to the environment.",,,,,,,,,,,,,,
+thrownGrenadeContactSteel_doughs,items,Gun,,,"Steel Contact Grenade (Ammo)",,,,,,,,,,,,,,
+thrownGrenadeContactSteel_doughsDesc,items,Gun,,,"Contact-fused grenades are volatile devices that should not be dropped carelessly. Throw with the primary action.\nBe very careful!\nDue to an extra steel layer these are heavier so they are harder to throw. They can also do damage to the environment.",,,,,,,,,,,,,,

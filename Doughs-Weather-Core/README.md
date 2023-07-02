@@ -1,7 +1,7 @@
 **For game**: [7 Days to Die](https://7daystodie.com)
 
 **Description:**
-This modlet makes the weather more challenging to deal with.
+This modlet makes the weather more challenging to deal with BUT does not add effects to the player beyond what teh game normally adds. It adds "more bad weather" and "lower visibility" not "player debuffs/afflictions.
 It makes the assumption that the apocalypse recently occurred and the air is very dirty.
 The winds of nuclear annihilation have not calmed....or something like that.
 

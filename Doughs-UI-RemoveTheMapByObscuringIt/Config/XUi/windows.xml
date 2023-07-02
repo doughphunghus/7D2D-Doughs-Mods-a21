@@ -1,0 +1,73 @@
+<Doughs>
+  <!-- DOUGH: Chose full WHITE to discourage people looking at it, as well as it may be the only
+  color that actually works well as a lot of text is white. Black/transparent seems to bleed through
+
+  NOTE: Chose to block out map over trying to remove navigating to the map because kep mapping, etc
+  is too hard to think about blocking, and its seeme the game really wants to render it and throws
+  errors if you remove things like this.
+  -->
+
+  <!-- DOUGH: Remove interacting with the map to place markers.
+  Default: style="press, scroll, hover"
+  Note: Using "" gives an error when starting up, so set to scroll, then set on_drag = false
+    press = Allows setting waypoints
+  -->
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/@style">scroll</set>
+  <setattribute xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']" name="on_drag">false</setattribute>
+
+  <!-- DOUGH: Block the map by making the clipping panel not invisible
+  Note: This blocks all statistics on the map too :(
+  Almost Wish we could not block them.
+  Note: <panel name="clippingPanel" -> clippingsoftness="4,4" seems to be the soft edging in the inside of the main map window, like a soft fading in"
+  Note: <panel name="clippingPanel" -> disableautobackground="true" seems to have no effect anymore if true/false
+  -->
+  <!-- This partialy wipes out both the map header and map -->
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/sprite[@name='backgroundMain']/@color">[white]</set>
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/sprite[@name='backgroundMain']/@fillcenter">true</set>
+
+  <!-- This wipes out the map header -->
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/rect[@name='toolbar']/sprite[@type='sliced']/@color">[white]</set>
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/rect[@name='toolbar']/sprite[@type='sliced']/@fillcenter">true</set>
+
+  <!-- a20: Can still see stats in the header... make font tiny and they fade away-->
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/rect[@name='toolbar']/label[@name='playerPos']/@font_size">4</set>
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/rect[@name='toolbar']/label[@name='bedrollPos']/@font_size">4</set>
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/rect[@name='toolbar']/label[@name='cursorPos']/@font_size">4</set>
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/rect[@name='toolbar']/label[@name='waypointDistance']/@font_size">4</set>
+
+  <!-- This wipes out the map as much as possible, if used alone you can still see it -->
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/panel[@name='clippingPanel']/@disableautobackground">false</set>
+  <!-- setattribute = adds an attribute that does not exist! -->
+  <setattribute xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/panel[@name='clippingPanel']" name="backgroundcolor">[white]</setattribute>
+
+
+  <!-- a20: Swap these layers, otherwise you can see the map just barely. --> 
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/sprite[@name='backgroundMain']/@depth">2</set>
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/texture[@name='mapViewTexture']/@depth">1</set>
+
+  <!-- a20: Add a label to the map so its obvious it looks like this on purpose. Stil kinda hard to see but works -->
+  <append xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/rect[@name='content']">
+    <label depth="1" name="doughsModInfoLabel" pos="40,26" width="250" height="28" text="MAP OBSCURED BY MOD: Remove The Map" font_size="26" color="[white]"/>
+  </append>
+
+
+<!-- 
+  <setattribute xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/texture[@name='mapViewTexture']" name="color">[transparent]</setattribute>
+-->
+
+  <!-- This wipes out the map bottom left hand corner navigation data
+  AND also seems to trigger it all to work properly!? otherwise you can still see the map kinda
+  -->
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/rect[@name='content']/sprite[@name='dayTimeIcon']/@color">[transparent]</set>
+  <setattribute xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/rect[@name='content']/label[@name='dayTimeLabel']" name="color">[transparent]</setattribute>
+  
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/rect[@name='content']/sprite[@name='tempIcon']/@color">[transparent]</set>
+  <setattribute xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/rect[@name='content']/label[@name='tempLabel']" name="color">[transparent]</setattribute>
+  
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/rect[@name='content']/sprite[@name='windIcon']/@color">[transparent]</set>
+  <setattribute xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/rect[@name='content']/label[@name='windLabel']" name="color">[transparent]</setattribute>
+  
+  <set xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/rect[@name='content']/sprite[@name='elevIcon']/@color">[transparent]</set>
+  <setattribute xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/rect[@name='content']/label[@name='elevLabel']" name="color">[transparent]</setattribute>
+
+</Doughs>

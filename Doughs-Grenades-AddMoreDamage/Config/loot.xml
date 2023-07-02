@@ -1,0 +1,23 @@
+<configs>
+  <!--
+  ########## Mod vanilla items ##########
+  -->
+
+  <!-- Add new grenades everywhere vanilla ones can be found -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Demolitionist']">
+    <item name="thrownGrenadeSteel_doughs" prob="0.5" count="1,2"/>
+    <item name="thrownGrenadeContactSteel_doughs" prob="0.5" count="1,2"/>
+  </append>
+
+  <append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Demolitionist']">
+    <item name="thrownGrenadeSteel_doughs" prob="0.8" count="1,2"/>
+    <item name="thrownGrenadeContactSteel_doughs" prob="0.8" count="1,2"/>
+  </append>
+
+  <!-- Trader quest rewards -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']">
+    <item name="thrownGrenadeSteel_doughs" count="6" loot_prob_template="QuestT2Prob"/>
+    <item name="thrownGrenadeContactSteel_doughs" count="6" loot_prob_template="QuestT3Prob"/>
+  </append>
+
+</configs>

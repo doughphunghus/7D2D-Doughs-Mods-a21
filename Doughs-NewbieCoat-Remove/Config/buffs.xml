@@ -1,4 +1,4 @@
-<Doughs>
+<configs>
 
 <!--
 Remove NewbieCoat buff activation
@@ -11,4 +11,4 @@ a20: Looks like this in vanilla
 -->
 <set xpath="/buffs/buff[@name='buffNewbieCoat']/effect_group/triggered_effect[@action='RemoveBuff']/requirement[@name='PlayerLevel']/@value">0</set>
 
-</Doughs>
+</configs>
