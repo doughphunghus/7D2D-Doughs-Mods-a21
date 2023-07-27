@@ -1,0 +1,50 @@
+<configs>
+  <!--
+  ########## New items ##########
+  -->
+
+  <!-- DOUGH: Make Flashlights require batteries, light and Flashlights shell -->
+  <remove xpath="/recipes/recipe[@name='meleeToolFlashlight02']/ingredient[@name='resourceForgedIron']" />
+  <remove xpath="/recipes/recipe[@name='meleeToolFlashlight02']/ingredient[@name='resourceScrapPolymers']" />
+
+  <append xpath="/recipes/recipe[@name='meleeToolFlashlight02']">
+    	<ingredient name="meleeToolEmptyFlashlight_doughs" count="1"/>
+    	<ingredient name="resourceCellSizeC_doughs" count="4"/>
+      <ingredient name="resourceSmallLightBulb_doughs" count="1"/> <!-- was 2 ... seemed a pain to justify -->
+  </append>
+
+  <!-- DOUGH: Make lantern require batteries, remove ...headlight (takes oil...it is a oil powered lamp)? -->
+  <remove xpath="/recipes/recipe[@name='lanternDecorLightBlockVariantHelper']/ingredient[@name='resourceHeadlight']" />
+  <remove xpath="/recipes/recipe[@name='lanternDecorLightBlockVariantHelper']/ingredient[@name='resourceOil']" />
+
+  <append xpath="/recipes/recipe[@name='lanternDecorLightBlockVariantHelper']">
+      <ingredient name="resourceSmallLightBulb_doughs" count="4"/> <!-- Make 4 because it uses the big headlight -->
+      <ingredient name="resourceCellSizeC_doughs" count="4"/>
+  </append>
+
+  <!-- DOUGH: Cant make scrapping my flashlights (looted) give batteries
+   sooo...take flashlights apart? hmmm...craft batteries?
+  -->
+  <append xpath="/recipes">
+
+    <recipe name="resourceSmallLightBulb_doughs" count="1"> <!-- 1/2 back ;) -->
+      <ingredient name="lanternDecorLightBlockVariantHelper" count="1"/>
+    </recipe>
+
+    <recipe name="resourceCellSizeC_doughs" count="1"> <!-- 1/2 back ;) -->
+    	<ingredient name="meleeToolFlashlight02" count="1"/>
+    </recipe>
+
+    <recipe name="resourceSmallLightBulb_doughs" count="1">
+      <ingredient name="meleeToolFlashlight02" count="1"/>
+    </recipe>
+
+    <recipe name="carBattery" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+      <ingredient name="resourceCellSizeC_doughs" count="12"/> <!-- They're really powerful ;) -->
+      <ingredient name="resourceScrapPolymers" count="6"/>
+      <ingredient name="resourceElectricParts" count="2"/>
+      <ingredient name="resourceDuctTape" count="2"/>
+    </recipe>
+
+  </append>
+</configs>

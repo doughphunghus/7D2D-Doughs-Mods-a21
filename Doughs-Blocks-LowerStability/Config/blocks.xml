@@ -1,0 +1,24 @@
+<configs>
+
+  <!--
+  Purposefully make "burnt wood" really freaking weak.
+  First: define a new super weak material
+  Second: set it as the material on burnt blocks.
+
+  NOTE: No burnt wood blocks have the material set
+  a20: was burntWoodBlock, but making burntWood to get more burnt wood items
+  -->
+  <append xpath="/blocks/block[starts-with(@name,'burntWood')]">
+    <property name="Material" value="Mburntwood_weak_doughs"/>
+
+    <!-- These all make them traps? Step and fall?-->
+    <property name="Class" value="TrapDoor"/>
+  	<property name="TriggerDelay" value="0.25"/>
+    <property name="TriggerSound" value="stepwoodsmallcreak"/>
+  	<property name="Shape" value="New"/>
+  	<property name="Path" value="solid"/>
+    <drop event="Fall" count="0" prob="0"/>
+    <property name="ShowModelOnFall" value="true"/>
+  </append>
+
+</configs>

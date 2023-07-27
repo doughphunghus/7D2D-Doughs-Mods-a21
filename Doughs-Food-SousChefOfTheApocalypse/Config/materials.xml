@@ -1,0 +1,20 @@
+<config>
+
+  <append xpath="/materials">
+
+    <material id="MresourceMeatScraps_doughs">
+      <property name="damage_category" value="metal"/>
+      <property name="surface_category" value="metal"/>
+      <property name="forge_category" value="foodMeatScraps_doughs"/>
+      <property name="Experience" value="2"/>
+    </material>
+
+    <material id="MresourceVegetableScraps_doughs">
+      <property name="damage_category" value="metal"/>
+      <property name="surface_category" value="metal"/>
+      <property name="forge_category" value="foodVegetableScraps_doughs"/>
+      <property name="Experience" value="2"/>
+    </material>
+</append>
+
+</config>

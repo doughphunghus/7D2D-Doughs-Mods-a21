@@ -1,0 +1,85 @@
+<configs>
+  <!--
+  Remove anything giving lights/light mods in loot because MUST CRAFT OR BUY
+  -->
+
+  <!--
+  Remove full flashlights from all lootgroups and lootcontainers
+  -->
+  <remove xpath="/lootcontainers/*/item[@name='modGunFlashlight']" />
+  <remove xpath="/lootcontainers/*/item[@name='modArmorHelmetLight']" />
+  <remove xpath="/lootcontainers/*/item[@name='meleeToolFlashlight02']" />
+
+  <!--
+  Remove light mods from all lootgroups and lootcontainers
+  Set mod_chance = 0!
+  -->
+  <set xpath="/lootcontainers/*/item[@mods='modArmorHelmetLight']/@mod_chance">0</set>
+
+  <!--
+  Put back empty flashlight cases/shells in some loot where flashlights were normally found
+  -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupCarWeaponsTools']">
+    <item name="meleeToolEmptyFlashlight_doughs" loot_prob_template="veryLow" />
+  </append>
+
+  <append xpath="/lootcontainers/lootgroup[@name='groupUtilityItems']">
+    <item name="meleeToolEmptyFlashlight_doughs" loot_prob_template="veryLow" force_prob="true"/>
+  </append>
+
+  <append xpath="/lootcontainers/lootgroup[@name='groupBackpacks02']">
+    <item name="meleeToolEmptyFlashlight_doughs" loot_prob_template="veryLow" force_prob="true"/>
+  </append>
+
+  <append xpath="/lootcontainers/lootgroup[@name='groupDesks02']">
+    <item name="meleeToolEmptyFlashlight_doughs" loot_prob_template="veryLow" force_prob="true"/>
+  </append>
+
+
+  <!--
+  Put batteries and bulbs in the rest of the numbered/common containers flashlights were normally found
+  -->
+  <!-- metal desk -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupDesks02']">
+    <item name="resourceCellSizeC_doughs" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+  </append>
+
+  <!-- suitcase / luggage -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupLuggage01']">
+    <item name="resourceCellSizeC_doughs" count="1,2" loot_prob_template="veryLow" force_prob="true"/>
+  </append>
+
+  <!-- cntNightstandClosed and dressers, wooden desk: pistol, ammo, magazines, books -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupNightstand02']">
+    <item name="resourceCellSizeC_doughs" count="1" loot_prob_template="veryLow" force_prob="true"/>
+  </append>
+
+  <!--
+  Add custom places to find items
+  -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupChemistryStationLoot03']">
+    <item name="resourceCellSizeC_doughs" count="1" loot_prob_template="low" force_prob="true"/>
+    <item name="resourceSmallLightBulb_doughs" count="1" loot_prob_template="low" force_prob="true"/>
+  </append>
+
+  <append xpath="/lootcontainers/lootgroup[@name='groupRareAutomotive']">
+    <item name="resourceCellSizeC_doughs" count="1" />
+    <item name="resourceSmallLightBulb_doughs" count="1" />
+  </append>
+
+  <!-- cntCollapsedWorkbench -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupWorkbenchLoot03']">
+    <item name="resourceCellSizeC_doughs" count="1,2" />
+    <item name="resourceSmallLightBulb_doughs" count="1" />
+    <item name="meleeToolEmptyFlashlight_doughs" count="1" />
+  </append>
+
+
+  <!-- cntToolBoxClosed -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupRollingToolbox03']">
+    <item name="resourceCellSizeC_doughs" count="1,2" loot_prob_template="low" force_prob="true"/>
+    <item name="resourceSmallLightBulb_doughs" count="1" loot_prob_template="veryLow" force_prob="true"/>
+    <item name="meleeToolEmptyFlashlight_doughs" count="1" loot_prob_template="veryLow" force_prob="true"/>
+  </append>
+
+</configs>

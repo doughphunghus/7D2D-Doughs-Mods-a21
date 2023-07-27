@@ -1,0 +1,280 @@
+<config>
+
+  <!-- Have to harvest raw maple. Might be biome specific now? 
+  trees = small -> largest
+  -->
+  <append xpath="/blocks/block[@name='treeBurntMaple01']">
+    <drop event="Harvest" name="foodRawMapleSyrupDrop_doughs" count="1" prob=".3"/>
+  </append>
+  <append xpath="/blocks/block[@name='treeBurntMaple02']">
+    <drop event="Harvest" name="foodRawMapleSyrupDrop_doughs" count="2" prob=".2"/> <!-- ha -->
+  </append>
+  <append xpath="/blocks/block[@name='treeBurntMaple03']">
+    <drop event="Harvest" name="foodRawMapleSyrupDrop_doughs" count="3"/>
+  </append>
+
+  <!-- Have to harvest raw flesh. Make it kinda rare as corpses are everywhere -->
+  <append xpath="/blocks/block[@name='goreBlockHumanCorpse']">
+    <drop event="Destroy" name="foodRawHumanFlesh_doughs" count="1" prob=".1"/>
+  </append>
+
+  <append xpath="/blocks">
+    <!-- NEW blocks... sort of -->
+    <!--  Chives = a small stalk.. whatever works 
+      winter food. Harvest 1 as it will be rare on the landscape
+      NOTE: It looks like... a green ear of corn in the hand!
+    -->
+    <block name="plantedChives3Harvest_doughs">
+      <property name="Extends" value="cropsHarvestableMaster"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="Model" value="Entities/Plants/blueberry_plant_harvestPrefab"/>
+      <property name="DescriptionKey" value="plantedChives3Harvest_doughsDesc"/>
+      <property name="PickupJournalEntry" value="plantedChives3HarvestTip_doughs"/>
+      <property name="CustomIcon" value="plantedSnowberry1"/> <!-- ICON = a book -->
+      <drop event="Harvest" name="foodChives_doughs" count="1" tag="wildCropsHarvest"/>
+      <drop event="Harvest" name="foodChives_doughs" prob="0.5" count="1" tag="bonusCropHarvest"/>
+      <drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+      <property name="SortOrder1" value="B958"/>
+      <property name="SortOrder2" value="0002"/>
+    </block>
+
+    <!--  Terragon = potato "bush" = winter food. Harvest 1 as it will be rare on the landscape -->
+    <block name="plantedTerragon3Harvest_doughs">
+      <property name="Extends" value="cropsHarvestableMaster"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
+      <property name="DescriptionKey" value="plantedTerragon3Harvest_doughsDesc"/>
+      <property name="PickupJournalEntry" value="plantedTerragon3HarvestTip_doughs"/>
+      <property name="CustomIcon" value="plantedPotato3Harvest"/> <!-- ICON = a book -->
+      <drop event="Harvest" name="foodTerragon_doughs" count="1" tag="wildCropsHarvest"/>
+      <drop event="Harvest" name="foodTerragon_doughs" prob="0.5" count="1" tag="bonusCropHarvest"/>
+      <drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+      <property name="SortOrder1" value="B958"/>
+      <property name="SortOrder2" value="0002"/>
+    </block>
+
+    <!-- 
+      WORKSTATIONS 
+    -->
+    <!-- Hydroponics for herbs. because "why not" but MORE IMPORTANTLY: I don't
+      want to have to do all the "growing" plant stuff, and this is a bit unique
+      Make then very low heat dew collectors, basically
+    -->
+    <block name="cntfoodHydroponicsChives_doughs">
+      <property name="Class" value="DewCollector"/>
+      <property name="UnlockedBy" value="cntHydroponicsBasicHerbsSchematic_doughs"/>
+      <property name="WorkstationIcon" value="ui_game_symbol_water"/>
+      <property name="CreativeMode" value="Player"/>
+      <property name="CustomIcon" value="plantHydroponicVertical"/> <!-- DOUGH: added -->
+      <property name="DescriptionKey" value="cntfoodHydroponicsChives_doughsDesc"/>
+      <property name="Material" value="MFuelBarrelPolymer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="Model" value="Entities/Plants/plantHydroponicVerticalPrefab"/> <!--DOUGH: changed-->
+      <property name="MultiBlockDim" value="2,2,1"/> <!--DOUGH: changed-->
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket"/> <!--DOUGH: Added-->
+      <!--<property name="ImposterExchange" value="imposterBlock" param1="116"/> -->
+      <property name="WaterFlow" value="permitted"/>
+      <property name="Place" value="TowardsPlacerInverted"/>
+      <property name="RestrictSubmergedPlacement" value="true"/>
+      <property name="AllowedRotations" value="Basic90"/>
+      <property name="Path" value="solid"/>
+      <property name="IsDecoration" value="true"/>
+      <property name="StabilitySupport" value="false"/>
+      <property name="OpenSound" value="open_workbench"/>
+      <property name="CloseSound" value="close_workbench"/>
+      <property name="ConvertSound" value="bucketfill_water"/>
+      <property name="MinConvertTime" value="64800" /> <!-- 21600 Game Seconds = 6 Game Hours, so 64800 = 3x-->
+      <property name="MaxConvertTime" value="108000" /> <!-- 36000 Game Seconds = 10 Game Hours, so 108000 = 3x-->
+      <property name="ConvertToItem" value="foodChives_doughs" />
+      <property name="EconomicValue" value="5"/> <!-- DOUGH: low price as it makes items that can be used to make more of them -->
+      <property name="EconomicBundleSize" value="1"/>
+      <property name="SellableToTrader" value="true"/> <!-- DOUGH: YES -->
+      <property name="MaxDamage" value="200"/>
+      <property name="HeatMapStrength" value="1"/>
+      <property name="HeatMapTime" value="5000"/>
+      <property name="HeatMapFrequency" value="1000"/>
+      <property class="RepairItems">
+        <property name="resourceScrapPolymers" value="20"/>
+        <property name="resourceHeadlight" value="2"/> <!-- DOUGH: ha ha-->
+        <property name="resourceElectricParts" value="2"/> <!-- DOUGH: ha ha ha ha-->
+      </property>
+      <drop event="Destroy" name="cntfoodHydroponicsChives_doughs" count="1"/>
+      <property name="SortOrder1" value="B281"/>
+      <property name="SortOrder2" value="0100"/>
+      <property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+      <property name="Tags" value="workstationSkill,twitch_workstation"/>
+      <property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+    </block>
+
+    <block name="cntfoodHydroponicsTerragon_doughs">
+      <property name="Class" value="DewCollector"/>
+      <property name="UnlockedBy" value="cntHydroponicsBasicHerbsSchematic_doughs"/>
+      <property name="WorkstationIcon" value="ui_game_symbol_water"/>
+      <property name="CreativeMode" value="Player"/>
+      <property name="CustomIcon" value="plantHydroponicVertical"/> <!-- DOUGH: added -->
+      <property name="DescriptionKey" value="cntfoodHydroponicsTerragon_doughsDesc"/>
+      <property name="Material" value="MFuelBarrelPolymer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="Model" value="Entities/Plants/plantHydroponicVerticalPrefab"/> <!--DOUGH: changed-->
+      <property name="MultiBlockDim" value="2,2,1"/> <!--DOUGH: changed-->
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket"/> <!--DOUGH: Added-->
+      <property name="ImposterExchange" value="imposterBlock" param1="116"/>
+      <property name="WaterFlow" value="permitted"/>
+      <property name="Place" value="TowardsPlacerInverted"/>
+      <property name="RestrictSubmergedPlacement" value="true"/>
+      <property name="AllowedRotations" value="Basic90"/>
+      <property name="Path" value="solid"/>
+      <property name="IsDecoration" value="true"/>
+      <property name="StabilitySupport" value="false"/>
+      <property name="OpenSound" value="open_workbench"/>
+      <property name="CloseSound" value="close_workbench"/>
+      <property name="ConvertSound" value="bucketfill_water"/>
+      <property name="MinConvertTime" value="64800" /> <!-- 21600 Game Seconds = 6 Game Hours, so 64800 = 3x-->
+      <property name="MaxConvertTime" value="108000" /> <!-- 36000 Game Seconds = 10 Game Hours, so 108000 = 3x-->
+      <property name="ConvertToItem" value="foodTerragon_doughs" />
+      <property name="EconomicValue" value="5"/> <!-- DOUGH: low price as it makes items that can be used to make more of them -->
+      <property name="EconomicBundleSize" value="1"/>
+      <property name="SellableToTrader" value="true"/> <!-- DOUGH: YES -->
+      <property name="MaxDamage" value="200"/>
+      <property name="HeatMapStrength" value="1"/>
+      <property name="HeatMapTime" value="5000"/>
+      <property name="HeatMapFrequency" value="1000"/>
+      <property class="RepairItems">
+        <property name="resourceScrapPolymers" value="20"/>
+        <property name="resourceHeadlight" value="2"/> <!-- DOUGH: ha ha-->
+        <property name="resourceElectricParts" value="2"/> <!-- DOUGH: ha ha ha ha-->
+      </property>
+      <drop event="Destroy" name="cntfoodHydroponicsChives_doughs" count="1"/>
+      <property name="SortOrder1" value="B281"/>
+      <property name="SortOrder2" value="0100"/>
+      <property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+      <property name="Tags" value="workstationSkill,twitch_workstation"/>
+      <property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+    </block>
+
+    <!-- 
+      Food Dehydrator. Why? I just had to do it. MAde from cement mixer
+    -->
+    <block name="foodDehydratorSousChefOTA_doughs">
+      <!-- Class -->
+      <property name="Class" value="Workstation"/>
+      <property class="Workstation">
+        <property name="Modules" value="output"/>
+      </property>
+      <property name="UnlockedBy" value="skillSousChefOTA_doughs"/> <!-- Mostly so you can see and read it -->
+      <property name="CustomIcon" value="palletEmptyStack"/> <!-- DOUGH: added -->
+      <property name="DisplayType" value="foodDehydratorSousChefOTA_doughs"/>
+      <!-- UI_Info -->
+      <property name="CreativeMode" value="Player"/>
+      <property name="DescriptionKey" value="foodDehydratorSousChefOTA_doughsDesc"/>
+      <property name="WorkstationIcon" value="ui_game_symbol_hot"/>
+      <property name="WorkstationJournalTip" value="foodDehydratorSousChefOTA_doughsTip"/>
+      <property name="CraftIcon" value="ui_game_symbol_hot"/>
+      <property name="CraftActionName" value="lblContextActionfoodDehydratorSousChefOTA_doughs"/>
+      <property name="Stacknumber" value="1"/>
+      <!-- Visual -->
+      <property name="Material" value="Miron_scrap"/>
+      <property name="Shape" value="ModelEntity"/>
+	    <property name="Model" value="Entities/Industrial/palletsWoodStackPrefab"/>
+      <property name="ModelOffset" value="0,0,0"/>
+      <property name="ImposterDontBlock" value="true"/>
+      <property name="WaterFlow" value="permitted"/>
+      <!-- Placement -->
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Path" value="solid"/>
+      <property name="IsTerrainDecoration" value="true"/>
+      <property name="StabilitySupport" value="true"/>
+      <!-- Value -->
+      <property name="Weight" value="0"/>
+      <property name="EconomicValue" value="2"/>
+      <property name="TraderStageTemplate" value="midTier1"/>
+      <!-- Interaction -->
+      <property name="MaxDamage" value="200"/>
+      <property name="HeatMapStrength" value="1"/>
+      <property name="HeatMapTime" value="5000"/>
+      <property name="HeatMapFrequency" value="1000"/>
+	    <property name="OpenSound" value="door_wood_open"/>
+	    <property name="CloseSound" value="door_wood_close"/>
+      <property name="CraftSound" value="steporganic"/> <!-- DOUGH: putting wet materials in -->
+      <property name="CraftCompleteSound" value="player_bandage"/> <!-- DOUGH: pulling dried materials off-->
+      <property name="TakeDelay" value="15"/>
+      <property class="RepairItems">
+        <property name="resourceCloth" value="2"/>
+        <property name="resourceWood" value="2"/>
+        <property name="resourceNail" value="2"/>
+      </property>
+      <drop event="Harvest" name="resourceScrapIron" count="50" tag="allHarvest"/>
+      <drop event="Harvest" name="resourceWood" count="10" tag="allHarvest"/>
+      <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+      <drop event="Harvest" name="resourceCloth" count="2" tag="salvageHarvest"/>
+      <drop event="Harvest" name="resourceMechanicalParts" count="4" tag="salvageHarvest"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+      <!-- Sorting -->
+      <property name="SortOrder1" value="B281"/>
+      <property name="SortOrder2" value="0400"/>
+      <property name="Group" value="Building,TCScience,advBuilding"/>
+      <property name="Tags" value="workstationSkill,twitch_workstation"/>
+      <property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+    </block>
+
+    <!-- Treasure --> 
+    <block name="cntTreasureChest001SousChefOTA_doughs">
+      	<property name="Extends" value="cntLootChestHero" param1="DescriptionKey"/>
+        <property name="CreativeMode" value="None"/>
+        <property name="LootList" value="cntTreasure001_SousChefOTA_doughs"/> <!-- DOUGH: CUSTOM loot container name -->
+        <property name="CustomIcon" value="cntLootChestHero"/>
+        <property name="CustomIconTint" value="FFBF00"/>
+        <property name="TintColor" value="804141"/>
+        <property name="WaterFlow" value="permitted"/>
+        <property name="IsTerrainDecoration" value="true"/>
+        <property name="DowngradeBlock" value="cntTreasureChest001InsecureSousChefOTA_doughs"/>
+        <property name="SortOrder1" value="B104"/>
+        <property name="SortOrder2" value="0102"/>
+        <property name="Tags" value="buriedTreasure,timecharge"/>
+        <property name="FilterTags" value="MC_helpers,SC_questblocks"/>
+    </block>
+    <!-- Unlocked chest -->
+    <block name="cntTreasureChest001InsecureSousChefOTA_doughs">
+      <property name="Extends" value="cntLootChestHeroInsecure" param1="DescriptionKey"/>
+      <property name="CreativeMode" value="None"/>
+      <property name="LootList" value="cntTreasure001_SousChefOTA_doughs"/>
+      <property name="TintColor" value="804141"/>
+      <property name="WaterFlow" value="permitted"/>
+      <property name="IsTerrainDecoration" value="true"/>
+      <property name="SortOrder1" value="B104"/>
+      <property name="SortOrder2" value="0103"/>
+      <property name="Tags" value="buriedTreasure"/>
+      <property name="FilterTags" value="MC_helpers,SC_questblocks"/>
+    </block>
+
+    <block name="cntTreasureChest002SousChefOTA_doughs">
+      	<property name="Extends" value="cntLootChestHero" param1="DescriptionKey"/>
+        <property name="CreativeMode" value="None"/>
+        <property name="LootList" value="cntTreasure002_SousChefOTA_doughs"/> <!-- DOUGH: CUSTOM loot container name -->
+        <property name="CustomIcon" value="cntLootChestHero"/>
+        <property name="CustomIconTint" value="FFBF00"/>
+        <property name="TintColor" value="804141"/>
+        <property name="WaterFlow" value="permitted"/>
+        <property name="IsTerrainDecoration" value="true"/>
+        <property name="DowngradeBlock" value="cntTreasureChest002InsecureSousChefOTA_doughs"/>
+        <property name="SortOrder1" value="B104"/>
+        <property name="SortOrder2" value="0102"/>
+        <property name="Tags" value="buriedTreasure,timecharge"/>
+        <property name="FilterTags" value="MC_helpers,SC_questblocks"/>
+    </block>
+    <!-- Unlocked chest -->
+    <block name="cntTreasureChest002InsecureSousChefOTA_doughs">
+      <property name="Extends" value="cntLootChestHeroInsecure" param1="DescriptionKey"/>
+      <property name="CreativeMode" value="None"/>
+      <property name="LootList" value="cntTreasure002_SousChefOTA_doughs"/>
+      <property name="TintColor" value="804141"/>
+      <property name="WaterFlow" value="permitted"/>
+      <property name="IsTerrainDecoration" value="true"/>
+      <property name="SortOrder1" value="B104"/>
+      <property name="SortOrder2" value="0103"/>
+      <property name="Tags" value="buriedTreasure"/>
+      <property name="FilterTags" value="MC_helpers,SC_questblocks"/>
+    </block>
+  </append>
+</config>

@@ -1,0 +1,160 @@
+<config>
+  <!--
+  ########## Looting items ##########
+  # Low percentage for stuff you should be crafting!
+  # Not everything should be found in loot, REQUIRE a LOT more CRAFTING as this mod has its own seperate perk tree
+  -->
+
+  <!-- stove/oven, cooking pots and pans rotten food -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupOven01']"> <!-- Loot probability is high for everything in vanilla -->
+    <item name="foodRuinedBurnedScraps_doughs" count="1,2" loot_prob_template="medLow"/>
+    <item name="foodRuinedBurnedCarcass_doughs" count="1,2" loot_prob_template="veryLow"/> <!-- Biggest -->
+    <item name="foodRuinedBurnedMeat_doughs" count="1,2" loot_prob_template="veryLow"/>
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='groupGrills']">
+    <item name="foodRuinedBurnedMeat_doughs" count="1,2" loot_prob_template="veryLow"/>
+    <item name="foodRuinedBurnedScraps_doughs" count="1,5" loot_prob_template="med"/>
+    <item name="foodRuinedColdGrilledMeat_doughs" count="1,2" loot_prob_template="low"/>
+  </append>
+
+  <!-- A20_Food_Trash -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupFoodTrashCommon']"> <!-- bones, empty jars, rotting food -->
+    <item name="foodRuinedColdBaconAndEggs_doughs" count="1,2" loot_prob_template="veryLow"/>
+    <item name="foodRuinedColdBoiledMeat_doughs" count="1,2" loot_prob_template="low"/>
+    <item name="foodRuinedColdEgg_doughs" count="1,2" loot_prob_template="med"/>
+    <item name="foodRuinedColdGrilledMeat_doughs" count="1,2" loot_prob_template="low"/>
+    <item name="foodRuinedColdDessert_doughs" count="1,3" loot_prob_template="veryLow"/>
+  </append>
+
+  <!-- A20_Food_Ingredients_Groups -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupIngredientsCommon']"> <!-- seeds/flours things that go bad very slowly-->
+    <item name="foodFlour_doughs" count="1,2"/>
+    <item name="foodBouillonCube_doughs" count="1,2"/>
+    <item name="foodCookingOil_doughs" count="1,2"/>
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='groupIngredientsUncommon']"> <!-- vegetables/things that go bad slowly -->
+    <item name="foodCreamOfTartar_doughs" count="1,2" />
+    <item name="foodRuinedColdBoiledMeat_doughs" count="1,2" />
+    <item name="foodRuinedHotPotato_doughs" count="1,6" />
+    <item name="foodRuinedBread_doughs" count="1,2" />
+    <item name="foodRuinedHotYam_doughs" count="1,3" />
+    <item name="foodRuinedHotBrusslesSprouts_doughs" count="1,6"/>
+    <item name="foodRuinedHotCarrot_doughs" count="1,4" />
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='groupIngredientsRare']"> <!-- meat/proteins. things that go bad quickly -->
+    <item name="foodRawSweetBread_doughs" count="1,2" />
+    <item name="foodButter_doughs" count="1,2" />
+    <item name="foodCheese_doughs" count="1" /> <!-- meh, this is a tough one for "shelf life" BUT a high end item for my mod -->
+    <item name="foodRawMapleSyrupDrop_doughs" count="1,5" /> <!-- make finding them a bit fun and "WTF" if you didn't know about them but should be "mining for them" -->
+  </append>
+
+  <!-- A20_Food_Groups -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupFoodCommon']"> <!-- canned vegetables/fruit/charred meat -->
+    <item name="foodRuinedColdGrilledMeat_doughs" count="1,2"/>
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='groupFoodPileCommon']"> <!-- canned fruit/veg some meat. charred meat -->
+    <item name="foodHardTack_doughs" count="1,2" />
+    <item name="foodBeefJerky_doughs" count="1,2"/>
+    <item name="foodTurkishDelight_doughs" count="1,2" />
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='groupFoodUncommon']"> <!-- canned meat/protein based without preservatives -->
+    <item name="foodRuinedColdEgg_doughs" count="1,2" />
+    <item name="foodRuinedColdBaconAndEggs_doughs" count="1,2" />
+  </append>
+
+  <append xpath="/lootcontainers/lootgroup[@name='groupDrinksUncommon']"> <!-- beers and teas -->
+    <item name="drinkBottomShelfRedWine_doughs" count="1,2" />
+    <item name="drinkRawMilk_doughs" count="1,2" />
+  </append>
+
+  <!-- These are actually books in this mod -->
+  <!-- Make them hard/rare to find. their recipes are special mini trees
+    dependant only on the book being found -->
+  <append xpath="/lootcontainers/lootgroup[@name='booksRareOnlyScaled']"> <!-- beers and teas -->
+    <item name="foodBasicExtractingSchematic_doughs" count="1" loot_prob_template="veryLow"/>
+    <item name="foodFriendsOfTheForestSchematic_doughs" count="1" loot_prob_template="veryLow"/>
+    <item name="foodEggsAndItsDiscontentsSchematic_doughs" count="1" loot_prob_template="veryLow"/>
+    <item name="cntHydroponicsBasicHerbsSchematic_doughs" count="1" loot_prob_template="veryLow"/>
+  </append>
+
+  <append xpath="/lootcontainers/lootgroup[@name='skillMagazines']"> 
+   	<item name="foodSkillMagazineSousChefOTA_doughs"/>
+  </append>
+
+  <!-- Zed gifts -->
+  <insertAfter xpath="/lootcontainers/lootgroup[@name='empty']">
+    <lootgroup name="groupRuinedZedItems001SCOTA_doughs" >
+      <item name="parcel006ZedSousChefOTA_doughs" count="1" />
+      <item name="parcel009ZedSousChefOTA_doughs" count="1" />
+    </lootgroup>
+    <lootgroup name="groupRuinedZedItems002SCOTA_doughs" >
+      <item name="parcel008ZedSousChefOTA_doughs" count="1"/>
+      <item name="parcel010ZedSousChefOTA_doughs" count="1"/>
+    </lootgroup>
+    <lootgroup name="groupRuinedZedItems003SCOTA_doughs" >
+      <item name="parcel007ZedSousChefOTA_doughs" count="1" /> <!-- has good stuff -->
+    </lootgroup>
+  </insertAfter>
+
+  <!-- ok, only 1 group for each, to dilute out probilibility. and make "rare" here
+  if don't force prob, always get an items ebcause teh loot group has "ALL" in it. like
+  choose something from all groups in teh group.
+  -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupZpackReg']"> 
+   	<item group="groupRuinedZedItems001SCOTA_doughs" loot_prob_template="veryLow" force_prob="true"/>
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong']"> 
+   	<item group="groupRuinedZedItems002SCOTA_doughs" loot_prob_template="veryLow" force_prob="true"/>
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss']"> 
+   	<item group="groupRuinedZedItems003SCOTA_doughs" loot_prob_template="veryLow" force_prob="true"/>
+  </append>
+
+  <!-- Treasure -->
+  <insertAfter xpath="/lootcontainers/lootgroup[@name='empty']">
+
+    <lootgroup name="treasure_SousChefOTA_doughs" count="1,3">
+      <item name="cobweb" count="2"/>
+      <item name="oldCash" count="2060" loot_prob_template="low" />
+      <!-- Add all special food items here -->
+      <item name="drinkBottomShelfRedWine_doughs" count="1" loot_prob_template="low" />
+      <item name="foodFlourAlmond_doughs" count="1" loot_prob_template="low" />
+      <item name="foodRaspberryJam_doughs" count="1" loot_prob_template="low" />
+      <item name="foodVanillaExtract_doughs" count="1" loot_prob_template="low" />
+      <item name="foodChocolateBar_doughs" count="1" loot_prob_template="low" />
+      <item name="foodRaspberryJam_doughs" count="1" loot_prob_template="low" />
+      <item name="drinkTopShelfWine001_doughs" count="1" loot_prob_template="low" />
+      <item name="drinkTopShelfWine001_doughs" count="1" loot_prob_template="low" />
+      <item name="drinkTopShelfWine001_doughs" count="1" loot_prob_template="low" />
+      <item name="drinkTopShelfWine001_doughs" count="1" loot_prob_template="low" />
+    </lootgroup>
+
+  </insertAfter>
+
+  <!-- Add them here too. -->
+  <append xpath="/lootcontainers/lootgroup[@name='groupTreasureMaps']">
+    <item name="treasureMap_001SousChefOTA_doughs" count="1" />
+    <item name="treasureMap_002SousChefOTA_doughs" count="1" />
+  </append>
+
+  <!--
+  Append these NEW containers ... errr.  at the beginning?
+  -->
+  <append xpath="/lootcontainers">
+    <!-- Treasure: Small container, small chance of good stuff! -->
+    <!-- LOOT GROUPS ONLY - so its more random 
+    DONT FORCE PROBability on loot here. want a 
+    2 loot groups here.
+    -->
+    <lootcontainer name="cntTreasure001_SousChefOTA_doughs" count="1,4" size="3,3" sound_open="open_suitcase" sound_close="close_suitcase" loot_quality_template="qualBaseTemplate">
+      <item group="treasure_SousChefOTA_doughs"/>
+      <item group="groupValuablesMed"/> <!-- Vanilla treasure group. This is 50% chance to get Sous Chef loot !-->
+    </lootcontainer>
+    <!-- Just 1 loot group here. 100% chance of Sous Chef loot  -->
+    <lootcontainer name="cntTreasure002_SousChefOTA_doughs" count="1,4" size="3,3" sound_open="open_suitcase" sound_close="close_suitcase" loot_quality_template="qualBaseTemplate">
+      <item group="treasure_SousChefOTA_doughs"/>
+    </lootcontainer>
+
+  </append>
+
+</config>

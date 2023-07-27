@@ -1,0 +1,20 @@
+<Doughs>
+  <append xpath="/ui_display_info/item_display">
+
+    <!-- Adds water and dysentary stats to all ruined/rotten foods-->
+    <item_display_info display_type="doughfoodRotten" display_group="groupConsumables">
+      <display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+      <display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+      <display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+      <display_entry name="ddummyNoBonus" title_key="statFoodStaminaBonus" display_type="Bool"/>
+      <display_entry name="dDysenteryRisk" title_key="statDysenteryRisk" display_type="Percent" negative_preferred="true"/>
+    </item_display_info>
+  </append>
+
+  <append xpath="/ui_display_info/crafting_category_display">
+    <crafting_category_list display_type="foodDehydratorSousChefOTA_doughs">
+      <crafting_category name="" icon="ui_game_symbol_hot" display_name="lblCategoryfoodDehydratorSousChefOTA_doughs" />
+    </crafting_category_list>
+  </append>
+
+</Doughs>

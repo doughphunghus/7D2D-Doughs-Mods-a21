@@ -1,0 +1,103 @@
+<Doughs>
+
+  <!-- Add new skills (read magazine = unlocks) 
+	insertafter so its by vanilla food, which feels better
+	-->
+	<insertAfter xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']">
+		<!-- *** FOOD_SKILLS -->
+		<crafting_skill name="skillSousChefOTA_doughs" max_level="100" parent="attCrafting" name_key="skillSousChefOTA_doughsName" desc_key="skillSousChefOTA_doughsDesc" long_desc_key="skillSousChefOTA_doughsLongDesc" icon="ui_game_symbol_fork">
+			<display_entry icon="foodPineSeedToasted_doughs,foodAcornSeedToasted_doughs,foodPumpkinSeedToasted_doughs,foodButteredToast_doughs,foodSauteedMushrooms_doughs,foodHardTack_doughs,foodSimpleJerky_doughs,foodBeefJerky_doughs,foodHumanJerky_doughs,foodDehydratorSousChefOTA_doughs,foodPopCorn_doughs,foodBoneMarrow_doughs,drinkScrapsAuJus_doughs" name_key="foodSCOTAT1-1,foodSCOTAT1-2,foodSCOTAT1-3,foodSCOTAT1-4,foodSCOTAT1-5" has_quality="false" unlock_level="2,4,6,8,10" >
+				<unlock_entry item="foodPineSeedToasted_doughs,foodAcornSeedToasted_doughs,foodPumpkinSeedToasted_doughs" unlock_tier="1" />
+				<unlock_entry item="foodButteredToast_doughs,foodSauteedMushrooms_doughs" unlock_tier="2" />
+				<unlock_entry item="foodHardTack_doughs,foodSimpleJerky_doughs,foodBeefJerky_doughs,foodHumanJerky_doughs,foodDehydratorSousChefOTA_doughs" unlock_tier="3" />
+				<unlock_entry item="foodPopCorn_doughs,foodBoneMarrow_doughs" unlock_tier="4" />
+				<unlock_entry item="drinkScrapsAuJus_doughs" unlock_tier="5" />
+			</display_entry>
+			<display_entry icon="drinkAuJus_doughs,foodPemmican_doughs,foodBoiledSweetBread_doughs,foodCookingOil_doughs,foodSaltyExtract_doughs,foodSweetExtract_doughs,foodFlour_doughs,foodCreamOfTartar_doughs,drinkMilk_doughs,foodRedWineBlueberrySorbet_doughs" name_key="foodSCOTAT2-1,foodSCOTAT2-2,foodSCOTAT2-3,foodSCOTAT2-4,foodSCOTAT2-5" has_quality="false" unlock_level="11,14,18,22,26" >
+				<unlock_entry item="drinkAuJus_doughs,foodPemmican_doughs" unlock_tier="1" />
+				<unlock_entry item="foodBoiledSweetBread_doughs,foodCookingOil_doughs" unlock_tier="2" />
+				<unlock_entry item="foodSaltyExtract_doughs,foodSweetExtract_doughs" unlock_tier="3" />
+				<unlock_entry item="foodFlour_doughs,foodCreamOfTartar_doughs" unlock_tier="4" />
+				<unlock_entry item="drinkMilk_doughs,foodRedWineBlueberrySorbet_doughs" unlock_tier="5" />
+			</display_entry>
+			<display_entry icon="drinkSweetNutMilk_doughs,drinkCream_doughs,foodTurkishDelight_doughs,foodSweetBreadCuisine_doughs,foodRoastBeefAuJus_doughs,foodMilkCurds_doughs,foodButter_doughs,foodIceCream_doughs,foodPotatoesDauphinoise_doughs,foodChocolateTruffle_doughs" name_key="foodSCOTAT3-1,foodSCOTAT3-2,foodSCOTAT3-3,foodSCOTAT3-4,foodSCOTAT3-5" has_quality="false" unlock_level="27,35,43,51,59" >
+				<unlock_entry item="drinkSweetNutMilk_doughs,drinkCream_doughs" unlock_tier="1" />
+				<unlock_entry item="foodTurkishDelight_doughs,foodSweetBreadCuisine_doughs" unlock_tier="2" />
+				<unlock_entry item="foodRoastBeefAuJus_doughs,foodMilkCurds_doughs" unlock_tier="3" />
+				<unlock_entry item="foodButter_doughs,foodIceCream_doughs" unlock_tier="4" />
+				<unlock_entry item="foodPotatoesDauphinoise_doughs,foodChocolateTruffle_doughs" unlock_tier="5" />
+			</display_entry>
+			<display_entry icon="foodButterOfTheGods_doughs,foodBreadBatter_doughs,foodBread_doughs,foodCheese_doughs,foodSteakAndPotatoCuisine_doughs,foodCroqueMonsieur_doughs,foodSweetCornBlueberryMuffin_doughs,foodBoeufBourguignon_doughs,foodEggSouffle_doughs,foodMacaronRaspberry_doughs" name_key="foodSCOTAT4-1,foodSCOTAT4-2,foodSCOTAT4-3,foodSCOTAT4-4,foodSCOTAT4-5" has_quality="false" unlock_level="60,70,80,90,100" >
+				<unlock_entry item="foodButterOfTheGods_doughs,foodBreadBatter_doughs" unlock_tier="1" />
+				<unlock_entry item="foodBread_doughs,foodCheese_doughs" unlock_tier="2" />
+				<unlock_entry item="foodSteakAndPotatoCuisine_doughs,foodCroqueMonsieur_doughs" unlock_tier="3" />
+				<unlock_entry item="foodSweetCornBlueberryMuffin_doughs,foodBoeufBourguignon_doughs" unlock_tier="4" />
+				<unlock_entry item="foodEggSouffle_doughs,foodMacaronRaspberry_doughs" unlock_tier="5" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="foodPineSeedToasted_doughs,foodAcornSeedToasted_doughs,foodPumpkinSeedToasted_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,100" value="1" tags="foodButteredToast_doughs,foodSauteedMushrooms_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,100" value="1" tags="foodDehydratorSousChefOTA_doughs,foodHardTack_doughs,foodSimpleJerky_doughs,foodBeefJerky_doughs,foodHumanJerky_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,100" value="1" tags="foodPopCorn_doughs,foodBoneMarrow_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,100" value="1" tags="drinkScrapsAuJus_doughs"/>
+
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="drinkAuJus_doughs,foodPemmican_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,100" value="1" tags="foodBoiledSweetBread_doughs,foodCookingOil_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,100" value="1" tags="foodSaltyExtract_doughs,foodSweetExtract_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="22,100" value="1" tags="foodFlour_doughs,foodCreamOfTartar_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="drinkMilk_doughs,foodRedWineBlueberrySorbet_doughs"/>
+
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,100" value="1" tags="drinkSweetNutMilk_doughs,drinkCream_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,100" value="1" tags="foodTurkishDelight_doughs,foodSweetBreadCuisine_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="43,100" value="1" tags="foodRoastBeefAuJus_doughs,foodMilkCurds_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="51,100" value="1" tags="foodButter_doughs,foodIceCream_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="59,100" value="1" tags="foodPotatoesDauphinoise_doughs,foodChocolateTruffle_doughs"/>
+
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,100" value="1" tags="foodButterOfTheGods_doughs,foodBreadBatter_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,100" value="1" tags="foodBread_doughs,foodCheese_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,100" value="1" tags="foodSteakAndPotatoCuisine_doughs,foodCroqueMonsieur_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="90,100" value="1" tags="foodSweetCornBlueberryMuffin_doughs,foodBoeufBourguignon_doughs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="foodEggSouffle_doughs,foodMacaronRaspberry_doughs"/>
+			</effect_group>
+		</crafting_skill>
+	</insertAfter>
+
+	<!-- Add new perks -->
+	<append xpath="/progression/perks">
+		<!-- *** MASTER_CHEF: CHANGE TO: SOUS CHEF-->
+		<perk name="perkSousChefOTA" max_level="5" parent="skillStrengthGeneral" name_key="perkSousChefOTA_doughsName" desc_key="perkSousChefOTA_doughsDesc" icon="ui_game_symbol_spatula">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10" desc_key="reqStrengthLevel10"/></level_requirements>
+
+			<effect_group>
+				<!-- fake crafting perk that is used to scale resources -->
+				<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkSousChefOTA_doughs"/>
+				<!-- Speed up cooking time of campfire recipes with each rank -->
+				<passive_effect name="CraftingTime" operation="perc_add" level="0,1,2,3,4,5" value="4,3,2,1,0" tags="perkSousChefOTA_doughs"/>
+				<!-- Adds a chance to find more in dumpsters -->
+				<!-- <passive_effect name="LootProb" operation="perc_add" level="2" value=".5" tags="dumpsterFood"/> -->
+				<!-- Increase the chance to find food items with each perk rank -->
+				<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="foodSkillSousChefOTA_doughs"/>
+				<!-- Increase the chance to find food crafting skill magazines with each perk rank up to crafting skill 100 -->
+				<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="foodCSMSousChefOTA_doughs">
+					<requirement name="ProgressionLevel" progression_name="skillSousChefOTA_doughs" operation="LT" value="100"/>
+				</passive_effect>
+				<!-- Once food crafting skill reaches 100, set the probability bonus of finding food crafting skill magazines to 0 -->
+				<passive_effect name="LootProb" operation="base_set" level="1,5" value="0,0" tags="foodCSMSousChefOTA_doughs">
+					<requirement name="ProgressionLevel" progression_name="skillSousChefOTA_doughs" operation="Equals" value="100"/>
+				</passive_effect>
+
+				<effect_description level="1" desc_key="perkSousChefOTA_doughsRank1Desc" long_desc_key="perkSousChefOTA_doughsRank1LongDesc"/>
+				<effect_description level="2" desc_key="perkSousChefOTA_doughsRank2Desc" long_desc_key="perkSousChefOTA_doughsRank2LongDesc"/>
+				<effect_description level="3" desc_key="perkSousChefOTA_doughsRank3Desc" long_desc_key="perkSousChefOTA_doughsRank3LongDesc"/>
+				<effect_description level="4" desc_key="perkSousChefOTA_doughsRank4Desc" long_desc_key="perkSousChefOTA_doughsRank4LongDesc"/>
+				<effect_description level="5" desc_key="perkSousChefOTA_doughsRank5Desc" long_desc_key="perkSousChefOTA_doughsRank5LongDesc"/>
+			
+			</effect_group>
+		</perk>
+	</append>
+</Doughs>

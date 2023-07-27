@@ -1,0 +1,418 @@
+<configs>
+
+<!--
+########## Mod vanilla items ##########
+
+The purpose is to try to make a more semi-realistic "unit" of items to carry, even though yeah you have a big backpack.
+Its not to try to balance "weight" but sorta is to make it feel like it. Stuff like 'units of iron" or sand is tough to estimate
+The backpack will fill up faster, on purpose.
+For storage, well, the boxes are kinda small so similar as the storage slot number in boxes is larger than backpack usually
+and small chests are small so can't put a lot in it.
+
+-->
+<set xpath="/items/item[@name='meleeToolTorch']/property[@name='Stacknumber']/@value">3</set>  <!-- DOUGH: Default = 50 -->
+<!-- <set xpath="/items/item[@name='meleeToolTorch']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: NA -->
+
+<set xpath="/items/item[@name='ammoJunkTurretRegular']/property[@name='Stacknumber']/@value">100</set>  <!-- DOUGH: Default = 1000 -->
+<!-- <set xpath="/items/item[@name='ammoJunkTurretRegular']/property[@name='EconomicBundleSize']/@value">20</set>-->  <!-- DOUGH: Default = 1000 -->
+
+<set xpath="/items/item[@name='ammoRocketHE']/property[@name='Stacknumber']/@value">3</set>  <!-- DOUGH: Default = 20 -->
+<!-- <set xpath="/items/item[@name='ammoRocketHE']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 20 -->
+
+<set xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']/@value">300</set>  <!-- DOUGH: Default = 10000 -->
+<!--<set xpath="/items/item[@name='ammoGasCan']/property[@name='EconomicBundleSize']/@value">25</set>-->  <!-- DOUGH: Default = 100 -->
+
+<set xpath="/items/item[@name='ammoArrowStone']/property[@name='Stacknumber']/@value">35</set>  <!-- DOUGH: Default = 150 -->
+<!--<set xpath="/items/item[@name='ammoArrowStone']/property[@name='EconomicBundleSize']/@value">5</set>--> <!-- DOUGH: Default = 5 -->
+
+<set xpath="/items/item[@name='ammoArrowExploding']/property[@name='Stacknumber']/@value">12</set>  <!-- DOUGH: Default = 75 -->
+<!--<set xpath="/items/item[@name='ammoArrowExploding']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 1 -->
+
+<set xpath="/items/item[@name='ammoCrossbowBoltStone']/property[@name='Stacknumber']/@value">35</set>  <!-- DOUGH: Default = 150 -->
+<!--<set xpath="/items/item[@name='ammoCrossbowBoltStone']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 5 -->
+
+<set xpath="/items/item[@name='ammoCrossbowBoltIron']/property[@name='Stacknumber']/@value">35</set>  <!-- DOUGH: Default = 150 -->
+<!--<set xpath="/items/item[@name='ammoCrossbowBoltIron']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 25 -->
+
+<set xpath="/items/item[@name='ammoCrossbowBoltExploding']/property[@name='Stacknumber']/@value">12</set>  <!-- DOUGH: Default = 80 -->
+<!--<set xpath="/items/item[@name='ammoCrossbowBoltExploding']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 1 -->
+
+<set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Stacknumber']/@value">6</set>  <!-- DOUGH: Default = 20 -->
+<!--<set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 20 -->
+
+<set xpath="/items/item[@name='thrownGrenadeContact']/property[@name='Stacknumber']/@value">9</set>  <!-- DOUGH: Default = 25 -->
+<!--<set xpath="/items/item[@name='thrownGrenadeContact']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 25 -->
+
+<set xpath="/items/item[@name='thrownTimedCharge']/property[@name='Stacknumber']/@value">2</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='thrownTimedCharge']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='thrownAmmoMolotovCocktail']/property[@name='Stacknumber']/@value">4</set>  <!-- DOUGH: Default = 20 -->
+<!--<set xpath="/items/item[@name='thrownAmmoMolotovCocktail']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 20 -->
+
+<set xpath="/items/item[@name='thrownAmmoFlare']/property[@name='Stacknumber']/@value">12</set>  <!-- DOUGH: Default = 40 -->
+<!--<set xpath="/items/item[@name='thrownAmmoFlare']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 1 -->
+
+<set xpath="/items/item[@name='ammoDartIron']/property[@name='Stacknumber']/@value">100</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='ammoDartIron']/property[@name='EconomicBundleSize']/@value">10</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='partsMaster']/property[@name='Stacknumber']/@value">6</set>  <!-- DOUGH: Default = 50 -->
+<!--<set xpath="/items/item[@name='partsMaster']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 50 -->
+
+<set xpath="/items/item[@name='gunMGT1AK47Parts']/property[@name='Stacknumber']/@value">7</set>  <!-- DOUGH: Default = 50 -->
+<!--<set xpath="/items/item[@name='gunMGT1AK47Parts']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 50 -->
+
+<set xpath="/items/item[@name='medicalFirstAidKit']/property[@name='Stacknumber']/@value">3</set>  <!-- DOUGH: Default = 5 -->
+<!--<set xpath="/items/item[@name='medicalFirstAidKit']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 5 -->
+
+<set xpath="/items/item[@name='medicalSplint']/property[@name='Stacknumber']/@value">2</set>  <!-- DOUGH: Default = 5 -->
+<!--<set xpath="/items/item[@name='medicalSplint']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 5 -->
+
+
+<set xpath="/items/item[@name='medicalBloodBag']/property[@name='Stacknumber']/@value">6</set>  <!-- DOUGH: Default = 15 -->
+<!--<set xpath="/items/item[@name='medicalBloodBag']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 15 -->
+
+<set xpath="/items/item[@name='drugRecog']/property[@name='Stacknumber']/@value">3</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='drugRecog']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='foodMeatStew']/property[@name='Stacknumber']/@value">3</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='foodMeatStew']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='foodSteakAndPotato']/property[@name='Stacknumber']/@value">3</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='foodSteakAndPotato']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='foodHoboStew']/property[@name='Stacknumber']/@value">3</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='foodHoboStew']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<append xpath="/items/item[@name='foodShamChowder']" > <!-- Looks like a bowl -->
+	<property name="Stacknumber" value="3"/>
+</append>
+<!--<set xpath="/items/item[@name='foodShamChowder']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='foodBlueberryPie']/property[@name='Stacknumber']/@value">1</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='foodBlueberryPie']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='foodPumpkinBread']/property[@name='Stacknumber']/@value">1</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='foodPumpkinBread']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='foodGumboStew']/property[@name='Stacknumber']/@value">1</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='foodGumboStew']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='foodShepardsPie']/property[@name='Stacknumber']/@value">4</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='foodShepardsPie']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='foodSpaghetti']/property[@name='Stacknumber']/@value">1</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='foodSpaghetti']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='foodBaconAndEggs']/property[@name='Stacknumber']/@value">6</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='foodBaconAndEggs']/property[@name='EconomicBundleSize']/@value">1</set>--> <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='foodVegetableStew']/property[@name='Stacknumber']/@value">3</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='foodVegetableStew']/property[@name='EconomicBundleSize']/@value">1</set> -->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/property[@name='Stacknumber']/@value">4</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='drinkJarRedTea']/property[@name='Stacknumber']/@value">4</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='drinkJarRedTea']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='drinkJarGoldenRodTea']/property[@name='Stacknumber']/@value">4</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='drinkJarGoldenRodTea']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='drinkJarYuccaJuice']/property[@name='Stacknumber']/@value">4</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='drinkJarYuccaJuice']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='drinkJarPureMineralWater']/property[@name='Stacknumber']/@value">6</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='drinkJarPureMineralWater']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<!-- Extends from red tea: drinkCanMegaCrush -->
+<set xpath="/items/item[@name='drinkJarCoffee']/property[@name='Stacknumber']/@value">4</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='drinkJarCoffee']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<!-- a20: just gone from XML! -->
+<!-- <set xpath="/items/item[@name='drinkJarGrainAlcohol']/property[@name='Stacknumber']/@value">4</set> --> <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='drinkJarBeer']/property[@name='Stacknumber']/@value">4</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='drinkJarBeer']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='drinkJarGrandpasMoonshine']/property[@name='Stacknumber']/@value">1</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='drinkJarGrandpasMoonshine']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='drinkJarGrandpasAwesomeSauce']/property[@name='Stacknumber']/@value">3</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='drinkJarGrandpasAwesomeSauce']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='drinkJarGrandpasLearningElixir']/property[@name='Stacknumber']/@value">3</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='drinkJarGrandpasLearningElixir']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@name='Stacknumber']/@value">3</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">10</set>  <!-- DOUGH: Default = 125 -->
+<!--<set xpath="/items/item[@name='foodRawMeat']/property[@name='EconomicBundleSize']/@value">2</set>-->  <!-- DOUGH: Default = 125 -->
+
+<set xpath="/items/item[@name='foodRottingFlesh']/property[@name='Stacknumber']/@value">10</set>  <!-- DOUGH: Default = 125 -->
+<!--<set xpath="/items/item[@name='foodRottingFlesh']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 1 -->
+
+<set xpath="/items/item[@name='foodEgg']/property[@name='Stacknumber']/@value">10</set>  <!-- DOUGH: Default = 125 -->
+<!--<set xpath="/items/item[@name='foodEgg']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 125 -->
+
+<set xpath="/items/item[@name='foodCropCorn']/property[@name='Stacknumber']/@value">12</set>  <!-- DOUGH: Default = 125 -->
+<!--<set xpath="/items/item[@name='foodCropCorn']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 125 -->
+
+<set xpath="/items/item[@name='foodCropGraceCorn']/property[@name='Stacknumber']/@value">12</set>  <!-- DOUGH: Default = 125 -->
+<!--<set xpath="/items/item[@name='foodCropGraceCorn']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 125 -->
+
+<set xpath="/items/item[@name='foodCropPotato']/property[@name='Stacknumber']/@value">10</set>  <!-- DOUGH: Default = 125 -->
+<!--<set xpath="/items/item[@name='foodCropPotato']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 125 -->
+
+<set xpath="/items/item[@name='foodCropYuccaFruit']/property[@name='Stacknumber']/@value">12</set>  <!-- DOUGH: Default = 125 -->
+<!--<set xpath="/items/item[@name='foodCropYuccaFruit']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 1 -->
+
+<set xpath="/items/item[@name='foodCropPumpkin']/property[@name='Stacknumber']/@value">1</set>  <!-- DOUGH: Default = 125 -->
+<!--<set xpath="/items/item[@name='foodCropPumpkin']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 125 -->
+
+<!-- REMOVED ITEMSin a21 -->
+<!-- <set xpath="/items/item[@name='drinkCanEmpty']/property[@name='Stacknumber']/@value">4</set> -->  <!-- DOUGH: Default = 500 -->
+<!-- <set xpath="/items/item[@name='drinkJarEmpty']/property[@name='Stacknumber']/@value">4</set> -->  <!-- DOUGH: Default = 125 -->
+
+<set xpath="/items/item[@name='drinkJarRiverWater']/property[@name='Stacknumber']/@value">4</set>  <!-- DOUGH: Default = 125 -->
+<!--<set xpath="/items/item[@name='drinkJarRiverWater']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 1 -->
+
+<set xpath="/items/item[@name='drinkJarBoiledWater']/property[@name='Stacknumber']/@value">4</set>  <!-- DOUGH: Default = 125 -->
+<!--<set xpath="/items/item[@name='drinkJarBoiledWater']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 125 -->
+
+<set xpath="/items/item[@name='resourceRockSmall']/property[@name='Stacknumber']/@value">100</set>  <!-- DOUGH: Default = 6000 -->
+<!--<set xpath="/items/item[@name='resourceRockSmall']/property[@name='EconomicBundleSize']/@value">20</set>-->  <!-- DOUGH: Default = 50 -->
+
+<set xpath="/items/item[@name='resourceSnowBall']/property[@name='Stacknumber']/@value">150</set>  <!-- DOUGH: Default = 6000 -->
+<!--<set xpath="/items/item[@name='resourceSnowBall']/property[@name='EconomicBundleSize']/@value">5</set>-->  <!-- DOUGH: Default = 150 -->
+
+<set xpath="/items/item[@name='resourceAcid']/property[@name='Stacknumber']/@value">4</set>  <!-- DOUGH: Default = 100 -->
+<!--<set xpath="/items/item[@name='resourceAcid']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 100 -->
+
+<set xpath="/items/item[@name='resourceYuccaFibers']/property[@name='Stacknumber']/@value">150</set>  <!-- DOUGH: Default = 6000 -->
+<!--<set xpath="/items/item[@name='resourceYuccaFibers']/property[@name='EconomicBundleSize']/@value">20</set>-->  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourceWood']/property[@name='Stacknumber']/@value">100</set>  <!-- DOUGH: Default = 6000 -->
+<!--<set xpath="/items/item[@name='resourceWood']/property[@name='EconomicBundleSize']/@value">10</set>-->  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourceCrushedSand']/property[@name='Stacknumber']/@value">100</set>  <!-- DOUGH: Default = 6000 -->
+<!--<set xpath="/items/item[@name='resourceCrushedSand']/property[@name='EconomicBundleSize']/@value">10</set>-->  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourceBrokenGlass']/property[@name='Stacknumber']/@value">50</set>  <!-- DOUGH: Default = 6000 -->
+<!--<set xpath="/items/item[@name='resourceBrokenGlass']/property[@name='EconomicBundleSize']/@value">5</set>-->  <!-- DOUGH: Default = 6000 -->
+
+<!-- <set xpath="/items/item[@name='resourceIronFragment']/property[@name='Stacknumber']/@value">80</set> --> <!-- DOUGH: Default = 1200 -->
+
+<set xpath="/items/item[@name='resourceScrapIron']/property[@name='Stacknumber']/@value">60</set>  <!-- DOUGH: Default = 6000 -->
+<!--<set xpath="/items/item[@name='resourceScrapIron']/property[@name='EconomicBundleSize']/@value">5</set>-->  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourceForgedIron']/property[@name='Stacknumber']/@value">8</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceForgedIron']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceMetalPipe']/property[@name='Stacknumber']/@value">12</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceMetalPipe']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceForgedSteel']/property[@name='Stacknumber']/@value">10</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceForgedSteel']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceScrapPolymers']/property[@name='Stacknumber']/@value">80</set>  <!-- DOUGH: Default = 1000 -->
+<!--<set xpath="/items/item[@name='resourceScrapPolymers']/property[@name='EconomicBundleSize']/@value">10</set>-->  <!-- DOUGH: Default = 1000 -->
+
+<set xpath="/items/item[@name='resourceOilShale']/property[@name='Stacknumber']/@value">60</set>  <!-- DOUGH: Default = 6000 -->
+<!--<set xpath="/items/item[@name='resourceOilShale']/property[@name='EconomicBundleSize']/@value">10</set>-->  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourceBone']/property[@name='Stacknumber']/@value">9</set>  <!-- DOUGH: Default = 1200 -->
+<!--<set xpath="/items/item[@name='resourceBone']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 1200 -->
+
+<set xpath="/items/item[@name='resourceLeather']/property[@name='Stacknumber']/@value">14</set>  <!-- DOUGH: Default = 250 -->
+<!--<set xpath="/items/item[@name='resourceLeather']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 250 -->
+
+<set xpath="/items/item[@name='resourceAnimalFat']/property[@name='Stacknumber']/@value">30</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceAnimalFat']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceCropGoldenrodPlant']/property[@name='Stacknumber']/@value">18</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceCropGoldenrodPlant']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceCropHopsFlower']/property[@name='Stacknumber']/@value">80</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceCropHopsFlower']/property[@name='EconomicBundleSize']/@value">10</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceCropAloeLeaf']/property[@name='Stacknumber']/@value">30</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceCropAloeLeaf']/property[@name='EconomicBundleSize']/@value">5</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceCropChrysanthemumPlant']/property[@name='Stacknumber']/@value">14</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceCropChrysanthemumPlant']/property[@name='EconomicBundleSize']/@value">2</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceCropCottonPlant']/property[@name='Stacknumber']/@value">10</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceCropCottonPlant']/property[@name='EconomicBundleSize']/@value">2</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceCropCoffeeBeans']/property[@name='Stacknumber']/@value">25</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceCropCoffeeBeans']/property[@name='EconomicBundleSize']/@value">5</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceScrapBrass']/property[@name='Stacknumber']/@value">60</set>  <!-- DOUGH: Default = 6000 -->
+<!--<set xpath="/items/item[@name='resourceScrapBrass']/property[@name='EconomicBundleSize']/@value">5</set> --> <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourceScrapLead']/property[@name='Stacknumber']/@value">50</set>  <!-- DOUGH: Default = 6000 -->
+<!--<set xpath="/items/item[@name='resourceScrapLead']/property[@name='EconomicBundleSize']/@value">20</set>-->  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourceClayLump']/property[@name='Stacknumber']/@value">150</set>  <!-- DOUGH: Default = 6000 -->
+<!--<set xpath="/items/item[@name='resourceClayLump']/property[@name='EconomicBundleSize']/@value">25</set>-->  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourceCobblestones']/property[@name='Stacknumber']/@value">100</set>  <!-- DOUGH: Default = 1000 -->
+<!--<set xpath="/items/item[@name='resourceCobblestones']/property[@name='EconomicBundleSize']/@value">20</set> --> <!-- DOUGH: Default = 1000 -->
+
+<set xpath="/items/item[@name='resourceCement']/property[@name='Stacknumber']/@value">100</set>  <!-- DOUGH: Default = 1000 -->
+<!--<set xpath="/items/item[@name='resourceCement']/property[@name='EconomicBundleSize']/@value">10</set>-->  <!-- DOUGH: Default = 1000 -->
+
+<set xpath="/items/item[@name='resourceConcreteMix']/property[@name='Stacknumber']/@value">100</set>  <!-- DOUGH: Default = 1000 -->
+<!--<set xpath="/items/item[@name='resourceConcreteMix']/property[@name='EconomicBundleSize']/@value">10</set>-->  <!-- DOUGH: Default = 1000 -->
+
+<set xpath="/items/item[@name='resourceCloth']/property[@name='Stacknumber']/@value">50</set>  <!-- DOUGH: Default = 250 -->
+<!--<set xpath="/items/item[@name='resourceCloth']/property[@name='EconomicBundleSize']/@value">5</set>-->  <!-- DOUGH: Default = 250 -->
+
+<!-- a20: deprecated -->
+<!-- <set xpath="/items/item[@name='resourceFertilizer']/property[@name='Stacknumber']/@value">80</set>-->  <!-- DOUGH: Default = 250 -->
+
+<set xpath="/items/item[@name='resourceMilitaryFiber']/property[@name='Stacknumber']/@value">16</set>  <!-- DOUGH: Default = 250 -->
+<!--<set xpath="/items/item[@name='resourceMilitaryFiber']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 250 -->
+
+<set xpath="/items/item[@name='resourceElectricParts']/property[@name='Stacknumber']/@value">30</set>  <!-- DOUGH: Default = 1000 -->
+<!--<set xpath="/items/item[@name='resourceElectricParts']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 1000 -->
+
+<!-- <set xpath="/items/item[@name='resourceElectronicParts']/property[@name='Stacknumber']/@value">80</set>  --> <!-- DOUGH: Default = 1000 -->
+<set xpath="/items/item[@name='resourceMechanicalParts']/property[@name='Stacknumber']/@value">35</set>  <!-- DOUGH: Default = 1000 -->
+<!--<set xpath="/items/item[@name='resourceMechanicalParts']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 1000 -->
+
+<!-- no need to change large stack: resourceFeather -->
+<set xpath="/items/item[@name='resourceArrowHeadIron']/property[@name='Stacknumber']/@value">100</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceArrowHeadIron']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceArrowHeadSteelAP']/property[@name='Stacknumber']/@value">100</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceArrowHeadSteelAP']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceCoal']/property[@name='Stacknumber']/@value">100</set>  <!-- DOUGH: Default = 6000 -->
+<!--<set xpath="/items/item[@name='resourceCoal']/property[@name='EconomicBundleSize']/@value">10</set>-->  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourcePotassiumNitratePowder']/property[@name='Stacknumber']/@value">300</set>  <!-- DOUGH: Default = 6000 -->
+<!--<set xpath="/items/item[@name='resourcePotassiumNitratePowder']/property[@name='EconomicBundleSize']/@value">310</set>-->  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourceGunPowder']/property[@name='Stacknumber']/@value">350</set>  <!-- DOUGH: Default = 1000 -->
+<!--<set xpath="/items/item[@name='resourceGunPowder']/property[@name='EconomicBundleSize']/@value">25</set>-->  <!-- DOUGH: Default = 1000 -->
+
+<set xpath="/items/item[@name='resourceBuckshot']/property[@name='Stacknumber']/@value">150</set>  <!-- DOUGH: Default = 1000 -->
+<!--<set xpath="/items/item[@name='resourceBuckshot']/property[@name='EconomicBundleSize']/@value">20</set> -->  <!-- DOUGH: Default = 1000 -->
+
+<set xpath="/items/item[@name='resourceRocketTip']/property[@name='Stacknumber']/@value">12</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceRocketTip']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceRocketCasing']/property[@name='Stacknumber']/@value">10</set>  <!-- DOUGH: Default = 50 -->
+<!--<set xpath="/items/item[@name='resourceRocketCasing']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 50 -->
+
+<set xpath="/items/item[@name='resourceRepairKit']/property[@name='Stacknumber']/@value">4</set>  <!-- DOUGH: Default = 25 -->
+<!--<set xpath="/items/item[@name='resourceRepairKit']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 25 -->
+
+<set xpath="/items/item[@name='resourceOil']/property[@name='Stacknumber']/@value">6</set>  <!-- DOUGH: Default = 50 -->
+<!--<set xpath="/items/item[@name='resourceOil']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 50 -->
+
+<!-- <set xpath="/items/item[@name='resourceHubcap']/property[@name='Stacknumber']/@value">6</set> --> <!-- DOUGH: Default = 250 -->
+<!-- <set xpath="/items/item[@name='resourceAirFilter']/property[@name='Stacknumber']/@value">6</set> --> <!-- DOUGH: Default = 250 -->
+<!-- <set xpath="/items/item[@name='resourceCandyTin']/property[@name='Stacknumber']/@value">22</set> --> <!-- DOUGH: Default = 250 -->
+<set xpath="/items/item[@name='resourceDoorKnob']/property[@name='Stacknumber']/@value">8</set>  <!-- DOUGH: Default = 250 -->
+<!--<set xpath="/items/item[@name='resourceDoorKnob']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 250 -->
+
+<set xpath="/items/item[@name='resourceCandleStick']/property[@name='Stacknumber']/@value">6</set>  <!-- DOUGH: Default = 250 -->
+<!--<set xpath="/items/item[@name='resourceCandleStick']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 250 -->
+
+<set xpath="/items/item[@name='resourceRadiator']/property[@name='Stacknumber']/@value">1</set>  <!-- DOUGH: Default = 5 -->
+<!--<set xpath="/items/item[@name='resourceRadiator']/property[@name='EconomicBundleSize']/@value">1</set> --> <!-- DOUGH: Default = 5 -->
+
+<set xpath="/items/item[@name='resourceFishingWeight']/property[@name='Stacknumber']/@value">45</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceFishingWeight']/property[@name='EconomicBundleSize']/@value">5</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceTrophy1']/property[@name='Stacknumber']/@value">5</set>  <!-- DOUGH: Default = 250 -->
+<!--<set xpath="/items/item[@name='resourceTrophy1']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 250 -->
+
+<set xpath="/items/item[@name='resourceTrophy2']/property[@name='Stacknumber']/@value">5</set>  <!-- DOUGH: Default = 250 -->
+<!--<set xpath="/items/item[@name='resourceTrophy2']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 250 -->
+
+<!-- <set xpath="/items/item[@name='resourceTrophy3']/property[@name='Stacknumber']/@value">4</set> -->  <!-- DOUGH: Default = 250 -->
+<set xpath="/items/item[@name='resourceSilverNugget']/property[@name='Stacknumber']/@value">25</set>  <!-- DOUGH: Default = 250 -->
+<!--<set xpath="/items/item[@name='resourceSilverNugget']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 250 -->
+
+<set xpath="/items/item[@name='candle']/property[@name='Stacknumber']/@value">8</set>  <!-- DOUGH: Default = 50 -->
+<!--<set xpath="/items/item[@name='candle']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 50 -->
+
+<set xpath="/items/item[@name='resourceHeadlight']/property[@name='Stacknumber']/@value">6</set>  <!-- DOUGH: Default = 50 -->
+<!--<set xpath="/items/item[@name='resourceHeadlight']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 50 -->
+
+<set xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']/@value">620</set>  <!-- DOUGH: Default = 20000 -->
+<!--<set xpath="/items/item[@name='casinoCoin']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 20000 -->
+
+<set xpath="/items/item[@name='oldCash']/property[@name='Stacknumber']/@value">2240</set>  <!-- DOUGH: Default = 10000 -->
+<!--<set xpath="/items/item[@name='oldCash']/property[@name='EconomicBundleSize']/@value">20</set>-->  <!-- DOUGH: Default = 10000 -->
+
+<set xpath="/items/item[@name='resourceGlue']/property[@name='Stacknumber']/@value">16</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceGlue']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceDuctTape']/property[@name='Stacknumber']/@value">20</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceDuctTape']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='resourceSpring']/property[@name='Stacknumber']/@value">5</set>  <!-- DOUGH: Default = 500 -->
+<!--<set xpath="/items/item[@name='resourceSpring']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 500 -->
+
+<set xpath="/items/item[@name='toolCookingGrill']/property[@name='Stacknumber']/@value">3</set>  <!-- DOUGH: Default = 250 -->
+<!--<set xpath="/items/item[@name='toolCookingGrill']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 250 -->
+
+<set xpath="/items/item[@name='toolCookingPot']/property[@name='Stacknumber']/@value">2</set>  <!-- DOUGH: Default = 250 -->
+<!--<set xpath="/items/item[@name='toolCookingPot']/property[@name='EconomicBundleSize']/@value">1</set>--> <!-- DOUGH: Default = 250 -->
+
+<set xpath="/items/item[@name='toolBeaker']/property[@name='Stacknumber']/@value">3</set>  <!-- DOUGH: Default = 10 -->
+<!--<set xpath="/items/item[@name='toolBeaker']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 10 -->
+
+<set xpath="/items/item[@name='questMaster']/property[@name='Stacknumber']/@value">12</set>  <!-- DOUGH: Default = 50 -->
+<!--<set xpath="/items/item[@name='questMaster']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 50 -->
+
+<set xpath="/items/item[@name='blankNoteMaster']/property[@name='Stacknumber']/@value">18</set>  <!-- DOUGH: Default = 50 -->
+<!--<set xpath="/items/item[@name='blankNoteMaster']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 50 -->
+
+<set xpath="/items/item[@name='bookFiremansAlmanacHeat']/property[@name='Stacknumber']/@value">1</set>  <!-- DOUGH: Default = 20 -->
+<!--<set xpath="/items/item[@name='bookFiremansAlmanacHeat']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 20 -->
+
+<set xpath="/items/item[@name='resourceWaterFilter']/property[@name='Stacknumber']/@value">4</set>  <!-- DOUGH: Default = 50 -->
+<!--<set xpath="/items/item[@name='resourceWaterFilter']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 50 -->
+
+<set xpath="/items/item[@name='resourceLockPick']/property[@name='Stacknumber']/@value">20</set>  <!-- DOUGH: Default = 50 -->
+<!--<set xpath="/items/item[@name='resourceLockPick']/property[@name='EconomicBundleSize']/@value">5</set>-->  <!-- DOUGH: Default = 50 -->
+
+<set xpath="/items/item[@name='resourcePaint']/property[@name='Stacknumber']/@value">150</set>  <!-- DOUGH: Default = 1000 -->
+<!--<set xpath="/items/item[@name='resourcePaint']/property[@name='EconomicBundleSize']/@value">20</set>-->  <!-- DOUGH: Default = 1000 -->
+
+<!-- Handle Bundles -->
+<set xpath="/items/item[@name='ammoBundleJunkTurretRegular']/property[@class='Action0']/property[@name='Create_item_count']/@value">250</set>  <!-- DOUGH: Default = 1000 -->
+
+<set xpath="/items/item[@name='ammoBundleJunkTurretShell']/property[@class='Action0']/property[@name='Create_item_count']/@value">250</set>  <!-- DOUGH: Default = 1000 -->
+
+<set xpath="/items/item[@name='ammoBundleJunkTurretAP']/property[@class='Action0']/property[@name='Create_item_count']/@value">250</set>  <!-- DOUGH: Default = 1000 -->
+
+<set xpath="/items/item[@name='resourceRockSmallBundle']/property[@class='Action0']/property[@name='Create_item_count']/@value">600</set>  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourceWoodBundle']/property[@class='Action0']/property[@name='Create_item_count']/@value">600</set>  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourcePotassiumNitratePowderBundle']/property[@class='Action0']/property[@name='Create_item_count']/@value">600</set>  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourceLeadBundle']/property[@class='Action0']/property[@name='Create_item_count']/@value">600</set>  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourceCoalBundle']/property[@class='Action0']/property[@name='Create_item_count']/@value">600</set>  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='resourceOilShaleBundle']/property[@class='Action0']/property[@name='Create_item_count']/@value">600</set>  <!-- DOUGH: Default = 6000 -->
+
+<set xpath="/items/item[@name='ammoGasCanBundle']/property[@class='Action0']/property[@name='Create_item_count']/@value">500</set>  <!-- DOUGH: Default = 5000 -->
+
+<set xpath="/items/item[@name='resourceGunPowderBundle']/property[@class='Action0']/property[@name='Create_item_count']/@value">500</set>  <!-- DOUGH: Default = 1000 -->
+
+<!-- SPECIAL: This is what all vehicle parts extend from, and it extends from partsMaster, which gun parts extend from....sigh-->
+<append xpath="/items/item[@name='vehicleWheels']" >
+	<property name="Stacknumber" value="1"/>
+</append>
+<!--<set xpath="/items/item[@name='vehicleWheels']/property[@name='EconomicBundleSize']/@value">1</set>-->  <!-- DOUGH: Default = 1000 -->
+
+</configs>

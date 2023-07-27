@@ -58,8 +58,8 @@
 
 <set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Explosion.DamageBonus.earth']/@value">1.5</set>
 
-<!-- Carry a little more -->
-<set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Stacknumber']/@value">30</set>  <!-- DOUGH: Extended base class = 20 -->
+<!-- Carry a little more? NAh, and it also "breaks" the mod lowering stack sizes! -->
+<!-- <set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Stacknumber']/@value">30</set> --> <!-- DOUGH: Extended base class = 20 -->
 
 <set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='EconomicValue']/@value">29</set>  <!-- DOUGH: Extended base class = 41 -->
 <set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Explosion.DamageBonus.earth']/@value">1.5</set>
@@ -102,7 +102,6 @@
 
     <!-- Overrides to extended base class -->
     <property name="Material" value="MresourceScrapBrassMedium"/>
-    <property name="Stacknumber" value="500"/> <!-- STK resource -->
     <property name="EconomicValue" value="24"/> <!-- DOUGH: 1.5x iron than iron -->
   </item>
 

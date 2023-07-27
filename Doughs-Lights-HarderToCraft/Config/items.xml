@@ -1,0 +1,104 @@
+<configs>
+
+  <!-- Make flashlight buy/sell for a lot more -->
+	 <set xpath="/items/item[@name='meleeToolFlashlight02']/property[@name='EconomicValue']/@value">1500</set> <!-- DOUGH: default = 200-->
+ <!--
+  ########## New items ##########
+  -->
+  <append xpath="/items">
+
+    <!-- DOUGH: Copied from carBattery -->
+    <item name="resourceCellSizeC_doughs">
+    	<property name="HoldType" value="45"/>
+      <property name="Tags" value="junk"/>
+    	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+    	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+    	<property name="Material" value="MresourceScrapLeadSmall"/>
+
+      <property name="DescriptionKey" value="resourceCellSizeC_doughsDesc"/> <!-- DOUGH: Added -->
+      <property name="CustomIcon" value="modGunSoundSuppressorSilencer"/> <!-- DOUGH: Changed -->
+      <property name="CustomIconTint" value="fcfc00"/> <!-- DOUGH: Yellow -->
+
+    	<property name="Stacknumber" value="25"/> <!-- STK resource -->
+    	<property name="EconomicValue" value="30"/>
+    	<property name="Group" value="Resources,Basics"/>
+    </item>
+
+    <!-- DOUGH: Copied from meleeToolFlashlight02 -->
+    <item name="meleeToolEmptyFlashlight_doughs">
+    	<property name="Tags" value="blunt,melee,grunting,light,tool,noMods"/>
+    	<property name="DisplayType" value="simpleTool"/>
+    	<property name="HoldType" value="13"/>
+    	<property name="Meshfile" value="#Other/Items?Tools/flashlight02Prefab.prefab"/>
+    	<property name="DropScale" value="1.5"/>
+    	<property name="Material" value="Miron_scrap"/> <!-- DOUGH: Changed -->
+      <property name="Weight" value="5"/>
+    	<property name="EconomicValue" value="20"/>
+    	<property name="Stacknumber" value="1"/>
+    	<property name="Group" value="Tools/Traps"/>
+
+      <property name="DescriptionKey" value="meleeToolEmptyFlashlight_doughsDesc"/> <!-- DOUGH: Added -->
+      <property name="CustomIcon" value="meleeToolFlashlight02"/> <!-- DOUGH: Changed -->
+      <property name="CustomIconTint" value="444346"/> <!-- DOUGH: Darken to look more ironish.  Cannot lighten for steel -->
+
+    	<property class="Action0">
+    		<property name="Class" value="DynamicMelee"/>
+    		<property name="Sphere" value=".1"/>
+    		<property name="Sound_start" value="swoosh"/>
+    		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+
+    		<property name="UseGrazingHits" value="true"/>
+    		<property name="GrazeStart" value=".5"/>
+    		<property name="GrazeEnd" value=".55"/>
+    		<property name="SwingDegrees" value="65"/>
+    		<property name="SwingAngle" value="160"/>
+    	</property>
+    	<property class="Action1">
+    		<property name="Class" value="DynamicMelee"/>
+    		<property name="Sphere" value=".1"/>
+    		<property name="Sound_start" value="swoosh"/>
+    		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+    		<property name="UsePowerAttackAnimation" value="true"/>
+    		<property name="UseGrazingHits" value="true"/>
+    		<property name="GrazeStart" value=".5"/>
+    		<property name="GrazeEnd" value=".55"/>
+    		<property name="SwingDegrees" value="65"/>
+    		<property name="SwingAngle" value="160"/>
+    	</property>
+    	<effect_group name="meleeToolEmptyFlashlight_doughs" tiered="false">
+    		<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
+    		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+    		<passive_effect name="EntityDamage" operation="base_set" value="7.2"/> <!-- meleeToolFlashlight02 -->
+    		<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+    		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+    		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+    		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+    		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+    		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+    		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+    		<passive_effect name="AttacksPerMinute" operation="base_set" value="65"/>
+    		<passive_effect name="StaminaLoss" operation="base_set" value="11.4" tags="primary"/>
+    		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+    	</effect_group>
+    </item>
+
+    <!-- DOUGH: Copied from resourceHeadlight -->
+    <item name="resourceSmallLightBulb_doughs">
+    	<property name="HoldType" value="45"/>
+    	<property name="Tags" value="junk"/>
+
+      <property name="CustomIcon" value="resourceHeadlight"/> <!-- DOUGH: Changed -->
+      <property name="CustomIconTint" value="d9b6f8"/> <!-- DOUGH: Darken to look more ironish.  Cannot lighten for steel -->
+      <property name="DescriptionKey" value="resourceSmallLightBulb_doughsDesc"/> <!-- DOUGH: Added -->
+
+    	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+    	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+    	<property name="Material" value="MresourceBrokenGlass"/>
+    	<property name="Stacknumber" value="20"/> <!-- STK loot -->
+    	<property name="Weight" value="2"/>
+    	<property name="EconomicValue" value="30"/> <!-- DOUGH: Changed -->
+    	<property name="Group" value="Resources"/>
+    </item>
+
+  </append>
+</configs>

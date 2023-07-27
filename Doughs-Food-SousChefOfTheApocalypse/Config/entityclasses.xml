@@ -1,0 +1,69 @@
+<Doughs>
+
+  <!-- Make the milk(s) low harvest, since we cant target dog gender,
+  we want players to try to harvest frequently,
+  and we don't want to be swimming in raw dog milk ;)
+  -->
+  <append xpath="/entity_classes/entity_class[@name='animalZombieDog']">
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="0" tool_category="Butcher"/> <!-- No get item -->
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="1" tag="butcherHarvest"/>
+  	<drop event="Harvest" name="drinkRawMilk_doughs" count="2" tag="WasteTreasuresCompleteHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="0" tool_category="Butcher"/> <!-- No get item -->
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="1" tag="butcherHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="2" tag="WasteTreasuresCompleteHarvest"/>
+  </append>
+  <append xpath="/entity_classes/entity_class[@name='animalCoyote']">
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="0" tool_category="Butcher"/> <!-- No get item -->
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="1" tag="butcherHarvest"/>
+  	<drop event="Harvest" name="drinkRawMilk_doughs" count="2" tag="WasteTreasuresCompleteHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="0" tool_category="Butcher"/> <!-- No get item -->
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="1" tag="butcherHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="2" tag="WasteTreasuresCompleteHarvest"/>
+  </append>
+  <append xpath="/entity_classes/entity_class[@name='animalWolf']">
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="0" tool_category="Butcher"/> <!-- No get item -->
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="2" tag="butcherHarvest"/>
+  	<drop event="Harvest" name="drinkRawMilk_doughs" count="3" tag="WasteTreasuresCompleteHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="0" tool_category="Butcher"/> <!-- No get item -->
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="2" tag="butcherHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="3" tag="WasteTreasuresCompleteHarvest"/>
+  </append>
+  <append xpath="/entity_classes/entity_class[@name='animalMountainLion']">
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="0" tool_category="Butcher"/> <!-- No get item -->
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="2" tag="butcherHarvest"/>
+  	<drop event="Harvest" name="drinkRawMilk_doughs" count="3" tag="WasteTreasuresCompleteHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="0" tool_category="Butcher"/> <!-- No get item -->
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="2" tag="butcherHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="3" tag="WasteTreasuresCompleteHarvest"/>
+  </append>
+  <append xpath="/entity_classes/entity_class[@name='animalStag']"> <!-- No drinkRawMilk_doughs -->
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="0" tool_category="Butcher"/> <!-- No get item -->
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="2" tag="butcherHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="3" tag="WasteTreasuresCompleteHarvest"/>
+  </append>
+  <append xpath="/entity_classes/entity_class[@name='animalDoe']">
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="1" tool_category="Butcher"/>
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="3" tag="butcherHarvest"/>
+  	<drop event="Harvest" name="drinkRawMilk_doughs" count="4" tag="WasteTreasuresCompleteHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="1" tool_category="Butcher"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="3" tag="butcherHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="4" tag="WasteTreasuresCompleteHarvest"/>
+  </append>
+  <append xpath="/entity_classes/entity_class[@name='animalBear']">
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="2" tool_category="Butcher"/>
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="4" tag="butcherHarvest"/>
+  	<drop event="Harvest" name="drinkRawMilk_doughs" count="5" tag="WasteTreasuresCompleteHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="2" tool_category="Butcher"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="4" tag="butcherHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="5" tag="WasteTreasuresCompleteHarvest"/>
+  </append>
+  <append xpath="/entity_classes/entity_class[@name='animalBossGrace']">
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="2" tool_category="Butcher"/>
+    <drop event="Harvest" name="drinkRawMilk_doughs" count="6" tag="butcherHarvest"/>
+  	<drop event="Harvest" name="drinkRawMilk_doughs" count="8" tag="WasteTreasuresCompleteHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="2" tool_category="Butcher"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="6" tag="butcherHarvest"/>
+    <drop event="Harvest" name="foodRawSweetBread_doughs" count="8" tag="WasteTreasuresCompleteHarvest"/>
+  </append>
+
+</Doughs>

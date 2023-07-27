@@ -1,0 +1,59 @@
+<Doughs>
+  <append xpath="/quests">
+
+    <!-- Treasure quests: Geocaching
+    NOTE: Make them look/read identical do you don't know what you're going to get until you dig
+    -->
+    <quest id="treasureQuest_001SousChefOTA_doughs"> <!-- DOUGH: Copied from Sarahs treasure map -->
+      <property name="name_key" value="treasureQuest_001SousChefOTA_doughs" param1="name"/> <!-- DOUGH: top title when reading/accepting -->
+      <property name="subtitle_key" value="treasureQuest_001SousChefOTA_doughs" param1="name"/> <!-- DOUGH: top title when reading/accepting -->
+      <property name="description_key" value="treasureQuest_001OfferSousChefOTA_doughs" param1="offer"/> <!-- DOUGH: Body of treasure map when reading/accepting -->
+      <property name="icon" value="ui_game_symbol_map"/>
+      <property name="repeatable" value="true"/>
+      <property name="category_key" value="treasure"/>
+      <property name="offer_key" value="treasureQuest_001OfferSousChefOTA_doughs" param1="offer"/> <!-- DOUGH: Body of treasure map when reading/accepting -->
+      <property name="difficulty" value="medium"/> <!-- DOUGH: This shows when reading/accepting -->
+      <property name="shareable" value="false"/>
+      <objective type="TreasureChest">
+        <property name="block" value="cntTreasureChest001SousChefOTA_doughs"/> <!-- DOUGH: Custom loot container -->
+        <property name="alt_block" value="cntTreasureChest001InsecureSousChefOTA_doughs"/>
+        <property name="distance" value="500-1150"/> <!-- Overlap treasure quest distances a bit -->
+        <property name="default_radius" value="9"/>
+        <property name="nav_object" value="treasure" />
+        <property name="direct_nav_object" value="treasure_direct" />
+        <property name="blocks_per_reduction" value="10" />
+        <!-- Perk/item can reduce this by 8. Change perk/item to a % based effect if a blocks_per_reduction less than 10 that is desired. -->
+
+        <property name="radius_reduction_sound" value="ui_radius_shrink" />
+        <property name="explosion_event" value="quest_treasure_explosion_horde" />
+      </objective>
+    </quest>
+
+    <quest id="treasureQuest_002SousChefOTA_doughs"> <!-- DOUGH: Copied from Sarahs treasure map -->
+      <property name="name_key" value="treasureQuest_002SousChefOTA_doughs" param1="name"/> <!-- DOUGH: top title when reading/accepting -->
+      <property name="subtitle_key" value="treasureQuest_002SousChefOTA_doughs" param1="name"/> <!-- DOUGH: top title when reading/accepting -->
+      <property name="description_key" value="treasureQuest_002OfferSousChefOTA_doughs" param1="offer"/> <!-- DOUGH: Body of treasure map when reading/accepting -->
+      <property name="icon" value="ui_game_symbol_map"/>
+      <property name="repeatable" value="true"/>
+      <property name="category_key" value="treasure"/>
+      <property name="offer_key" value="treasureQuest_002OfferSousChefOTA_doughs" param1="offer"/> <!-- DOUGH: Body of treasure map when reading/accepting -->
+      <property name="difficulty" value="medium"/> <!-- DOUGH: This shows when reading/accepting -->
+      <property name="shareable" value="false"/>
+
+      <objective type="TreasureChest">
+        <property name="block" value="cntTreasureChest002SousChefOTA_doughs"/> <!-- DOUGH: Custom loot container -->
+        <property name="alt_block" value="cntTreasureChest002InsecureSousChefOTA_doughs"/>
+        <property name="distance" value="800-1550"/> <!-- Overlap treasure quest distances a bit -->
+        <property name="default_radius" value="9"/>
+        <property name="nav_object" value="treasure" />
+        <property name="direct_nav_object" value="treasure_direct" />
+        <property name="blocks_per_reduction" value="10" />
+        <!-- Perk/item can reduce this by 8. Change perk/item to a % based effect if a blocks_per_reduction less than 10 that is desired. -->
+        <property name="radius_reduction_sound" value="ui_radius_shrink" />
+        <property name="explosion_event" value="quest_treasure_explosion_horde" />
+      </objective>
+    </quest>
+
+</append>
+
+</Doughs>

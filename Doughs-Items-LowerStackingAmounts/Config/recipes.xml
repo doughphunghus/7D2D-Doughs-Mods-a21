@@ -1,0 +1,25 @@
+<config>
+  <!-- Handle Bundles 
+  CHECK how much resources it takes to make tehm, then adjust!
+  other ammo bundles: leave them as did not lolwer ammo stacks (or much)
+  -->
+  <set xpath="/recipes/recipe[@name='ammoBundleJunkTurretRegular']/ingredient[@name='resourceScrapLead']/@count">250</set>  <!-- DOUGH: Default = 1000 -->
+
+  <set xpath="/recipes/recipe[@name='ammoBundleJunkTurretShell']/ingredient[@name='resourceScrapLead']/@count">200</set>  <!-- DOUGH: Default = 1000 -->
+  <set xpath="/recipes/recipe[@name='ammoBundleJunkTurretShell']/ingredient[@name='resourceBuckshot']/@count">200</set>  <!-- DOUGH: Default = 1000 -->
+
+  <set xpath="/recipes/recipe[@name='ammoBundleJunkTurretAP']/ingredient[@name='resourceScrapLead']/@count">600</set>  <!-- DOUGH: Default = 1000 -->
+  <set xpath="/recipes/recipe[@name='ammoBundleJunkTurretAP']/ingredient[@name='resourceScrapIron']/@count">600</set>  <!-- DOUGH: Default = 1000 -->
+    
+  <set xpath="/recipes/recipe[@name='resourceRockSmallBundle']/ingredient[@name='resourceRockSmall']/@count">600</set>  <!-- DOUGH: Default = 1000 -->
+  <set xpath="/recipes/recipe[@name='resourceWoodBundle']/ingredient[@name='resourceWood']/@count">600</set>  <!-- DOUGH: Default = 1000 -->
+  <set xpath="/recipes/recipe[@name='resourcePotassiumNitratePowderBundle']/ingredient[@name='resourcePotassiumNitratePowder']/@count">600</set>  <!-- DOUGH: Default = 1000 -->
+  <set xpath="/recipes/recipe[@name='resourceLeadBundle']/ingredient[@name='resourceScrapLead']/@count">600</set>  <!-- DOUGH: Default = 1000 -->
+  <set xpath="/recipes/recipe[@name='resourceCoalBundle']/ingredient[@name='resourceCoal']/@count">600</set>  <!-- DOUGH: Default = 1000 -->
+  <set xpath="/recipes/recipe[@name='resourceOilShaleBundle']/ingredient[@name='resourceOilShale']/@count">600</set>  <!-- DOUGH: Default = 1000 -->
+  <set xpath="/recipes/recipe[@name='ammoGasCanBundle']/ingredient[@name='resourceOilShale']/@count">500</set>  <!-- DOUGH: Default = 1000 -->
+
+  <set xpath="/recipes/recipe[@name='resourceGunPowderBundle']/ingredient[@name='resourceCoal']/@count">400</set>  <!-- DOUGH: Default = 1000 -->
+  <set xpath="/recipes/recipe[@name='resourceGunPowderBundle']/ingredient[@name='resourcePotassiumNitratePowder']/@count">400</set>  <!-- DOUGH: Default = 1000 -->
+
+</config>

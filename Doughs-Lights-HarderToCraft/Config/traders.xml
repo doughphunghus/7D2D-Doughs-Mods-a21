@@ -1,0 +1,24 @@
+<configs>
+  <!--
+  ########## Add items to traders##########
+  -->
+  <!--
+  Remove items from traders
+  -->
+  <remove xpath="/traders/trader_item_groups/trader_item_group[@name='traderGeneral']/item[@name='meleeToolFlashlight02']" />
+  <remove xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedMods']/item[@name='modGunFlashlight']" />
+ 
+  <!--
+  Add new items to traders
+  Keep the volume of items really low to encourage crafting
+  -->
+  <append xpath="/traders/trader_item_groups/trader_item_group[@name='generalResources']">
+    <item name="resourceCellSizeC_doughs" count="1,2" prob="0.02"/>
+    <item name="meleeToolEmptyFlashlight_doughs" count="1,2" prob="0.05"/>
+  </append>
+
+  <append xpath="/traders/trader_item_groups/trader_item_group[@name='traderElectrical']">
+    <item name="resourceCellSizeC_doughs" count="1,2" prob="0.02"/>
+    <item name="resourceSmallLightBulb_doughs" count="1" prob="0.02"/>
+  </append>
+</configs>

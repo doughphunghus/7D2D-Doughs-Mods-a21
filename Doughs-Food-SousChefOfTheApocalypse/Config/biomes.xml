@@ -1,0 +1,9 @@
+<config>
+  <!-- Have to harvest some herbs. Make them pretty hard to find -->
+  <append xpath="/worldgeneration/biomes/biome[@name='snow']/subbiome/decorations">
+    <decoration type="block" blockname="plantedTerragon3Harvest_doughs" prob=".0006" rotatemax="3"/>
+  </append>
+  <append xpath="/worldgeneration/biomes/biome[@name='wasteland']/subbiome/decorations">
+    <decoration type="block" blockname="plantedChives3Harvest_doughs" prob=".0006" rotatemax="3"/>
+  </append>
+</config>

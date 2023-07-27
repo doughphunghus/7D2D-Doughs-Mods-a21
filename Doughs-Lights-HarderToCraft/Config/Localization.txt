@@ -1,0 +1,7 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+meleeToolEmptyFlashlight_doughs,items,Item,,,"Flashlight Case",,,,,,,,,,,,,,
+meleeToolEmptyFlashlight_doughsDesc,items,Item,,,"An well crafted flashlight casing made out of metal that has been looted for its parts.",,,,,,,,,,,,,,
+resourceCellSizeC_doughs,items,Item,,,"NevRDie Cell",,,,,,,,,,,,,,
+resourceCellSizeC_doughsDesc,items,Item,,,"A good old NevRDie cell, type C\nYou remember the commercial jingle fondly...NevRDie.\nNever runs down, never goes out, never lets you dooown.\nNevRDie. Will long be around, after you're in the ground.\nNevRDie.\nIt'll last longer than YOU!",,,,,,,,,,,,,,
+resourceSmallLightBulb_doughs,items,Item,,,"Small Bulb",,,,,,,,,,,,,,
+resourceSmallLightBulb_doughsDesc,items,Item,,,"A small halogen bulb that could probably be powered by a few cells.",,,,,,,,,,,,,,

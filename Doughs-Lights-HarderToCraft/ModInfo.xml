@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	  <!-- v2.0 -->
+		<Name value="Doughs-Lights-HarderToCraft" /> <!-- (Required) Internal name, like an ID, of the mod. Should be globally unique, like an author prefix + name. Only allowed chars: Numbers, latin letters, underscores, dash -->
+    <DisplayName value="Doughs - Lights: HarderToCraft" /> <!-- (Required) Name used for display purposes, like shown in the mods UI at some point. Could be the same as you would later on use on workshop or wherever mods get distributed -->
+    <Version value="21.0.0.1" /> <!-- (Required) SemVer version of the mod. Has to be in the format major.minor[.build[.revision]] (i.e. build and revision can be left out, recommend using them though as typically done with Semantic Versioning -->
+    <Description value="Makes flashlights and placeable lanterns very hard to craft/obtain" /> <!-- (Optional) More text to show on UIs -->
+    <Author value="Doughphunghus" /> <!-- (Optional) Name(s) of the author(s) -->
+    <Website value="https://github.com/doughphunghus/7D2D-Doughs-Mods-a21" /> <!-- (Optional) URL of a website of the mod -->
+</xml>
