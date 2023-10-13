@@ -1,0 +1,151 @@
+<Doughs>
+  <!-- Override icons and colors -->
+  
+  <set xpath="/items/item[@name='foodSweetCornBlueberryMuffin_doughs']/property[@name='CustomIcon']/@value">foodSweetCornBlueberryMuffin_doughs</set>
+  <remove xpath="/items/item[@name='foodSweetCornBlueberryMuffin_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodBread_doughs']/property[@name='CustomIcon']/@value">foodBread_doughs</set>
+  <remove xpath="/items/item[@name='foodBread_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodRuinedHotPotato_doughs']/property[@name='CustomIcon']/@value">foodRuinedHotPotato_doughs</set>
+  <!-- <remove xpath="/items/item[@name='foodRuinedHotPotato_doughs']/property[@name='CustomIconTint']"/> -->
+
+  <set xpath="/items/item[@name='foodCheese_doughs']/property[@name='CustomIcon']/@value">foodCheese_doughs</set>
+  <remove xpath="/items/item[@name='foodCheese_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodRuinedColdDessert_doughs']/property[@name='CustomIcon']/@value">foodRuinedColdDessert_doughs</set>
+  <!-- <remove xpath="/items/item[@name='doughsFood_RuninedFoodCold_Dessert']/property[@name='CustomIconTint']"/> -->
+
+  <set xpath="/items/item[@name='foodCroqueMonsieur_doughs']/property[@name='CustomIcon']/@value">foodCroqueMonsieur_doughs</set>
+  <remove xpath="/items/item[@name='foodCroqueMonsieur_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodRuinedBread_doughs']/property[@name='CustomIcon']/@value">foodRuinedBread_doughs</set>
+  <!-- <remove xpath="/items/item[@name='foodRuinedBread_doughs']/property[@name='CustomIconTint']"/> -->
+
+  <set xpath="/items/item[@name='foodButteredToast_doughs']/property[@name='CustomIcon']/@value">foodButteredToast_doughs</set>
+  <remove xpath="/items/item[@name='foodButteredToast_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodPemmican_doughs']/property[@name='CustomIcon']/@value">foodPemmican_doughs</set>
+  <remove xpath="/items/item[@name='foodPemmican_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodCreamOfTartar_doughs']/property[@name='CustomIcon']/@value">foodCreamOfTartar_doughs</set>
+  <remove xpath="/items/item[@name='foodCreamOfTartar_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodSauteedMushrooms_doughs']/property[@name='CustomIcon']/@value">foodSauteedMushrooms_doughs</set>
+  <remove xpath="/items/item[@name='foodSauteedMushrooms_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodBoeufBourguignon_doughs']/property[@name='CustomIcon']/@value">foodBoeufBourguignon_doughs</set>
+  <remove xpath="/items/item[@name='foodBoeufBourguignon_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodPopCorn_doughs']/property[@name='CustomIcon']/@value">foodPopCorn_doughs</set>
+  <remove xpath="/items/item[@name='foodPopCorn_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='drinkBottomShelfRedWine_doughs']/property[@name='CustomIcon']/@value">drinkBottomShelfRedWine_doughs</set>
+  <remove xpath="/items/item[@name='drinkBottomShelfRedWine_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodTurkishDelight_doughs']/property[@name='CustomIcon']/@value">foodTurkishDelight_doughs</set>
+  <remove xpath="/items/item[@name='foodTurkishDelight_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodButter_doughs']/property[@name='CustomIcon']/@value">foodButter_doughs</set>
+  <remove xpath="/items/item[@name='foodButter_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodButterOfTheGods_doughs']/property[@name='CustomIcon']/@value">foodButter_doughs</set>
+  <!-- <remove xpath="/items/item[@name='foodButterOfTheGods_doughs']/property[@name='CustomIconTint']"/> -->
+  
+  <set xpath="/items/item[@name='foodCookingOil_doughs']/property[@name='CustomIcon']/@value">foodCookingOil_doughs</set>
+  <remove xpath="/items/item[@name='foodCookingOil_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodBeefJerky_doughs']/property[@name='CustomIcon']/@value">foodBeefJerky_doughs</set>
+  <remove xpath="/items/item[@name='foodBeefJerky_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodSaltyExtract_doughs']/property[@name='CustomIcon']/@value">foodSaltyExtract_doughs</set>
+  <remove xpath="/items/item[@name='foodSaltyExtract_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodSweetExtract_doughs']/property[@name='CustomIcon']/@value">foodSweetExtract_doughs</set>
+  <remove xpath="/items/item[@name='foodSweetExtract_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodVegetableScraps_doughs']/property[@name='CustomIcon']/@value">foodVegetableScraps_doughs</set>
+  <remove xpath="/items/item[@name='foodVegetableScraps_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodMeatScraps_doughs']/property[@name='CustomIcon']/@value">foodMeatScraps_doughs</set>
+  <remove xpath="/items/item[@name='foodMeatScraps_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodFlour_doughs']/property[@name='CustomIcon']/@value">foodFlour_doughs</set>
+  <remove xpath="/items/item[@name='foodFlour_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='drinkScrapsAuJus_doughs']/property[@name='CustomIcon']/@value">drinkScrapsAuJus_doughs</set>
+  <remove xpath="/items/item[@name='drinkScrapsAuJus_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='drinkAuJus_doughs']/property[@name='CustomIcon']/@value">drinkAuJus_doughs</set>
+  <remove xpath="/items/item[@name='drinkAuJus_doughs']/property[@name='CustomIconTint']"/>
+
+  <set xpath="/items/item[@name='foodPineSeedToasted_doughs']/property[@name='CustomIcon']/@value">foodPineSeedToasted_doughs</set>
+  <remove xpath="/items/item[@name='foodPineSeedToasted_doughs']/property[@name='CustomIconTint']"/>
+
+
+<!-- 
+  TODO
+
+foodBouillonCube_doughs
+foodRuinedBurnedScraps_doughs
+foodRuinedBurnedCarcass_doughs
+foodRuinedBurnedMeat_doughs
+foodRuinedColdBaconAndEggs_doughs
+foodRuinedColdBoiledMeat_doughs
+foodRuinedColdEgg_doughs
+foodRuinedColdGrilledMeat_doughs
+foodRuinedHotYam_doughs
+foodRuinedHotBrusslesSprouts_doughs
+foodRuinedHotCarrot_doughs
+foodRedWineBlueberrySorbet_doughs
+foodSteakAndPotatoCuisine_doughs
+foodAcornSeedToasted_doughs
+foodPumpkinSeedToasted_doughs
+foodBoneMarrow_doughs
+foodHardTack_doughs
+foodSimpleJerky_doughs
+foodHumanJerky_doughs
+foodMeatScraps_doughs
+foodRawSweetBread_doughs
+foodBoiledSweetBread_doughs
+foodSweetBreadCuisine_doughs
+drinkSweetNutMilk_doughs
+drinkRawMilk_doughs
+drinkMilk_doughs
+drinkCream_doughs
+foodMilkCurds_doughs
+foodButterOfTheGods_doughs
+foodBreadBatter_doughs
+foodBreadSlice_doughs
+foodRoastBeefAuJus_doughs
+foodEggSouffle_doughs
+foodIceCream_doughs
+foodPotatoesDauphinoise_doughs
+foodBasicExtractingSchematic_doughs
+foodRawMapleSyrupDrop_doughs
+foodMapleSyrup_doughs
+foodMapleGlazedPears_doughs
+foodFriendsOfTheForestSchematic_doughs
+foodRawHumanFlesh_doughs
+foodCookedHumanFlesh_doughs
+foodHumanVealStew_doughs
+foodEggsAndItsDiscontentsSchematic_doughs
+foodChives_doughs
+foodTerragon_doughs
+foodFrenchOmelet_doughs
+foodSkillMagazineSousChefOTA_doughs
+treasureMap_001SousChefOTA_doughs
+treasureMap_002SousChefOTA_doughs
+drinkTopShelfWine001_doughs
+drinkTopShelfWine002_doughs
+drinkTopShelfWine003_doughs
+drinkTopShelfWine004_doughs
+foodRaspberryJam_doughs
+foodFlourAlmond_doughs
+foodChocolateBar_doughs
+foodChocolateTruffle_doughs
+foodMacaronRaspberry_doughs
+foodVanillaExtract_doughs
+parcelBaseSousChefOTA_doughs
+  -->
+</Doughs>
