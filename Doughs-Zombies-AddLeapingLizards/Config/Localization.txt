@@ -1,0 +1,4 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+zombieSpider_doughsZLL,entityclasses,Entity,,,Zephyros,,,,,,,,,,,,,,
+zombieSpiderFeral_doughsZLL,entityclasses,Entity,,,Feral Zephyros,,,,,,,,,,,,,,
+zombieSpiderRadiated_doughsZLL,entityclasses,Entity,,,Radiated Zephyros,,,,,,,,,,,,,,

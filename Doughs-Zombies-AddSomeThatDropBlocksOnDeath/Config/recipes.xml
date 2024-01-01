@@ -1,0 +1,10 @@
+<configs>
+	<append xpath="/recipes">
+  
+    <recipe name="thrownAmmoPipeBomb_doughsZDBOD" count="1" craft_time="12">
+      <ingredient name="thrownAmmoPipeBomb" count="1"/>
+      <ingredient name="resourceZedLump_doughsZDBOD" count="10"/>
+    </recipe>
+
+	</append>
+</configs>

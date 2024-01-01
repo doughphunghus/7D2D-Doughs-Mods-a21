@@ -1,0 +1,11 @@
+<configs>
+	<append xpath="/ui_display_info/item_display">
+    <item_display_info display_type="thrownAmmoPipeBomb_doughsZDBOD" display_group="groupAmmo">
+			<display_entry name="EntityDamage" title_key="statEntityDamageExplosion" tags="perkDemolitionsExpert,admin"/>
+			<display_entry name="BlockDamage" title_key="statBlockDamage" tags="perkDemolitionsExpert,admin"/>
+			<display_entry name="dExRadius" title_key="statExRadius"/>
+			<display_entry name="dFuseTime" title_key="statFuseTime" display_type="Time" negative_preferred="true"/>
+			<display_entry name="dOrganicDamage_doughsZDBOD" title_key="statOrganicDamage_doughsZDBOD"/>
+		</item_display_info>
+  </append>
+</configs>

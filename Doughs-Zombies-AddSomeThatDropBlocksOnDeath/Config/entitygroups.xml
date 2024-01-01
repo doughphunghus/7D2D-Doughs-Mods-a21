@@ -1,0 +1,93 @@
+<config>
+  <!-- Add the block droppers to all blood moon hordes -->
+  <!-- *** A21_INFO -->
+  <!-- New format. One zed name per line -->
+  <!-- zombieName, probability (and no prob = 1)-->
+
+<!-- DOUGH: MUST use CRLF line endings on any CML file using csv! else emsses things up! -->
+
+<!-- NORMAL -->
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'zombieSpider' ) ]/text()" delim="\n" op="add" >
+		zombieSpider_doughsZDBOD
+    zombieBurnt_doughsZDBOD, .5
+</csv>
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'zombieUtilityWorker' ) ]/text()" delim="\n" op="add" >
+		zombieUtilityWorker_doughsZDBOD
+    zombieBurnt_doughsZDBOD, .5
+</csv>
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'zombieMaleHazmat' ) ]/text()" delim="\n" op="add" >
+		zombieMaleHazmat_doughsZDBOD, .2
+</csv>
+
+<!-- FERAL -->
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'zombieSpiderFeral' ) ]/text()" delim="\n" op="add" >
+		zombieSpiderFeral_doughsZDBOD
+    zombieBurntFeral_doughsZDBOD, .5
+</csv>
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'zombieUtilityWorkerFeral' ) ]/text()" delim="\n" op="add" >
+		zombieUtilityWorkerFeral_doughsZDBOD
+    zombieBurntFeral_doughsZDBOD, .5
+</csv>
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'zombieMaleHazmatFeral' ) ]/text()" delim="\n" op="add" >
+		zombieMaleHazmatFeral_doughsZDBOD, .2
+</csv>
+
+<!-- RADIATED -->
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'zombieSpiderRadiated' ) ]/text()" delim="\n" op="add" >
+		zombieSpiderRadiated_doughsZDBOD
+    zombieBurntRadiated_doughsZDBOD, .5
+</csv>
+<!-- zombieUtilityWorkerRadiated isn't in any feralHordeStageGS* !
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'zombieUtilityWorkerRadiated' ) ]/text()" delim="\n" op="add" >
+		zombieUtilityWorkerRadiated_doughsZDBOD
+    zombieBurntRadiated_doughsZDBOD, .5
+</csv>
+-->
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'zombieMaleHazmatRadiated' ) ]/text()" delim="\n" op="add" >
+		zombieMaleHazmatRadiated_doughsZDBOD, .2
+  	zombieUtilityWorkerRadiated_doughsZDBOD
+    zombieBurntRadiated_doughsZDBOD, .5
+</csv>
+
+<!--
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS')]/text()" delim="\n" op="add" >
+		zombieUtilityWorker_doughsZDBOD
+		zombieBurnt_doughsZDBOD
+		zombieMaleHazmat_doughsZDBOD
+		zombieSpider_doughsZDBOD
+</csv>
+-->
+<!--
+  <csv xpath="/entitygroups/entitygroup[contains(@name,'scoutHordeStageGS')]/text()" delim="\n" op="add" >
+		zombieUtilityWorker_doughsZDBOD
+    zombieBurnt_doughsZDBOD
+    zombieMaleHazmat_doughsZDBOD
+    zombieSpider_doughsZDBOD
+	</csv>
+  -->
+<!--
+  <csv xpath="/entitygroups/entitygroup[contains(@name,'defenseHordeStageGS')]/text()" delim="\n" op="add" >
+		zombieUtilityWorker_doughsZDBOD
+    zombieBurnt_doughsZDBOD
+    zombieMaleHazmat_doughsZDBOD
+    zombieSpider_doughsZDBOD
+	</csv>
+-->
+  <!-- 
+    Other zeds we could add
+    zombieUtilityWorkerFeral_doughsZDBOD
+    zombieUtilityWorkerRadiated_doughsZDBOD
+    zombieBurntFeral_doughsZDBOD
+    zombieBurntRadiated_doughsZDBOD
+    zombieMaleHazmatFeral_doughsZDBOD
+    zombieMaleHazmatRadiated_doughsZDBOD
+  -->
+
+  <!-- NOTE: ALl other wandering hordes? Maybe do something with these?
+  wanderingHordeStageGS
+  FwanderingHordeStageGS
+  badassOnlyHordeStageGS
+  scoutHordeStageGS
+  defenseHordeStageGS
+  -->
+</config>

@@ -1,0 +1,33 @@
+<config>
+
+	<append xpath="/entity_classes">
+
+    <!-- 
+      Maybe we want to make them all "special" in some way (slow/fast/some effects)?
+    -->
+
+
+		<!-- *** ZOMBIE_SPIDER = jumper -->
+    <entity_class name="zombieSpider_doughsZLL" extends="zombieSpider">
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="WalkType" value="1"/> <!-- DOUGH: 1 = Moe? Make the Spider zed walk. so we know its a special one.-->
+      <property name="JumpMaxDistance" value="15, 17"/> <!-- DOUGH: Default = 7, 9 -->
+    </entity_class>
+
+   <entity_class name="zombieSpiderFeral_doughsZLL" extends="zombieSpiderFeral">
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="WalkType" value="1"/> <!-- DOUGH: 1 = Moe? Make the Spider zed walk. so we know its a special one.-->
+      <property name="JumpMaxDistance" value="20, 22"/> <!-- DOUGH: Default = 11, 13 -->
+    </entity_class>
+
+    <entity_class name="zombieSpiderRadiated_doughsZLL" extends="zombieSpiderRadiated">
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="WalkType" value="1"/> <!-- DOUGH: 1 = Moe? Make the Spider zed walk. so we know its a special one.-->
+      <property name="JumpMaxDistance" value="25, 27"/> <!-- DOUGH: Default = 11, 13 -->
+    </entity_class>
+
+  </append>
+</config>

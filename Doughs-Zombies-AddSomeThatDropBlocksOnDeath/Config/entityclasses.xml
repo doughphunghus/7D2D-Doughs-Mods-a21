@@ -1,0 +1,219 @@
+<config>
+
+	<append xpath="/entity_classes">
+
+    <!-- 
+      Maybe we want to make them all "special" in some way (slow/fast/some effects)?
+      so we know its a special block dropper zed?
+
+      For now, lets try these "specials" out:
+      zombieBurnt*_doughsZDBOD = drops ash piles (burning/fire effect...maybe also cool with the fire mod?)
+      zombieMaleHazmat*_doughsZDBOD = Drops gas barrels
+      zombieUtilityWorker*_doughsZDBOD = Drops dirt blocks
+    -->
+
+
+		<!-- *** ZOMBIE_SPIDER = drops a mine -->
+    <entity_class name="zombieSpider_doughsZDBOD" extends="zombieSpider">
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="CorpseBlock" value="goreBlockZombieBones_doughs004_ZDBOD" /> <!-- DOUGH: Drop special corpse block-->
+      <property name="CorpseBlockChance" value="1" /> <!-- DOUGH: %chance. 0.01 -> 1.00 probably?-->
+      <property name="TimeStayAfterDeath" value="20"/> --> <!-- DOUGH: default=30 seconds -->
+      <property name="WalkType" value="1"/> <!-- DOUGH: 1 = Moe? Make the Spider zed walk. so we know its a special one.-->
+
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="50"/>
+        <!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+      </effect_group>
+    </entity_class>
+
+   <entity_class name="zombieSpiderFeral_doughsZDBOD" extends="zombieSpiderFeral">
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="CorpseBlock" value="goreBlockZombieBones_doughs004_ZDBOD" /> <!-- DOUGH: Drop special corpse block-->
+      <property name="CorpseBlockChance" value="1" /> <!-- DOUGH: %chance. 0.01 -> 1.00 probably?-->
+      <property name="TimeStayAfterDeath" value="20"/> --> <!-- DOUGH: default=30 seconds -->
+      <property name="WalkType" value="1"/> <!-- DOUGH: 1 = Moe? Make the Spider zed walk. so we know its a special one.-->
+
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="150"/>
+        <!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+      </effect_group>
+    </entity_class>
+
+    <entity_class name="zombieSpiderRadiated_doughsZDBOD" extends="zombieSpiderRadiated">
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="CorpseBlock" value="goreBlockZombieBones_doughs004_ZDBOD" /> <!-- DOUGH: Drop special corpse block-->
+      <property name="CorpseBlockChance" value="1" /> <!-- DOUGH: %chance. 0.01 -> 1.00 probably?-->
+      <property name="TimeStayAfterDeath" value="20"/> --> <!-- DOUGH: default=30 seconds -->
+      <property name="WalkType" value="1"/> <!-- DOUGH: 1 = Moe? Make the Spider zed walk. so we know its a special one.-->
+
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="250"/>
+        <!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+      </effect_group>
+    </entity_class>
+    <!--
+      ##########################################
+      zombieBurnt
+      ##########################################
+    -->
+    <entity_class name="zombieBurnt_doughsZDBOD" extends="zombieBurnt">
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="CorpseBlock" value="goreBlockZombieBones_doughs002_ZDBOD" /> <!-- DOUGH: Drop special corpse block-->
+		  <property name="CorpseBlockChance" value="1" /> <!-- DOUGH: %chance. 0.01 -> 1.00 probably?-->
+      <property name="TimeStayAfterDeath" value="20"/> --> <!-- DOUGH: default=30 seconds -->
+      <property name="WalkType" value="22"/> <!-- DOUGH: Spider walk. so we know its a special one.-->
+
+    </entity_class>
+
+    <entity_class name="zombieBurntFeral_doughsZDBOD" extends="zombieBurntFeral">
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="CorpseBlock" value="goreBlockZombieBones_doughs002_ZDBOD" /> <!-- DOUGH: Drop special corpse block-->
+		  <property name="CorpseBlockChance" value="1" /> <!-- DOUGH: %chance. 0.01 -> 1.00 probably?-->
+      <property name="TimeStayAfterDeath" value="20"/> --> <!-- DOUGH: default=30 seconds -->
+      <property name="WalkType" value="22"/> <!-- DOUGH: Spider walk. so we know its a special one.-->
+      <!-- DOUGH: END Adding special properties -->
+
+    </entity_class>
+
+    <entity_class name="zombieBurntRadiated_doughsZDBOD" extends="zombieBurntRadiated">
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="CorpseBlock" value="goreBlockZombieBones_doughs002_ZDBOD" /> <!-- DOUGH: Drop special corpse block-->
+		  <property name="CorpseBlockChance" value="1" /> <!-- DOUGH: %chance. 0.01 -> 1.00 probably?-->
+      <property name="TimeStayAfterDeath" value="20"/> --> <!-- DOUGH: default=30 seconds -->
+      <property name="WalkType" value="22"/> <!-- DOUGH: Spider walk. so we know its a special one.-->
+      <!-- DOUGH: END Adding special properties -->
+
+    </entity_class>
+
+    <!--
+      ##########################################
+      zombieMaleHazmat
+      ##########################################
+    -->
+    <entity_class name="zombieMaleHazmat_doughsZDBOD" extends="zombieMaleHazmat">
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="CorpseBlock" value="goreBlockZombieBones_doughs003_ZDBOD" /> <!-- DOUGH: Drop special corpse block-->
+		  <property name="CorpseBlockChance" value="1" /> <!-- DOUGH: %chance. 0.01 -> 1.00 probably?-->
+      <property name="TimeStayAfterDeath" value="20"/> --> <!-- DOUGH: default=30 seconds -->
+      <property name="WalkType" value="22"/> <!-- DOUGH: Spider walk. so we know its a special one.-->
+      <!-- DOUGH: END Adding special properties -->
+
+    </entity_class>
+        <entity_class name="zombieMaleHazmatFeral_doughsZDBOD" extends="zombieMaleHazmatFeral">
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="CorpseBlock" value="goreBlockZombieBones_doughs003_ZDBOD" /> <!-- DOUGH: Drop special corpse block-->
+		  <property name="CorpseBlockChance" value="1" /> <!-- DOUGH: %chance. 0.01 -> 1.00 probably?-->
+      <property name="TimeStayAfterDeath" value="20"/> --> <!-- DOUGH: default=30 seconds -->
+      <property name="WalkType" value="22"/> <!-- DOUGH: Spider walk. so we know its a special one.-->
+      <!-- DOUGH: END Adding special properties -->
+
+    </entity_class>
+
+    <entity_class name="zombieMaleHazmatRadiated_doughsZDBOD" extends="zombieMaleHazmatRadiated">
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="CorpseBlock" value="goreBlockZombieBones_doughs003_ZDBOD" /> <!-- DOUGH: Drop special corpse block-->
+		  <property name="CorpseBlockChance" value="1" /> <!-- DOUGH: %chance. 0.01 -> 1.00 probably?-->
+      <property name="TimeStayAfterDeath" value="20"/> --> <!-- DOUGH: default=30 seconds -->
+      <property name="WalkType" value="22"/> <!-- DOUGH: Spider walk. so we know its a special one.-->
+      <!-- DOUGH: END Adding special properties -->
+
+    </entity_class>
+
+
+    <!--
+      ##########################################
+      zombieUtilityWorker
+      ##########################################
+    -->
+    <entity_class name="zombieUtilityWorker_doughsZDBOD" extends="zombieUtilityWorker">
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="CorpseBlock" value="goreBlockZombieBones_doughs001_ZDBOD" /> <!-- DOUGH: Drop special corpse block-->
+		  <property name="CorpseBlockChance" value="1" /> <!-- DOUGH: %chance. 0.01 -> 1.00 probably?-->
+      <property name="TimeStayAfterDeath" value="20"/> --> <!-- DOUGH: default=30 seconds -->
+      <!-- <property name="WalkType" value="22"/> --> <!-- DOUGH: 22 = Spider walk. BUT cannot easily get hit by other zeds if crawling -->
+
+      <!-- DOUGH: so it will die on any hit? want it to hit a block/wall and die 
+      BUT if it gets to a wall, a zed hitting it will drop it 
+      also: maybe easier to shoot from a distance to drop it/stop getting to wall
+      
+      NOTE: HealthMax = 1 is so low, spawning in groups of 25 can kill most of them
+      -->
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="120"/>
+      </effect_group>
+    </entity_class>
+
+    <!-- ZOMBIE_UTILITY_WORKER_FERAL -->
+    <entity_class name="zombieUtilityWorkerFeral_doughsZDBOD" extends="zombieUtilityWorker">
+      
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="CorpseBlock" value="goreBlockZombieBones_doughs001_ZDBOD" /> <!-- DOUGH: Drop special corpse block -->
+		  <property name="CorpseBlockChance" value="1" /> <!-- DOUGH: %chance. 0.01 -> 1.00 probably?-->
+      <property name="TimeStayAfterDeath" value="20"/> --> <!-- DOUGH: default=30 seconds -->
+      <property name="WalkType" value="22"/> <!-- DOUGH: Spider walk. so we know its a special one.-->
+      <!-- DOUGH: END Adding special properties -->
+
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="entity,zombie,walker,feral"/>
+      <property name="Mesh" value="@:Entities/Zombies/Prefabs/ZWorkerFeral.prefab"/>
+
+      <!-- Gameplay zombieUtilityWorkerFeral -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+      <property name="PainResistPerHit" value=".7"/><!-- Feral -->
+      <property name="MoveSpeedAggro" value=".5, 1.35"/>
+      <property name="HandItem" value="meleeHandZombieWorkerFeral"/>
+      <property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+      <property name="LootDropProb" value=".03"/> <!-- Feral -->
+
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="350"/>
+        <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+        <!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+      </effect_group>
+    </entity_class>
+
+		<!-- *** ZOMBIE_UTILITY_WORKER_RADIATED -->
+    <property name="UserSpawnType" value="Menu"/>
+    <entity_class name="zombieUtilityWorkerRadiated_doughsZDBOD" extends="zombieUtilityWorkerFeral">
+      
+      <!-- DOUGH: BEGIN Adding special properties -->
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="CorpseBlock" value="goreBlockZombieBones_doughs001_ZDBOD" /> <!-- DOUGH: Drop special corpse block-->
+		  <property name="CorpseBlockChance" value="1" /> <!-- DOUGH: %chance. 0.01 -> 1.00 probably?-->
+      <property name="TimeStayAfterDeath" value="20"/> --> <!-- DOUGH: default=30 seconds -->
+      <property name="WalkType" value="22"/> <!-- DOUGH: Spider walk. so we know its a special one.-->
+      <!-- DOUGH: END Adding special properties -->
+
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+      <!-- <property name="Buffs" value="buffLegendaryBoss"/> -->
+      <property name="Mesh" value="@:Entities/Zombies/Prefabs/ZWorkerRadiated.prefab"/>
+
+      <!-- Gameplay zombieUtilityWorkerRadiated -->
+      <property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+      <property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+      <property name="ExperienceGain" value="1200"/><!-- XP grunt radiated -->
+
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1100"/>
+        <passive_effect name="EntityDamage" operation="perc_add" value="1"/> <!-- Boss damage -->
+        <passive_effect name="HealthChangeOT" operation="base_set" value="1.4"/> <!-- Boss regen, 1% -->
+        <triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+      </effect_group>
+    </entity_class>
+
+	</append>
+</config>

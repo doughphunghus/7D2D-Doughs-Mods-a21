@@ -1,0 +1,24 @@
+<config>
+  <!-- Add the block droppers to all blood moon hordes -->
+  <!-- *** A21_INFO -->
+  <!-- New format. One zed name per line -->
+  <!-- zombieName, probability (and no prob = 1)-->
+
+<!-- DOUGH: MUST use CRLF line endings on any CML file using csv! else emsses things up! -->
+
+<!-- NORMAL --> <!--TODO: handle feral and rad spiders-->
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'zombieSpider' ) ]/text()" delim="\n" op="add" >
+		zombieSpider_doughsZLL, .5
+</csv>
+
+<!-- FERAL -->
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'zombieSpiderFeral' ) ]/text()" delim="\n" op="add" >
+		zombieSpiderFeral_doughsZLL, .5
+</csv>
+
+<!-- RADIATED -->
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'zombieSpiderRadiated' ) ]/text()" delim="\n" op="add" >
+		zombieSpiderRadiated_doughsZLL, .5
+</csv>
+
+</config>

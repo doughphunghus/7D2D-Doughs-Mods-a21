@@ -1,0 +1,44 @@
+<configs>
+	<append xpath="/items">
+
+    <!-- DOUGH: Copied from meleeHandAnimalZombieVultureRadiated -->
+    <item name="meleeHandAnimalZombieVultureRadiated_doughsZAED">
+      <property name="Extends" value="meleeHandAnimalZombieVulture"/>
+      <property name="CreativeMode" value="None"/>
+      <property class="Action0">
+        <property name="Delay" value=".7"/>
+        <property name="DamageEntity" value="10"/>
+        <property name="DamageBlock" value="32"/>
+      </property>
+      <property class="Action1">
+        <property name="Class" value="Vomit"/>
+        <property name="Hitmask_override" value="Arrow"/>
+        <property name="Delay" value=".5"/>
+        <property name="Infinite_ammo" value="true"/>
+        <property name="Magazine_items" value="ammoDartIron"/> <!-- DOUGH: modified -->
+        <property name="Sound_warning" value="drone_enemy_engauge"/> <!-- DOUGH: modified -->
+        <property name="Sound_start" value="darttrap_fire"/> <!-- DOUGH: modified -->
+        <property name="Sound_repeat" value="darttrap_fire"/>
+        <property name="Sound_end" value="darttrap_end"/> <!-- DOUGH: modified -->
+        <property name="Sound_empty" value=""/>
+        <property name="Sound_reload" value=""/>
+      </property>
+      <effect_group name="meleeHandAnimalZombieVultureRadiated_doughsZAED" tiered="false">
+        <passive_effect name="ModSlots" operation="base_set" value="0"/>
+        <passive_effect name="MagazineSize" operation="base_set" value="1"/>
+        <passive_effect name="BurstRoundCount" operation="base_set" value="2"/>
+        <passive_effect name="SpreadDegreesVertical" operation="base_set" value="3"/> <!-- DOUGH: modified, now more accurate? -->
+        <passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/> <!-- DOUGH: modified, now more accurate? -->
+        <passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+        <passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+        <passive_effect name="MaxRange" operation="base_set" value="50"/>
+        <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+          buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+          weights=".11,.07,.05,.29,.36,.11"/>
+
+        <!-- DOUGH: Removed vulture alternate debiuffs -->
+      </effect_group>
+    </item>
+
+  </append>
+</configs>

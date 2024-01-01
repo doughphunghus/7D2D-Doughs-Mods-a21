@@ -1,0 +1,2 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+animalZombieVultureDrone_doughsZAED,entityclasses,Entity,,,Goverment Spy Drone v5.34.1c,,,,,,,,,,,,,,

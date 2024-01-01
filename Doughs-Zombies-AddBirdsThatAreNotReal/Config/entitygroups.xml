@@ -1,0 +1,39 @@
+<config>
+  <!-- Add the block droppers to all blood moon hordes -->
+  <!-- *** A21_INFO -->
+  <!-- New format. One zed name per line -->
+  <!-- zombieName, probability (and no prob = 1)-->
+
+<!-- DOUGH: MUST use CRLF line endings on any CML file using csv! else emsses things up! -->
+
+<!-- NORMAL --> <!--TODO: handle feral and rad spiders-->
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'animalZombieVulture' ) ]/text()" delim="\n" op="add" >
+		animalZombieVultureDrone_doughsZAED, .1
+</csv>
+
+<csv xpath="/entitygroups/entitygroup[contains(@name,'Zombies') and contains(text(), 'animalZombieVulture' ) ]/text()" delim="\n" op="add" >
+		animalZombieVultureDrone_doughsZAED, .5
+</csv>
+<!-- DOUGH: These scale very different -->
+<csv xpath="/entitygroups/entitygroup[contains(@name,'EnemyAnimals') and contains(text(), 'animalZombieVulture' ) ]/text()" delim="\n" op="add" >
+		animalZombieVultureDrone_doughsZAED, 10
+</csv>
+
+<!-- I think this will add the vulture to POIS? -->
+<csv xpath="/entitygroups/entitygroup[@name='animalZombieVulture' ]/text()" delim="\n" op="add" >
+		animalZombieVultureDrone_doughsZAED, .5
+</csv>
+
+<!-- FERAL -->
+<!-- 
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'animalZombieVultureFeral' ) ]/text()" delim="\n" op="add" >
+		animalZombieVultureDrone_doughsZAED, .5
+</csv>
+-->
+<!-- RADIATED -->
+<!--
+<csv xpath="/entitygroups/entitygroup[contains(@name,'feralHordeStageGS') and contains(text(), 'animalZombieVultureRadiated' ) ]/text()" delim="\n" op="add" >
+		animalZombieVultureDrone_doughsZAED, .5
+</csv>
+-->
+</config>

@@ -1,0 +1,124 @@
+<configs>
+	<append xpath="/blocks">
+
+		<!-- 
+			blocks drooped after gore block disappears
+		-->
+		<block name="terrDirt_doughs001_ZDBOD"> <!-- DOUGH: Copied from terrDirt.-->
+			<property name="TerrainIndex" value="9"/>
+			<property name="CanMobsSpawnOn" value="true"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+			<property name="Map.Color" value="20,50,21"/>
+			<property name="Material" value="Morganic"/> <!-- DOUGH: changed to organic -->
+			<property name="Shape" value="Terrain"/>
+			<property name="Mesh" value="terrain"/>
+			<property name="Texture" value="2"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="LPHardnessScale" value="2"/>
+			<!-- DOUGH: removed repair items -->
+			<drop event="Harvest" name="resourceZedLump_doughsZDBOD" count="10" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceZedLump_doughsZDBOD" count="5" prob="0.25" stick_chance="1"/>
+			<drop event="Fall" name="resourceZedLump_doughsZDBOD" count="44" prob="0.187" stick_chance="0"/>
+			<property name="SortOrder1" value="0000"/>
+			<property name="SortOrder2" value="0300"/>
+			<property name="FilterTags" value="MC_outdoor,SC_terrain"/>
+		</block>
+
+		<!-- DOUGH: Copying this entire master block so we can... not have loot and can pick it up -->
+		<block name="cntBarrelGasSingle00_doughs001_ZDBOD"> <!-- DOUGH: From cntBarrelMetalMaster-->
+
+			<property name="Class" value="CarExplode"/> <!-- DOUGH: Changed -->
+			<property name="DescriptionKey" value="cntBarrelGasSingle00_doughs001_ZDBODDesc"/>
+			<!--  <property name="LootList" value="gasBarrel"/> -->  <!-- DOUGH: Changed -->
+			<!--  DOUGH: SEtting CanPickup to true has press E to pickup, but this fails?? -->
+			<property name="CanPickup" value="false" param1="cntBarrelGasSingle00"/> <!-- DOUGH: Added --> 
+			<property class="Explosion">
+				<property name="ParticleIndex" value="14"/>
+				<property name="RadiusBlocks" value="5"/>
+				<property name="BlockDamage" value="500"/>
+				<property name="RadiusEntities" value="5"/>
+				<property name="EntityDamage" value="250"/>
+			</property>
+			<property name="CustomIcon" value="cntBarrelAcidSingle00"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="DescriptionKey" value="cntBarrelGroupDesc"/>
+			<property name="Material" value="MFuelBarrelMetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Industrial/barrelGasPrefab"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
+			<property name="Path" value="solid"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="CanDecorateOnSlopes" value="false"/>
+			<drop event="Harvest" name="resourceScrapIron" count="3,6" tag="allToolsHarvest"/>
+			<drop event="Harvest" name="ammoGasCan" count="10,20" tag="allToolsHarvest"/> <!-- DOUGH: Added -->
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1,5" prob="0.75" stick_chance="1"/>
+			<property name="Tags" value="barrelExplosive"/>
+			<property name="FilterTags" value="MC_building,SC_loot"/>
+		</block>
+
+		<block name="mineCandyTin_doughs001_ZDBOD"> <!-- DOUGH: Copied from mineCandyTinTwitch.-->
+			<property name="Extends" value="mineCandyTin"/>
+			<property name="DescriptionKey" value="mineCandyTin_doughs001_ZDBODDesc"/>
+			<property name="CanPickup" value="true" param1="mineCandyTin"/> <!-- DOUGH: Added -->
+			
+			<property name="CustomIcon" value="mineCandyTin"/>
+			<property name="CustomIconTint" value="CC00FF"/>
+			<property name="Explosion.BlockDamage" value="0"/>
+			<property name="Explosion.RadiusEntities" value="5" />
+			<property name="Explosion.EntityDamage" value="250" />
+			<property name="Explosion.IgnoreHeatMap" value="true" />
+			<property name="NoImmunity" value="true" />
+			<property name="Tags" value=""/>
+		</block>
+
+		<!-- 
+			Gore blocks drooped after corpse disappears
+		-->
+		<block name="goreBlockZombieBones_doughs001_ZDBOD">
+			<property name="Extends" value="goreBlockHumanBones"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Class" value="UpgradeRated"/>
+			<property name="UpgradeRated.ToBlock" value="terrDirt_doughs001_ZDBOD"/> <!-- DOUGH: Basic block for seige/blocking -->
+			<property name="UpgradeRated.Rate" value="300"/> <!-- TODO: Time this-->
+		</block>
+
+    <block name="goreBlockZombieBones_doughs002_ZDBOD">
+			<property name="Extends" value="goreBlockHumanBones"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Class" value="UpgradeRated"/>
+			<property name="UpgradeRated.ToBlock" value="emberPileDeco2"/> <!-- DOUGH: Burns when walked on -->
+			<property name="UpgradeRated.Rate" value="300"/> <!-- TODO: Time this-->
+		</block>
+
+    <block name="goreBlockZombieBones_doughs003_ZDBOD">
+			<property name="Extends" value="goreBlockHumanBones"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Class" value="UpgradeRated"/>
+			<property name="UpgradeRated.ToBlock" value="cntBarrelGasSingle00_doughs001_ZDBOD"/> <!-- DOUGH: Explodes if destroyed -->
+			<property name="UpgradeRated.Rate" value="300"/> <!-- TODO: Time this-->
+		</block>
+
+		<block name="goreBlockZombieBones_doughs004_ZDBOD">
+			<property name="Extends" value="goreBlockHumanBones"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Class" value="UpgradeRated"/>
+			<property name="UpgradeRated.ToBlock" value="mineCandyTin_doughs001_ZDBOD"/> <!-- DOUGH: Explodes if stepped on -->
+			<property name="UpgradeRated.Rate" value="300"/> <!-- TODO: Time this-->
+		</block>
+	</append>
+</configs>

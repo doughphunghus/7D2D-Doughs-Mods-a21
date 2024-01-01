@@ -1,0 +1,75 @@
+<config>
+
+	<append xpath="/entity_classes">
+
+    <!-- 
+      Maybe we want to make them all "special" in some way (slow/fast/some effects)?
+    -->
+		<!-- *** ZOMBIE_VULTURE --><!-- DOUGH: just copied and modified some attributes -->
+    <entity_class name="animalZombieVultureDrone_doughsZAED" extends="animalZombieVulture">
+      <property name="Class" value="EntityVulture"/>
+      <property name="UserSpawnType" value="Menu"/>
+      <!-- DOUGH: Add drone attributes, remove duplicate vulture ones below-->
+      <!-- <property name="Mesh" value="@:Other/Items/Weapons/Ranged/Junk Drone/junkDrone_Prefab.prefab"/> -->
+      <!-- <property name="Model" value="Entities/Electrical/deskTopPCPrefab"/> -->
+      <!-- <property name="mesh" value="engine_small"/> -->
+	    <!-- <property name="Mesh" value="@:Entities/LootContainers/backpack_vehicleDroppedPrefab.prefab"/> -->
+
+      <property name="SurfaceCategory" value="metal"/>
+      <property name="SizeScale" value="0.25"/>
+      <property name="Mass" value="70"/> <!-- DOUGH: make it 2x heavier than vulture-->
+      <!-- DOUGH: END drone attributes -->
+
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="EntityFlags" value="animal,zombie"/>
+      <property name="EntityType" value="Zombie"/>
+      <property name="Tags" value="entity,animal,zombie,hostile,vulture"/>
+      <property name="AvatarController" value="AvatarAnimalController"/>
+      <property name="ModelType" value="Standard"/>
+      <property name="HasRagdoll" value="true"/>
+      <property name="PhysicsBody" value="vulture"/>
+
+      <property name="AITask-1" value=""/>
+      <property name="AITarget-1" value=""/>
+
+      <!-- DOUGH: Add drone attributes, remove duplicate vulture ones below-->
+      <property name="SoundRandom" value="drone_greeting"/>
+      <property name="SoundAlert" value="drone_wakeup"/>
+      <property name="SoundHurt" value="drone_attackeffect"/>
+      <property name="SoundDeath" value="drone_shutdown"/>
+      <property name="SoundAttack" value=""/>
+      <property name="SoundSense" value="drone_enemy_sense"/>
+      <property name="SoundGiveUp" value="drone_idle_hover"/>
+      <!-- DOUGH: END drone attributes -->
+
+      <!-- Stealth -->
+      <property name="SightRange" value="70"/>
+
+      <!-- Gameplay  -->
+      <property name="MoveSpeed" value="1.3"/> <!--DOUGH: faster than vulture. default = 1-->
+      <property name="MoveSpeedAggro" value="2.1, 2.1"/> <!-- Used when player in vehicle -->
+      <property name="MaxTurnSpeed" value="230"/> <!--DOUGH: faster than vulture. default = 190 -->
+
+      <property name="HandItem" value="meleeHandAnimalZombieVultureRadiated_doughsZAED"/>
+      <property name="Immunity" value="sickness;disease;wellness;bleeding"/> <!-- DOUGH: ADD: bleeding; -->
+
+      <property name="DismemberMultiplierLegs" value="0"/>
+      <property name="PainResistPerHit" value="-1"/> <!-- no pain -->
+
+      <property name="DeadBodyHitPoints" value="175"/>
+
+      <!-- DOUGH: Add drone attributes, remove duplicate vulture ones below-->
+      <!-- Harvest higher end things needed to craft a bot. no schematics -->
+      <drop event="Harvest" name="gunBotRoboticsParts" tag="salvageHarvest" prob="0.2" count="1"/>
+	    <drop event="Harvest" name="resourceForgedSteel" tag="allToolsHarvest" count="1,2"/>
+      <drop event="Harvest" name="motionsensor" tag="salvageHarvest" prob="0.2" count="1"/>
+      <!-- DOUGH: END drone attributes -->
+      
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="50"/>  <!-- DOUGH: ADD: more health; easy to drop with a few shots -->
+        <passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffRadiationPool"/>
+      </effect_group>
+    </entity_class>
+
+  </append>
+</config>

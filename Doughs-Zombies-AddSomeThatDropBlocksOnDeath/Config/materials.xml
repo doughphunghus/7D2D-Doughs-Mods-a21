@@ -1,0 +1,14 @@
+<configs>
+	<append xpath="/materials">
+
+    <!-- DOUGH: UNUSWED PLACEHOLDER
+    Taken from MresourceAnimalFat and Mdirt -->
+    <material id="MresourceZedLump_doughsZDBOD">
+      <property name="damage_category" value="organic"/>
+      <property name="surface_category" value="organic"/>
+      <property name="particle_category" value="organic"/>
+      <property name="Experience" value="4"/>
+    </material>
+
+	</append>
+</configs>

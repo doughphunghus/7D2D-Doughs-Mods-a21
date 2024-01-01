@@ -1,0 +1,47 @@
+<configs>
+	<append xpath="/items">
+
+  <!-- Harvestable things from zed block that is dropped -->
+
+  <!-- DOUGH: Taken from resourceClayLump -->
+  <item name="resourceZedLump_doughsZDBOD"> <!-- scrap material -->
+              
+    <property name="CustomIcon" value="resourceClayLump"/>
+    <property name="CustomIconTint" value="255,0,0"/>
+    <property name="TintColor" value="255,0,0"/>
+    <property name="DescriptionKey" value="resourceZedLump_doughsZDBODDesc"/>
+  
+    <property name="HoldType" value="45"/>
+    <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+    <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+    <property name="Material" value="Morganic"/> <!-- DOUGH: so can blow it up easier -->
+    <property name="Weight" value="5"/>
+    <property name="Stacknumber" value="6000"/> <!-- STK resource -->
+    <property name="EconomicValue" value="2"/>
+    <property name="EconomicBundleSize" value="150"/>
+    <property name="Group" value="Resources"/>
+    <property name="CraftingIngredientTime" value=".2"/>
+  </item>
+
+  <item name="thrownAmmoPipeBomb_doughsZDBOD"> <!-- DOUGH: For clearing dropped "dirt" -->
+    <property name="Extends" value="thrownAmmoPipeBomb"/>
+    <property name="DescriptionKey" value="thrownAmmoPipeBomb_doughsZDBODDesc"/>
+    <property name="CustomIcon" value="thrownAmmoPipeBomb"/>
+    <property name="CustomIconTint" value="255,0,0"/>
+    <property name="TintColor" value="255,0,0"/>
+
+    <property name="Explosion.RadiusBlocks" value="6"/>
+    <property name="Explosion.DamageBonus.organic" value="100"/>
+    <effect_group tiered="false">
+      <passive_effect name="BlockDamage" operation="base_set" value="25"/>
+      <!-- adding 10% damage because it's impossible to place explosives inside an entity where it would do the exact damage -->
+      <passive_effect name="EntityDamage" operation="base_set" value="253" tags="perkDemolitionsExpert"/>
+      <display_value name="dExRadius" value="6"/>
+      <display_value name="dFuseTime" value="4"/>
+      <display_value name="dOrganicDamage_doughsZDBOD" value="100"/> <!-- DOUGH: Added, for display-->
+      <triggered_effect trigger="onSelfWaterSubmerge" action="ResetHeldItem"/>
+    </effect_group>
+  </item>
+
+	</append>
+</configs>
