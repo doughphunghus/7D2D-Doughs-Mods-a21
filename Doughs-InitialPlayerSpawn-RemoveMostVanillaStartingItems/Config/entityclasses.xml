@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+    <!--
+    Remove each starter item
+    -->
+    <!-- singleplayer: This is present only in Single player -->
+    <csv xpath="/entity_classes/entity_class[@name='playerMale']/property[starts-with(@name, 'ItemsOnEnterGame')]/@value" delim="," op="remove">noteDuke01</csv>
+    
+    <!-- singleplayer: The water list item is different vs the other game modes, so do wildcard -->
+    <csv xpath="/entity_classes/entity_class[@name='playerMale']/property[starts-with(@name, 'ItemsOnEnterGame')]/@value" delim="," op="remove">drinkJarBoiledWater*</csv>
+
+    <!-- remove all otherstandard spawn items -->
+    <csv xpath="/entity_classes/entity_class[@name='playerMale']/property[starts-with(@name, 'ItemsOnEnterGame')]/@value" delim="," op="remove">foodCanChili</csv>
+    <csv xpath="/entity_classes/entity_class[@name='playerMale']/property[starts-with(@name, 'ItemsOnEnterGame')]/@value" delim="," op="remove">medicalFirstAidBandage</csv>
+    <csv xpath="/entity_classes/entity_class[@name='playerMale']/property[starts-with(@name, 'ItemsOnEnterGame')]/@value" delim="," op="remove">meleeToolTorch</csv>
+    
+    <!-- Do not uncomment this UNLESS you make sure at least 1 item is in the toolbelt from this or other mods!-->
+    <!-- <csv xpath="/entity_classes/entity_class[@name='playerMale']/property[starts-with(@name, 'ItemsOnEnterGame')]/@value" delim="," op="remove">keystoneBlock</csv> -->
+
+</configs>

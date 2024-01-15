@@ -1,0 +1,3 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+StarterPack1_doughs,items,Item,,,"Tattered Box"
+StarterPack1_doughsDesc,items,Item,,,"This pistol, ammo, and clothing/food is all I can give on such short notice without crossing the Duke. Maybe it will keep you alive a bit longer. Unopened this is worth a few dukes more if you just trade it, just show 'em my sig. and I'll pay them back. Hope to see you again in better times - Duffins"

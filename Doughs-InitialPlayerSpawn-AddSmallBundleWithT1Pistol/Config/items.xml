@@ -1,0 +1,31 @@
+<configs>
+	<append xpath="/items">
+
+		<!-- Starter Bundle Master Template -->
+		<item name="StarterPack1_doughs">
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="StarterPack1_doughsDesc"/>
+			<property name="CustomIconTint" value="#ffaa00"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="CustomIcon" value="cntTrashPile06"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Food/cornbreadPrefab.prefab"/>
+			<property name="HandMeshfile" value="@:Other/Items/Food/cornbreadHandPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Weight" value="0"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="EconomicValue" value="1400" /> <!-- T1 pistol = 500 + Ammo = 9 (9x42) = 378, boots = 60, pants = 40. cans = 20/item, potato = 10/item.  sewing kit = 16 so total = 1124. THEN add a tiny bit (20%) so its worth more unopened to ecourage not to open it ;) -->
+			<property name="Group" value="Special Items"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Create_item" value="apparelWornBoots,apparelOveralls,foodCanCatfood,foodCropPotato,resourceSewingKit,gunHandgunT1Pistol,ammo9mmBulletBall"/>
+				<property name="Create_item_count" value="1,1,4,5,1,1,42"/>
+			</property>
+		</item>
+
+	</append>
+</configs>

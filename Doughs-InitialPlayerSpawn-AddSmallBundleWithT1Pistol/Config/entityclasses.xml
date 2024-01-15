@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+    <!-- Add our Starter Bundle package to all start spawn groups -->
+    <csv xpath="/entity_classes/entity_class[@name='playerMale']/property[starts-with(@name, 'ItemsOnEnterGame')]/@value" delim="," op="add">StarterPack1_doughs</csv>
+     
+</configs>
