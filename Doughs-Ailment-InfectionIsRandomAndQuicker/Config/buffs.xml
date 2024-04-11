@@ -14,9 +14,6 @@ SEE buffx.xml "RandomRoll" docs for a literal reference to this!
 
 -->
 
-<!-- Set vanilla global -->
-<set xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@trigger='onSelfEnteredGame'][@cvar='$infectionMaxDuration'][@operation='set']/@value">10800</set>
-
 <!-- Set vanilla default buff entry point -->
 <!-- 
 <set xpath="/buffs/buff[@name='buffInfectionMain']/effect_group/triggered_effect[@trigger='onSelfBuffStart'][@cvar='$infectionMaxDuration'][@operation='set']/@value">10800</set>
@@ -36,7 +33,7 @@ SEE buffx.xml "RandomRoll" docs for a literal reference to this!
  5% chance of having 30 minutes (1800 seconds)
 -->
 <!-- Add randomness to vanilla default buff entry point
-NOTE: RandomRoll might roll 1 time and the result be applied for all?
+NOTE: randomint rolls 1 time and the result is applied for all
 -->
   <!-- <append xpath="/buffs/buff[@name='buffInfectionMain']/effect_group[not(contains(@name, 'main loop')) and not(contains(@name, 'shut down')) and not(contains(@name, 'display % values')) and not(contains(@name, 'signaling buffs')) and not(contains(@name, 'getting hit makes it worse'))]">
   -->
@@ -44,41 +41,33 @@ NOTE: RandomRoll might roll 1 time and the result be applied for all?
 
     <effect_group> <!--Add ours at the beginning to set and calc infectionMaxDuration properly. Must go before all things as this is a major var in calcs -->
 
-		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="10800"> <!-- Duplicate what the game had with our max num  -->
-			<requirement name="CVarCompare" cvar="$infectionMaxDuration" operation="Equals" value="0" /></triggered_effect>
+      <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="infectionSeverity" operation="set" value="randomint(0,100)"/>
 
-    <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="7200"> <!-- 2 hours  -->
-      <requirement name="CVarCompare" cvar="$infectionMaxDuration" operation="Equals" value="10800"/>
-      <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="85"/>
-    </triggered_effect>
-
-    <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="5400"> <!-- 1.5 hours  -->
-      <requirement name="CVarCompare" cvar="$infectionMaxDuration" operation="Equals" value="7200"/>
-      <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="65"/>
-    </triggered_effect>
-
-    <!-- Add randomness to vanilla default buff entry point -->
-    <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="3600"> <!-- 1 hour -->
-      <requirement name="CVarCompare" cvar="$infectionMaxDuration" operation="Equals" value="5400"/>
-      <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
-    </triggered_effect>
-
-    <!-- Add randomness to vanilla default buff entry point. Make this the "min" value (shortest to live) -->
-    <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="2700"> <!-- 45 minutes -->
-      <requirement name="CVarCompare" cvar="$infectionMaxDuration" operation="Equals" value="3600"/>
-      <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
-    </triggered_effect>
-
-    <!-- Add randomness to vanilla default buff entry point. Make this the "min" value (shortest to live) -->
-    <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="1800"> <!-- 30 minutes -->
-      <requirement name="CVarCompare" cvar="$infectionMaxDuration" operation="Equals" value="2700"/>
-      <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="5"/>
-    </triggered_effect>
+      <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="10800">        <!-- 180 minutes -->
+        <requirement name="CVarCompare" cvar="infectionSeverity" operation="LTE" value="100"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="7200">        <!-- 120 minutes -->
+        <requirement name="CVarCompare" cvar="infectionSeverity" operation="LTE" value="85"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="5400">        <!-- 90 minutes -->
+        <requirement name="CVarCompare" cvar="infectionSeverity" operation="LTE" value="65"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="3600">        <!-- 60 minutes -->
+        <requirement name="CVarCompare" cvar="infectionSeverity" operation="LTE" value="40"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="2700">        <!-- 45 minutes -->
+        <requirement name="CVarCompare" cvar="infectionSeverity" operation="LTE" value="15"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="1800">        <!-- 30 minutes -->
+        <requirement name="CVarCompare" cvar="infectionSeverity" operation="LTE" value="5"/>
+      </triggered_effect>
 
     <!-- DEBUGGING -->
-    <!-- <triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="DOUGHS-BUFF_INFECTION DEBUG: Infection timer set to:"/>-->
-    <!-- <triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$infectionMaxDuration"/>-->
-
+    <!-- f1, dm, buff buffinfection main, q-->
+    <!-- <triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="DOUGHS-BUFF_INFECTION DEBUG: Infection severity set to:"/> -->
+    <!-- <triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="infectionSeverity"/> -->
+    <!-- <triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="DOUGHS-BUFF_INFECTION DEBUG: Infection timer set to:"/> -->
+    <!-- <triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$infectionMaxDuration"/> -->
 
     <!-- cleanup, as it seems to be set to the lowest it hit last time and does not reset -->
     <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="10800"/>
