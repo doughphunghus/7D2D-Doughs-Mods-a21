@@ -1,39 +1,46 @@
 <Doughs>
   <!--
-    Set to 10800 = 3 hour [real time not game time]
-    a19 default = 25200 = 7 hours [real time not game time]
+  Set to 10800 = 3 hour [real time not game time]
+  a19 default = 25200 = 7 hours [real time not game time]
 -->
 
-  <!--
-    Handle making random of how long it takes to die
-    15% chance of having 3 hours (10800 seconds) [real time]
-    20% chance of having 2 hours (7200 seconds)
-    25% chance of having 1.5 hours (5400 seconds)
-    25% chance of having 1 hour (3600 seconds)
-    10% chance of having 45 minutes (2700 seconds)
-    5% chance of having 30 minutes (1800 seconds)
+  <!-- WIP: If we want to try to punish on dying or something, set a 'genetic marker' counting deaths/infections?
+SEE buffx.xml "RandomRoll" docs for a literal reference to this!
+<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$doughsGeneticInfectionMarker" operation="set" value="0"/>
+<requirement name="CVarCompare" cvar="$foodAmountAdd" operation="LTE" value="@$doughsGeneticInfectionMarker"/>
+
+# Maybe indulge in this?
+<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="test2" operation="set" value="randomint(1,10)"/>
+
 -->
 
-  <!--
-    WIP: If we want to try to punish on dying or something, set a 'genetic marker' counting deaths/infections?
-    SEE buffx.xml "RandomRoll" docs for a literal reference to this!
-    <triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$doughsGeneticInfectionMarker" operation="set" value="0"/>
-    <requirement name="CVarCompare" cvar="$foodAmountAdd" operation="LTE" value="@$doughsGeneticInfectionMarker"/>
-
-    # Maybe indulge in this?
-    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="test2" operation="set" value="randomint(1,10)"/>
+  <!-- Set vanilla default buff entry point -->
+  <!-- 
+<set xpath="/buffs/buff[@name='buffInfectionMain']/effect_group/triggered_effect[@trigger='onSelfBuffStart'][@cvar='$infectionMaxDuration'][@operation='set']/@value">10800</set>
 -->
 
   <!-- Delete this as were moving it into our own effect group -->
   <remove xpath="/buffs/buff[@name='buffInfectionMain']/effect_group/triggered_effect[@trigger='onSelfBuffStart'][@cvar='$infectionMaxDuration'][@operation='set'][@value='25200']/requirement"/>
   <remove xpath="/buffs/buff[@name='buffInfectionMain']/effect_group/triggered_effect[@trigger='onSelfBuffStart'][@cvar='$infectionMaxDuration'][@operation='set'][@value='25200']"/>
 
-  <!-- Add ours at the beginning to set and calc infectionMaxDuration properly. Must go before all things as this is a major var in calcs -->
+  <!--
+ Handle "making random of how long it takes to die
+ 15% chance of having 3 hours (10800 seconds) [real time]
+ 20% chance of having 2 hours (7200 seconds)
+ 25% chance of having 1.5 hours (5400 seconds)
+ 25% chance of having 1 hour (3600 seconds)
+ 10% chance of having 45 minutes (2700 seconds)
+ 5% chance of having 30 minutes (1800 seconds)
+-->
+  <!-- Add randomness to vanilla default buff entry point
+NOTE: randomint rolls 1 time and the result is applied for all
+-->
+  <!-- <append xpath="/buffs/buff[@name='buffInfectionMain']/effect_group[not(contains(@name, 'main loop')) and not(contains(@name, 'shut down')) and not(contains(@name, 'display % values')) and not(contains(@name, 'signaling buffs')) and not(contains(@name, 'getting hit makes it worse'))]">
+  -->
   <insertBefore xpath="/buffs/buff[@name='buffInfectionMain']/effect_group[not(contains(@name, 'main loop')) and not(contains(@name, 'shut down')) and not(contains(@name, 'display % values')) and not(contains(@name, 'signaling buffs')) and not(contains(@name, 'getting hit makes it worse'))]">
 
-    <effect_group>
+    <effect_group>      <!--Add ours at the beginning to set and calc infectionMaxDuration properly. Must go before all things as this is a major var in calcs -->
 
-      <!-- Add randomness to vanilla default buff entry point (NOTE: randomint rolls 1 time and the result is applied for all) -->
       <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="infectionSeverity" operation="set" value="randomint(0,100)"/>
 
       <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="10800">        <!-- 180 minutes -->
