@@ -11,8 +11,8 @@
     <item name="resourceCellSizeC_doughs">
     	<property name="HoldType" value="45"/>
       <property name="Tags" value="junk"/>
-    	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
-    	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+    	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+    	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
     	<property name="Material" value="MresourceScrapLeadSmall"/>
 
       <property name="DescriptionKey" value="resourceCellSizeC_doughsDesc"/> <!-- DOUGH: Added -->
@@ -29,7 +29,7 @@
     	<property name="Tags" value="blunt,melee,grunting,light,tool,noMods"/>
     	<property name="DisplayType" value="simpleTool"/>
     	<property name="HoldType" value="13"/>
-    	<property name="Meshfile" value="#Other/Items?Tools/flashlight02Prefab.prefab"/>
+    	<property name="Meshfile" value="@:Other/Items/Tools/flashlight02Prefab.prefab"/>
     	<property name="DropScale" value="1.5"/>
     	<property name="Material" value="Miron_scrap"/> <!-- DOUGH: Changed -->
       <property name="Weight" value="5"/>
@@ -91,8 +91,8 @@
       <property name="CustomIconTint" value="d9b6f8"/> <!-- DOUGH: Darken to look more ironish.  Cannot lighten for steel -->
       <property name="DescriptionKey" value="resourceSmallLightBulb_doughsDesc"/> <!-- DOUGH: Added -->
 
-    	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
-    	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+    	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+    	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
     	<property name="Material" value="MresourceBrokenGlass"/>
     	<property name="Stacknumber" value="20"/> <!-- STK loot -->
     	<property name="Weight" value="2"/>

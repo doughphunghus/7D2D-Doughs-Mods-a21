@@ -1,0 +1,67 @@
+<configs>
+<!-- 
+NOTES: 
+- Setting toplevel spectrums only, leaving weather related ones alone.. why? usually its raining or snowing
+so precipitation... clears up the dirt/smoke a bit while its happening?
+- Not sure if particle effects being set ( like smoke" on top of the burnt forest spectrum) will be too much
+OR if snowing and other stuff messes things up.. but for now wait until people notice edge cases like x weather in y biome while 
+z happens makes the sky weird/off/too much. too much to test every combination easily. 
+-->
+
+<!-- 
+BIOME: snow
+Default spectrum exists and is <spectrum name="snow"/>
+-->
+<set xpath="/worldgeneration/biomes/biome[@name='snow']/spectrum[@name='snow']/@name">burnt_forest</set>
+
+<!-- 
+BIOME: pine_forest
+Default spectrum not exists
+-->
+<append xpath="/worldgeneration/biomes/biome[@name='pine_forest']">
+  <spectrum name="burnt_forest"/>
+</append>
+
+<!-- 
+BIOME: desert
+Default spectrum exists and is <spectrum name="desert"/>
+-->
+<set xpath="/worldgeneration/biomes/biome[@name='desert']/spectrum[@name='desert']/@name">burnt_forest</set>
+
+<!-- 
+BIOME: water
+Default spectrum not exists
+NOTE: Not sure when this is considered a biome, also difference between this and "onlyWater"
+-->
+<append xpath="/worldgeneration/biomes/biome[@name='water']">
+  <spectrum name="burnt_forest"/>
+</append>
+
+<!-- 
+BIOME: onlyWater
+Default spectrum exists and is <spectrum name="pine_forest"/>
+NOTE: Not sure when this is considered a biome, also difference between this and "water"
+-->
+<set xpath="/worldgeneration/biomes/biome[@name='onlyWater']/spectrum[@name='pine_forest']/@name">burnt_forest</set>
+
+
+<!-- 
+BIOME: underwater
+Since you are underwater... cannot see the sky.
+-->
+
+<!-- 
+BIOME: wasteland
+wasteland default is the burnt_forest spectrum
+-->
+
+<!-- 
+BIOME: burnt_forest
+Default spectrum not exists BUT the smokestorm effect is set at 7... hmmm
+maybe the spectrum is already burnt_forest?
+-->
+<append xpath="/worldgeneration/biomes/biome[@name='burnt_forest']">
+  <spectrum name="burnt_forest"/>
+</append>
+
+</configs>
