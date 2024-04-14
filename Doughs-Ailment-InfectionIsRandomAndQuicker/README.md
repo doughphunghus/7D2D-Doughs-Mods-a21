@@ -30,4 +30,5 @@ Why?
 - An untreated infection during a horde night or early game where you cannot loot or barter/trade can easily prove fatal.
 
 Bug Hunters/Fixers:
+- :clap:: [IronSharkInc](https://github.com/IronSharkInc): 21.2-b37.21.0.0.1. Pull request to make buff code better, roll 1x for rand infection value. Done in 21.2-b37.21.0.1.0
 - :clap:: [@ate0ate](https://community.7daystodie.com/profile/94874-ate0ate/): a20.0-b238.1.0.0. Discovered infection cure % of items was not accurate.  Fixed in a20.0-b238.1.0.1
